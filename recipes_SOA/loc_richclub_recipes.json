@@ -1,0 +1,595 @@
+{
+"recipes": [
+    {
+	"id": "richclub.purchasemembership.hint",
+	"actionid": "explore",
+	"label": "Purchase a membership at an exclusive club?",
+	"startdescription": "Entrance to this establishment can only be secured with wealth - the sort of wealth renowned artists or vacationing monarchs can muster. Do I possess that sort of wealth?",
+	"requirements": {
+	    "loc.richclub.first": 1,
+	    "funds": -20
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "richclub.purchasemembership",
+	"actionid": "explore",
+	"label": "Purchase a membership at an exclusive club",
+	"startdescription": "The funds have been accounted for. A pen waits beside a freshly drawn contract. In the highest office of the Tiresiac, the clubhouse steward and officer both await my signature.",
+	"description": "The proprietor takes the contract and exchanges it for a small, crisp card of certification. The steward presents me with a brass ring, engraved with a blinded eye. 'In honor of the blind Theban seer, who knew that excellence lies in both men and women.'",
+	"requirements": {
+	    "loc.richclub.first": 1,
+	    "funds": 20
+	},
+	"aspects": {
+	    "advancement": 1
+	},
+	"effects": {
+	    "membership.richclub": 1,
+	    "funds": -20
+	},
+	"craftable": true,
+	"warmup": 30
+    },
+    {
+	"id": "membership.renew",
+	"actionid": "study",
+	"label": "Pay my membership dues",
+	"startdescription": "Another letter, another writ of financial tranfer. My enjoyment of the club's amenities will continue for a little longer.",
+	"requirements": {
+	    "funds": 15,
+	    "membership.richclub": 1
+	},
+	"effects": {
+	    "funds": -15
+	},
+	"aspects": {
+	    "advancement": 1
+	},
+	"warmup": 30,
+	"craftable": true
+    },
+    {
+	"id": "membership.expired.renew",
+	"actionid": "study",
+	"label": "Restore my expired membership",
+	"startdescription": "The club had been clear about payment, yet here I am. Returning to the club's registry will be costlier than usual.",
+	"description": "It's done.",
+	"requirements": {
+	    "funds": 20,
+	    "membership.richclub.expired": 1
+	},
+	"effects": {
+	    "funds": -20
+	},
+	"aspects": {
+	    "advancement": 1
+	},
+	"warmup": 30,
+	"craftable": true
+    },
+    {
+	"id": "richclub.enter.nomembership",
+	"actionid": "explore",
+	"label": "Members Only",
+	"startdescription": "The club staff won't permit me entry - I must have missed my membership dues. [Renew your membership with Funds to gain access to the Tiresiac.]",
+	"requirements": {
+	    "loc.richclub": 1
+	},
+	"extantreqs": {
+	    "membership.richclub": -1
+	},
+	"hintonly": true,
+	"craftable": false
+    },
+    {
+	"id": "richclub.enter",
+	"actionid": "explore",
+	"label": "Spend an Evening at the Tiresiac",
+	"startdescription": "High-backed satin chairs, quiet suites, and crackling fires; rare books, high art, and tantalizing gossip. Above all: privacy. I have paid no small amount for access to the club's amenities - it would be wise to make the most of them.",
+	"requirements": {
+	    "loc.richclub": 1,
+	    "lore": -1,
+	    "whereabouts": -1
+	},
+	"extantreqs": {
+	    "membership.richclub": 1
+	},
+	"internaldeck": {
+	    "spec": [
+		"favour",
+		"favour",
+		"influencegrailc",
+		"influencegrailc",
+		"influencegrailc",
+		"influencelanternc",
+		"influencelanternc",
+		"rumour",
+		"rumour",
+	 	"eruditionplus"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": true
+	},
+	"craftable": true,
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "richclub.blackmail",
+	    },
+	    {
+		"id": "richclub.feast"
+	    },
+	    {
+		"id": "richclub.film"
+	    },
+	    {
+		"id": "richclub.rumour"
+	    },
+	    {
+		"id": "richclub.book"
+	    }
+	]
+    },
+    {
+	"id": "richclub.blackmail",
+	"actionid": "explore",
+	"label": "Spend an Evening at the Tiresiac",
+	"startdescription": "In the Colchian Room, I struck up conversation with a man from Downing Street. He and I talked casually about affairs of state: tensions with Germany, unrest in India, developments in the Americas. Eventually, he began to speak of his colleagues, and - perhaps due to some professional grudge - told me of certain indiscretions his colleagues had indulged in. A useful gossip.",
+	"requirements": {
+	    "favour": 1
+	},
+	"effects": {
+	    "secrecy": 1
+	}
+    },
+    {
+	"id": "richclub.feast",
+	"actionid": "explore",
+	"label": "Spend an Evening at the Tiresiac",
+	"startdescription": "Glasses of brandy were passed around the Arcadian Room. I made toasts with aging aristocrats in their straining tuxedoes and filled dresses. The chatter was base, and decorum was breached more than a few times - but we all ate of that night, and <i>hungrily.</i>",
+	"requirements": {
+	    "influencegrailc": 1
+	},
+	"effects": {
+	    "contentment": 1,
+	    "secrecy": 1
+	}
+    },
+    {
+	"id": "richclub.film",
+	"actionid": "explore",
+	"label": "Spend an Evening at the Tiresiac",
+	"startdescription": "The Delphian Room is the newest of the club's installations. It bears no books nor tables nor even windows - but there is an abundance of seating. And at the fore of the Delphian room is a pale canvas, onto which soundless light is sometimes projected. Tonight, the proprietor was there alone in the film-glow. I sat behind him, and we watched the shadows play in their silence.",
+	"requirements": {
+	    "influencelanternc": 1
+	},
+	"effects": {
+	    "influencewinterc": 1,
+	    "contentment": 1,
+	    "secrecy": 1
+	}
+    },
+    {
+	"id": "richclub.rumour",
+	"actionid": "explore",
+	"label": "Spend an Evening at the Tiresiac",
+	"startdescription": "The Colchian Room is where members are permitted to churn gossip. That night, I overheard two men disussing matters judicial and prohibitive. The Bureau was brought up more than a few times, alongside the name of one who had recently drawn their scrutiny. I keep the name in mind as I leave the Tiresiac that evening.",
+	"requirements": {
+	    "rumour": 1
+	},
+	"effects": {
+	    "secrecy": 1
+	}
+    },
+    {
+	"id": "richclub.book",
+	"actionid": "explore",
+	"label": "Spend an Evening at the Tiresiac",
+	"startdescription": "I visited the Athenian Room that night, where walls of literature coiled around me like a labyrinth. No member can take the club's translated volumes off the premises, but why would one ever wish to do so? The air here is conducive to comfortable reading. So, I shall sit, and I shall read.",
+	"requirements": {
+	    "eruditionplus": 1
+	},
+	"effects": {
+	    "contentment": 1,
+	    "secrecy": 1
+	},
+	"internaldeck": {
+	    "spec": [
+		"vinzantinscriptions",
+		"accountkanishkspidersdoor",
+		"dehoris1",
+		"dehoris2",
+		"franklinbancroftdiaries",
+		"vienneseconundra",
+		"irreproachabletraditionssocietynobleendeavour",
+		"raptintheking",
+		"matthiasamethystpursuit",
+		"silverbook",
+		"indignitiesobliviate"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": false,
+	    "defaultcard": "textbookpassion"
+	},
+	"linked": [
+	    {
+		"id": "mutatebook",
+	    }
+	]
+    },
+    {
+	"id": "mutate.book",
+	"actionid": "explore",
+	"label": "Spend an Evening at the Tiresiac",
+	"startdescription": "I visited the Athenian Room that night, where walls of literature wound around me like a labyrinth. No member can take the club's translated volumes off the premises, but why would one wish to do so in the first place? The air here is conducive to comfortable reading. So, I shall sit, and I shall read.",
+	"mutations": [
+	    {
+		"filter": "text",
+		"mutate": "auctionable",
+		"level": -99
+	    }
+	]
+    },
+    {
+	"id": "richclub.scout",
+	"actionid": "explore",
+	"label": "Allude to occult truths?",
+	"startdescription": "The Tiresiac's membership is comprised only of the Capital's most esteemed. Wealth is characteristic of each and every guest - but I know powers beyond wealth. That could interest a few a here.",
+	"requirements": {
+	    "loc.richclub": 1,
+	    "lore": 1,
+	    "potentialpatrons": 1,
+	    "potentialacquaintances": 1
+	},
+	"extantreqs": {
+	    "membership.richclub": 1
+	},
+	"craftable": true,
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "scout.draw.howe",
+		"chance": 30
+	    },
+	    {
+		"id": "richclub.scout.success.draw",
+		"chance": 70
+	    },
+	    {
+		"id": "scout.failure"
+	    },
+	]
+    },
+    {
+	"id": "richclub.scout.success.draw",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"internaldeck": {
+	    "spec": [
+		"poppyready",
+		"rocheford",
+		"florence.a",
+		"lucetta.a",
+		"ludwig.a",
+		"jerome.a"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": false,
+	    "defaultcard": "mistakenidentity"
+	},
+	"linked": [
+	    {
+		"id": "richclub.scout.poppy"
+	    },
+	    {
+		"id": "richclub.scout.rocheford"
+	    },
+	    {
+		"id": "richclub.scout.florence"
+	    },
+	    {
+		"id": "richclub.scout.lucetta"
+	    },
+	    {
+		"id": "richclub.scout.ludwig"
+	    },
+	    {
+		"id": "richclub.scout.jerome"
+	    },
+	    {
+		"id": "scout.depleted"
+	    }
+	]
+    },
+    {
+	"id": "richclub.scout.poppy",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "poppyready": 1
+	},
+	"slots": [
+	    {
+		"id": "needsmorbidity",
+		"label": "Morbidity?",
+		"required": {
+		    "influencewinter": 1,
+		    "influencewinterc": 1,
+		    "influencewintere": 1,
+		    "influencewinterg": 1
+		}
+	    }
+	],
+	"startdescription": "An older woman has taken a seat by me in the Colchian Room. Soon enough, we turn to conversation, the principal subject of which is death. 'I'm getting on, as you can see,' she says, smirking with all her wrinkles. 'I find myself dwelling on it. Perhaps very soon I shall even dream of the end.' She swirls a glass of brandy in her hand. 'What say you about death?' ",
+	"description": "She hums thoughtfully at my response, but no more than that. The ice in her brandy is melting.",
+	"warmup": 60,
+	"effects": {
+	    "poppyready": -1,
+	    "poppy.w": 1
+	},
+	"alt": [
+	    {
+		"id": "richclub.scout.poppy.success"
+	    }
+	]
+    },
+    {
+	"id": "richclub.scout.poppy.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "influence": 1
+	},
+	"startdescription": "'It's really quite fundamental, isn't it? Like punctuation,' she chirps, drumming her bony fingers upon the armrest. 'I have been looking for the best way to punctuate things, myself. Perhaps you and I could discuss ideas?'"
+    },
+    {
+	"id": "richclub.scout.rocheford",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "rocheford": 1
+	},
+	"slots": [
+	    {
+		"id": "needsvault",
+		"label": "An Exotic Locale?",
+		"required": {
+		    "vault": 1
+		},
+		"forbidden": {
+		    "vaultcapital": 1,
+		    "vaultshires": 1
+		}
+	    }
+	],
+	"startdescription": "A portly Frenchman grumbles away in the corner of the Colchian Room, forking through a newspaper titled <i>The Invisible Sun.</i> 'They've forgotten where to find good stories,' he complains to no-one in particular. 'Three continents' worth of the strange and the obscure, and not a single stimulating word on the page.'",
+	"description": "Eventually, he stuffs the newspaper under his arm, the cigar under his lip, and mutters something about 'chastising Armitage' before huffing off the premises. The Colchian Room became quiet again.",
+	"warmup": 60,
+	"effects": {
+	    "rocheford": -1,
+	    "rocheford.w": 1
+	},
+	"alt": [
+	    {
+		"id": "richclub.scout.rocheford.success"
+	    }
+	]
+    },
+    {
+	"id": "richclub.scout.rocheford.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "vault": 1
+	},
+	"startdescription": "I speak up, unbidden. The Frenchman raises an eyebrow - for a moment, I fear I have been too forward. Thankfully, he only nods. 'That sounds more fitting for the column, <i>oui,'</i> he agrees. 'Tell me more - I think I ought to send one of the journalists there for a story. You will be compensated for the information, too.'",
+    },
+    {
+	"id": "richclub.scout.florence",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "florence.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsfleeting",
+		"label": "Nostalgia?",
+		"required": {
+		    "fleeting": 1
+		}
+	    }
+	],
+	"startdescription": "Someone is crying in the Delphian Room. A woman - not old, but not quite young either - watches the images on the wall, where Eurydice dances amongst the ghosts in Hades. Eurydice looks a little like her. 'Go. Leave me alone,' she sobs without turning. 'Please, I... I can't be seen this way.'",
+	"description": "<i>'Go!'</i> the woman shrieks. She falls back to sobbing, and I leave her in the Delphian Room, alone again. Onscreen, Eurydice is pulled back into the Underworld by the masked dead.",
+	"warmup": 60,
+	"effects": {
+	    "florence.a": -1,
+	    "florence.w": 1
+	},
+	"alt": [
+	    {
+		"id": "richclub.scout.florence.success"
+	    }
+	]
+    },
+    {
+	"id": "richclub.scout.florence.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "fleeting": 1
+	},
+	"startdescription": "'You... you <i>remember</i> me?' she sniffs. 'Oh, you have no idea how <i>long</i> it's been since someone...' The woman wipes her eyes with her handkerchief, then pats the seat beside her. 'Sit with me, won't you? It's chilly in here.'"
+    },
+    {
+	"id": "richclub.scout.lucetta",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "lucetta.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needstalent",
+		"label": "Talent?",
+		"required": {
+		    "paintingmastermoth": 1,
+		    "paintingmasterlantern": 1,
+		    "paintingmasterforge": 1,
+		    "paintingmasteredge": 1,
+		    "paintingmasterwinter": 1,
+		    "paintingmasterheart": 1,
+		    "paintingmastergrail": 1,
+		    "paintingmasterknock": 1
+		}
+	    }
+	],
+	"startdescription": "The Arcadian Room hosts a dinner tonight. On my left is a moustached, uninteresting gentleman attacking a roast duck; on my right is a woman. Italian by her accent; a <i>cantatrice</i> by her ego. 'I am a great talent,' she boasts. 'Here and abroad, in fact. And you? Surely someone like yourself has <i>some</i> art to them.'",
+	"description": "'No? <i>Che peccato,'</i> the woman smirks, pulling her hand away. 'It seems I had mistaken you for someone interesting.'",
+	"warmup": 60,
+	"effects": {
+	    "lucetta.a": -1,
+	    "lucetta.w": 1
+	},
+	"alt": [
+	    {
+		"id": "richclub.scout.lucetta.success"
+	    }
+	]
+    },
+    {
+	"id": "richclub.scout.lucetta.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "tool": 1
+	},
+	"startdescription": "The woman's eyebrows raise, half-amused, but also half-impressed. 'A painter? Hm. I have been meaning to sit for another portrait, but have yet to find a suitable artist in this city. You - you will capture me, yes?'"
+    },
+    {
+	"id": "richclub.scout.ludwig",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "ludwig.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needslore",
+		"label": "Knowledge?",
+		"required": {
+		    "skillreasonc": 1,
+		    "skillreasond_concentration": 1,
+		    "skillreasond_illumination": 1
+		}
+	    }
+	],
+	"startdescription": "A stoic German reclines in the Athenian Room, silently writing in a small leather book with a copper-plated pen. I begin to speak to him, but he stops me by holding out his notebook, rife with mathematical formulae and celestial diagrams. 'I'm not interested in speaking,' he says matter-of-factly, 'unless you can help me make sense of the quandary currently bottlenecking my research.'",
+	"description": "'I didn't think so,' he shakes his head. 'If I wanted dilettantes to bother me, I would go to the Colchian Room. Now, if you please -' He gestures at the rest of the library.",
+	"warmup": 60,
+	"effects": {
+	    "ludwig.a": -1,
+	    "ludwig.w": 1
+	},
+	"alt": [
+	    {
+		"id": "richclub.scout.ludwig.success"
+	    }
+	]
+    },
+    {
+	"id": "richclub.scout.ludwig.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "ability": 1
+	},
+	"startdescription": "The man narrows his eyes. 'Interesting. I'd not considered that approach before. That would create... four new risk factors in the initial sublimation process, but I estimate I should be able to manage those efficiently,' he closes his book and shakes my hand. 'You surprise me. What other things are you learned of?'",
+    },
+    {
+	"id": "richclub.scout.jerome",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "jerome.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needswit",
+		"label": "Cunning?",
+		"required": {
+		    "skillreasonc": 1,
+		    "skillreasond_concentration": 1,
+		    "skillreasond_illumination": 1
+		}
+	    }
+	],
+	"startdescription": "My evening is occupied by a chess game with a hawkish, articulate gentleman in the Colchian Room. He plays the black; I play the white. The man is short a rook and a bishop, but he has taken a knight and a bishop. He moves a pawn forward. My turn, then.",
+	"description": "He smiles when I make my move. Five moves after that, I am in checkmate. 'I enjoyed that,' he grins. 'Thank you for the game.' The gentleman goes up from his seat and stalks off to the Arcadian Room.",
+	"warmup": 60,
+	"effects": {
+	    "jerome.a": -1,
+	    "jerome.w": 1
+	},
+	"alt": [
+	    {
+		"id": "richclub.scout.jerome.success"
+	    }
+	]
+    },
+    {
+	"id": "richclub.scout.jerome.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "ability": 1
+	},
+	"startdescription": "He tilts his head to the side when I shift my queen forward. 'Aggressive,' he says approvingly. 'And sacrificial. Were I you, I would have made that gambit.' In eight moves, I put the gentleman in checkmate. He laughs once, disbelievingly. 'An excellent game, I must say. The last time I was defeated this way was at the hands of Major Saxon. Have a drink with me - I'll tell you about him.'",
+    }
+]
+}

@@ -1,0 +1,306 @@
+{
+"recipes": [
+    {
+	"id": "pacifist.trigger",
+	"actionid": "pacifist_verb",
+	"label": "Do No Harm?",
+	"startdescription": "A weak stomach, or perhaps some surviving vestige of morality, has this one questioning the nobility of our work -",
+	"warmup": 15,
+	"tablereqs": {
+	    "pacifist": 1
+	},
+	"slots": [
+	    {
+		"id": "needspacifist",
+		"label": "Follower",
+		"required": {
+		    "pacifist": 1
+		},
+		"greedy": true
+	    }
+	],
+	"linked": [
+	    {
+		"id": "pacifist.trigger.attemptstop"
+	    }
+	]
+    },
+    {
+	"id": "pacifist.trigger.attemptstop",
+	"actionid": "pacifist_verb",
+	"label": "Do No Harm?",
+	"startdescription": "I can attempt to quell this one's doubts with Passion, but they may be staunch in their values. [Provide Passion to prevent this follower from gaining Resentment. You may need to do this multiple times.]",
+	"warmup": 30,
+	"slots": [
+	    {
+		"id": "needspassion",
+		"label": "Passion",
+		"required": {
+		    "passion": 1
+		}
+	    }
+	],
+	"aspects": {
+	    "fatiguing": 1
+	},
+	"linked": [
+	    {
+		"id": "pacifist.trigger.failure"
+	    }
+	],
+	"alt": [
+	    {
+		"id": "pacifist.trigger.attemptstop.passion"
+	    }
+	]
+    },
+    {
+	"id": "pacifist.trigger.attemptstop.passion",
+	"actionid": "pacifist_verb",
+	"label": "Necessary Evil?",
+	"startdescription": "'No worthy thing is attained without sacrifice. And we have enemies: the wicked, the ignorant, the misguided. This was necessary. This will <i>continue</i> to be necessary.'",
+	"requirements": {
+	    "passion": 1
+	},
+	"aspects": {
+	    "fatiguing": 1
+	},
+	"linked": [
+	    {
+		"id": "pacifist.trigger.succeedstop",
+		"chance": 30
+	    },
+	    {
+		"id": "pacifist.trigger.attemptstop"
+	    }
+	]
+    },
+    {
+	"id": "pacifist.trigger.succeedstop",
+	"actionid": "pacifist_verb",
+	"label": "Necessary Evil",
+	"startdescription": "The protestations cease. My follower falls into thoughtful silence. They are still troubled, yes, but they will continue to believe - at least for a little while longer."
+    },
+    {
+	"id": "pacifist.trigger.failure",
+	"actionid": "pacifist_verb",
+	"label": "Do No Harm",
+	"startdescription": "I could not allay this irksome humanitarian's worries. If I allow their doubt to reach a certain threshold, it may blossom into insubordination.",
+	"mutations": [
+	    {
+		"filter": "pacifist",
+		"mutate": "resentment",
+		"level": 1,
+		"additive": true
+	    }
+	]
+    },
+    {
+	"id": "pacifist.trigger.expulsion",
+	"actionid": "pacifist_verb",
+	"label": "Do No Harm?",
+	"startdescription": "A weak stomach, or perhaps some surviving vestige of morality, has this one questioning the nobility of our work -",
+	"warmup": 15,
+	"requirements": {
+	    "pacifist": 1
+	},
+	"linked": [
+	    {
+		"id": "pacifist.trigger.attemptstop"
+	    }
+	]
+    },
+        {
+            "id": "annoyanceattacksuccess",
+            "label": "Ending an Annoyance...",
+            "actionid": "talk",
+            "startdescription": "I await word....",
+            "description": "My minion has returned, with a trophy. The Annoyance has been extirpated.",
+            "aspects": {
+                "endannoyance": 1
+            },
+            "effects": {
+                "corpse": 1,
+                "notoriety": 1
+            },
+            "alt": [
+                {
+                    "id": "annoyancecapturesuccess",
+                    "chance": 30
+                },
+		{
+		    "id": "pacifist.trigger.expulsion",
+		    "additional": true,
+		    "chance": 30,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "pacifist": 1
+			}
+		    }
+		},
+		{
+		    "id": "pacifist.trigger",
+		    "additional": true,
+		    "chance": 30
+		}
+            ],
+            "warmup": 30
+        },
+        {
+            "id": "annoyancecapturesuccess",
+            "label": "Ending an Annoyance...",
+            "actionid": "talk",
+            "startdescription": "I await word....",
+            "description": "My minion has returned, with a prisoner! ...who will have time now to regret his choices.",
+            "aspects": {
+                "endannoyance": 1
+            },
+            "effects": {
+                "notoriety": 1,
+                "genericprisonerm": 1
+            },
+            "alt": [
+		{
+		    "id": "pacifist.trigger.expulsion",
+		    "additional": true,
+		    "chance": 30,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "pacifist": 1
+			}
+		    }
+		},
+		{
+		    "id": "pacifist.trigger",
+		    "additional": true,
+		    "chance": 30
+		}
+            ],
+            "warmup": 10
+        },
+        {
+            "id": "annoyancederangesuccess",
+            "label": "Arranging Night Terrors for an Annoyance...",
+            "actionid": "talk",
+            "startdescription": "I await word....",
+            "description": "My minion has returned. The Annoyance is no longer capable of lucid speech, let alone capable of annoying me further.",
+            "aspects": {
+                "endannoyance": 1
+            },
+            "warmup": 30,
+            "alt": [
+		{
+		    "id": "pacifist.trigger.expulsion",
+		    "additional": true,
+		    "chance": 30,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "pacifist": 1
+			}
+		    }
+		},
+		{
+		    "id": "pacifist.trigger",
+		    "additional": true,
+		    "chance": 30
+		}
+            ],
+        },
+        {
+            "id": "hunterspeakpoison_glassfinger",
+            "label": "Employ Glassfinger Toxin against a Hunter",
+            "actionid": "talk",
+            "requirements": {
+                "ingredientlanternd": 1
+            },
+            "startdescription": "'Enjoying your tea?'",
+            "description": "The end is not pretty, but it's quick and almost painless. When the dissolution is complete, nothing visible remains.",
+            "alt": [
+                {
+                    "id": "huntertenacioussurvives",
+                    "chance": 30
+                },
+		{
+		    "id": "pacifist.trigger",
+		    "additional": true,
+		    "chance": 30
+		}
+            ],
+            "effects": {
+                "ingredientlanternd": -1
+            },
+            "aspects": {
+                "dissolution": 1
+            },
+            "craftable": false
+        },
+        {
+            "id": "hunterspeakpoison",
+            "label": "Employ a Remarkable Poison against a Hunter",
+            "actionid": "talk",
+            "requirements": {
+                "poison": 1
+            },
+            "startdescription": "'Enjoying your tea?'",
+            "description": "The end is not pretty, but it's quick and almost painless. There are much worse ways to die.",
+            "alt": [
+                {
+                    "id": "huntertenacioussurvives",
+                    "chance": 30
+                },
+		{
+		    "id": "pacifist.trigger",
+		    "additional": true,
+		    "chance": 30
+		}
+            ],
+            "effects": {
+                "poison": -1,
+                "notoriety": 1
+            },
+            "aspects": {
+                "killhunter": 1
+            },
+            "craftable": false
+        },
+        {
+            "id": "explorevaultguardian_watchers_success_edge",
+            "actionid": "explore",
+            "label": "The Watchers' End",
+            "startdescription": "Their blood pumps bright, then dark. They should not have opposed us. We move on.",
+            "description": ".",
+            "effects": {
+                "guardian_watchers": -1
+            },
+            "craftable": false,
+            "linked": [
+                {
+                    "id": "explorevaulttick",
+                    "chance": 100
+                }
+            ],
+            "alt": [
+		{
+		    "id": "pacifist.trigger.expulsion",
+		    "additional": true,
+		    "chance": 30,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "pacifist": 1
+			}
+		    }
+		},
+		{
+		    "id": "pacifist.trigger",
+		    "additional": true,
+		    "chance": 30
+		}
+            ],
+            "warmup": 30
+        }
+]
+}

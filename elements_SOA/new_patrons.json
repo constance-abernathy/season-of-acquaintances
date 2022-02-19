@@ -1,0 +1,39 @@
+{
+"elements": [
+    {
+	"id": "william",
+	"label": "Professor William Jericho",
+	"description": "A bookish, thoughtful Englishman greying into late middle age. He was formerly Cambridge’s chair of archaeology, but his interests have veered towards the more disputed vertices of history.",
+	"aspects": {
+	    "patron": 1,
+	    "mortal": 1
+	}
+    },
+    {
+	"id": "rocheford",
+	"label": "H.M. Rocheford",
+	"description": "The editor-in-chief for <i>Interviews With the Invisible,</i> a monthly news column popular amongst madrugadas and noctambules alike. He and his assistant are keen for the obscure, the exotic, and the impossible.",
+	"aspects": {
+	    "patron": 1,
+	    "mortal": 1
+	}
+    },
+    {
+	"id": "armitage",
+	"label": "T. Armitage",
+	"description": "The editor’s assistant: a wiry polyglot with impeccable handwriting and remarkable recall. He is timid in almost every aspect, save for when the facts must be found.",
+	"aspects": {
+	    "mortal": 1
+	}
+    },
+    {
+	"id": "beek",
+	"label": "Alexandra Beek",
+	"description": "When a Reckoner Lord vanished on the Isle of Morbihan, a secret war was fought for the territories he left behind. The self-styled ‘Iron Mother’ was - and remains - the most avid of those belligerents. No score is made in the Capital without her approval.",
+	"aspects": {
+	    "patron": 1,
+	    "mortal": 1
+	}
+    }
+]
+}

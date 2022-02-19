@@ -1,0 +1,451 @@
+{
+"recipes": [
+    {
+	"id": "college.attend",
+	"actionid": "explore",
+	"label": "Attend a public lecture?",
+	"startdescription": "The Imperial College holds weekly public lectures in Bishop Auditorium for the curious and the idle. I might learn something if I drop by.",
+	"requirements": {
+	    "loc.college": 1,
+	    "lore": -1,
+	    "whereabouts": -1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"warmup": 60,
+	"craftable": true,
+        "internaldeck": {
+                "spec": [
+                    "erudition",
+		    "erudition",
+		    "erudition",
+		    "eruditionplus",
+		    "eruditionplus",
+		    "fact.rational",
+		    "fact.eccentric",
+		    "restlessness"
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+        },
+	"description": "@#erudition|An empty seat in the rear of the auditorium accomodates me. No-one sits too closely to another here, and this affords me space to listen. I listen to the lecturer run the length of his knowledge; I listen to the wheedling of chalk against the board. I listen, and I learn.\n#eruditionplus|Today, the college has picked an unusually practiced individual to give the public lecture. The choice of subject is salient, and the rhetoric itself is as clever as it is edifying. The speaker and I exchange thoughts after the hour's end, and my mind comes away bright with new ideas.\n#fact.rational|The current in the air is Newtonian, Euclidian. The higher mathematics and the physical sciences bleed and wash into one another. 'There is an architecture to our world,' the lecturer says, 'and with each passing day we grow closer to understanding its totality.'\n#fact.eccentric|Today is a day of odd intellectual bedfellows. Poetry, philosophy, politics - the lecturer waltzes from the Bard to Bentham, then back again with a clever quip. 'Mark this,' the lecturer says. 'The first thing to understand is that it's all utterly, utterly arbitrary. The rest logically follows as it must.'\n#restlessness|The college's offerings were meagre today. The speaker remained bereft of interest, and lecture's hour felt as a year. Intellectual farce. Unfortunately, I could not even say that it made me laugh.\n@"
+    },
+    {
+	"id": "college.scout",
+	"actionid": "explore",
+	"label": "Allude to occult truths?",
+	"startdescription": "This place teems with scholars, philosophers, writers, and theorists, a few of whom might be interested in more outré sciences. If I speak cleverly of such things, I could entice those few to my side.",
+	"requirements": {
+	    "loc.college": 1,
+	    "lore": 1,
+	    "potentialpatrons": 1,
+	    "potentialacquaintances": 1
+	},
+	"craftable": true,
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "scout.draw.howe",
+		"chance": 30
+	    },
+	    {
+		"id": "college.scout.success.draw",
+		"chance": 70
+	    },
+	    {
+		"id": "scout.failure"
+	    },
+	]
+    },
+    {
+	"id": "scout.failure",
+	"actionid": "explore",
+	"label": "A Lack of Engagement",
+	"startdescription": "I have drawn no new devotees to my work. None to whom I spoke were impressed with my subtleties, and others still may have found them alarming.",
+	"aspects": {
+	    "stale": 1
+	},
+	"internaldeck": {
+	    "spec": [
+		"mystique",
+		"mystique",
+		"notoriety"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": true
+	}
+    },
+    {
+	"id": "scout.draw.howe",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"tablereqs": {
+	    "funds": 1
+	},
+	"effects": {
+	    "howe.a": 1
+	},
+	"linked": [
+	    {
+		"id": "scout.howe"
+	    }
+	],
+	"maxexecutions": 1
+    },
+    {
+	"id": "scout.howe",
+	"actionid": "explore",
+	"label": "A Pickpocket!",
+	"startdescription": "Today, my trawlings of society's chaff have yielded nothing. As I make the return home, however, a shape darts out from the alleyway - I feel my pocketbook torn away from me!",
+	"slots": [
+	    {
+		"id": "needsfunds",
+		"label": "Theft!",
+		"required": {
+		    "funds": 1
+		},
+		"greedy": true
+	    }
+	],
+	"warmup": 15,
+	"linked": [
+	    {
+		"id": "scout.howe.attemptcatch",
+	    }
+	]
+    },
+    {
+	"id": "scout.howe.attemptcatch",
+	"actionid": "explore",
+	"label": "A Pickpocket!",
+	"startdescription": "The thief is already running! I must keep pace if I am to catch him -",
+	"description": "First I lose sight of him, then his footsteps patter out to silence in the evening. The thief has made away with his small prize.",
+	"aspects": {
+	    "stale": 1
+	},
+	"effects": {
+	    "howe.a": -1,
+	    "funds": -1,
+	    "howe.w": 1
+	},
+	"slots": [
+	    {
+		"id": "needshealth",
+		"label": "Stamina",
+		"required": {
+		    "health": 1
+		}
+	    }
+	],
+	"warmup": 45,
+	"alt": [
+	    {
+		"id": "scout.howe.caught"
+	    }
+	]
+    },
+    {
+	"id": "scout.howe.caught",
+	"label": "A Pickpocket, Caught",
+	"actionid": "explore",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "health": 1
+	},
+	"startdescription": "I snatch the thief by his wrist, and there in the lamplight I get a better look at him. His clothes are well-made but filthy; his other hand is a stump. And most strikingly - he is only a child. 'Well? What's it going to be, then?' he huffs defiantly. 'Are you going to take me to the station or not?'",
+    },	
+    {
+	"id": "college.scout.success.draw",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"internaldeck": {
+	    "spec": [
+		"william",
+		"klaus.a",
+		"millie.a",
+		"marjorie.a",
+		"atticus.a"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": false,
+	    "defaultcard": "mistakenidentity"
+	},
+	"linked": [
+	    {
+		"id": "college.scout.william"
+	    },
+	    {
+		"id": "college.scout.klaus"
+	    },
+	    {
+		"id": "college.scout.millie"
+	    },
+	    {
+		"id": "college.scout.marjorie"
+	    },
+	    {
+		"id": "college.scout.atticus"
+	    },
+	    {
+		"id": "scout.depleted"
+	    }
+	]
+    },
+    {
+	"id": "scout.depleted",
+	"actionid": "explore",
+	"label": "No-One Else",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "mistakenidentity": 1
+	},
+	"startdescription": "The hours pass without even the slightest sign of another worthwhile mind. If I am looking for disciples, perhaps I ought to look elsewhere. [You have encountered all patrons and followers at this location.]",
+        "mutations": [
+            {
+                "filter": "location",
+                "mutate": "potentialpatrons",
+                "level": -1
+            },
+            {
+                "filter": "location",
+                "mutate": "potentialacquaintances",
+                "level": -1
+            }
+        ]
+    },
+    {
+	"id": "college.scout.klaus",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "klaus.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "A Response?",
+		"required": {
+		    "reason": 1
+		}
+	    }
+	],
+	"startdescription": "A young man has been caught on my words - a German, or an Austrian. 'I've read a little about pioneering psychoanalysis. Your theories - well, they seem related,' he says. 'Tell me, have you ever considered the applications of light stimuli and hypnotic suggestion in dealing with latent neuroses?'",
+	"description": "'Ah... I see,' he almost-convincingly lies. He nods, looks at the clock, and then hesitates - he nearly says his 'goodbye' - but bashfulness keeps him. He purses his lips and walks swiftly into a classroom I am certain is empty.",
+	"warmup": 60,
+	"effects": {
+	    "klaus.a": -1,
+	    "klaus.w": 1
+	},
+	"alt": [
+	    {
+		"id": "college.scout.klaus.success"
+	    }
+	]
+    },
+    {
+	"id": "college.scout.klaus.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "reason": 1
+	},
+	"startdescription": "'Visionary... how utterly visionary!' the young man nods, smiling. His eyes are bright behind his glasses. 'I would love to hear more of your ideas.'"
+    },
+    {
+	"id": "college.scout.millie",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "millie.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needstext",
+		"label": "Literature?",
+		"required": {
+		    "text": 1
+		},
+		"forbidden": {
+		    "stumm": 1
+		}
+	    }
+	],
+	"startdescription": "A older woman sits in the college library, turning leisurely through a bibliography. A white cat is draped lazily across her shoulders. 'I heard what you've been saying to the others,' she says as I sit across from her. 'Would you know of any reading on that sort of thing? You make it sound terribly interesting.'",
+	"description": "The cat yawns. She smiles apologetically. 'No? Well, that's no worry. If you find something, do let me know. Perhaps I could add it to my library.' And then she is again immersed in her bibliography.",
+	"warmup": 60,
+	"effects": {
+	    "millie.a": -1,
+	    "millie.w": 1
+	},
+	"alt": [
+	    {
+		"id": "college.scout.millie.success"
+	    }
+	]
+    },
+    {
+	"id": "college.scout.millie.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "text": 1
+	},
+	"startdescription": "'That is certainly a catching title. I'll be on the lookout for a copy of my own, then.' the woman softly laughs. The white cat slinks down from the woman's shoulders and noses at my hand. 'And Gideon seems keen on it, too.'"
+    },
+    {
+	"id": "college.scout.marjorie",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "marjorie.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Perceptiveness?",
+		"required": {
+		    "reason": 1
+		}
+	    }
+	],
+	"startdescription": "A very severe-looking woman carrying a stuffed folder crosses my path, or I hers. Neither of us is prepared for the other - a collision ensues! 'Oh, for God's sake!' she hisses, scrambling at the scattered documents. 'Help me get everything in order! The central office is expecting this documentation and it will <i>not</i> be late.'",
+	"description": "The woman gathers up most of the miscellanea without my assistance. She sneers at me as she passes, hurrying down the hallway without so much as a second glance.",
+	"warmup": 60,
+	"effects": {
+	    "marjorie.a": -1,
+	    "marjorie.w": 1
+	},
+	"alt": [
+	    {
+		"id": "college.scout.marjorie.success"
+	    }
+	]
+    },
+    {
+	"id": "college.scout.marjorie.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "reason": 1
+	},
+	"startdescription": "As I look closer at her papers, I notice a discrepancy in the accountings. A number - a single number - is off. 'That's not... well, that <i>is</i> troubling,' she mutters grudgingly. 'Here - since you've already cost me precious minutes, you're all but obligated to help me review these one more time. Come.'"
+    },
+    {
+	"id": "college.scout.atticus",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "atticus.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needspassion",
+		"label": "Brio?",
+		"required": {
+		    "passion": 1
+		}
+	    }
+	],
+	"startdescription": "On the college yard, a large man - American by his accent - approaches me enthusiastically, pamphlets in hand. 'Friend, I ask that you afford me a moment from your day - there is a great inequity that must be brought to the fore of mankind's concern. Allow me to explain -'",
+	"description": "The man makes his proclamations. I listen, but I do not hear. I think that he knows this, but he smiles and shakes my hand all the same. 'I do hope you'll take what I've said to heart,' he nods before leaving for his next victim. 'I'm sure you will. You seem the humanitarian sort.'",
+	"warmup": 60,
+	"effects": {
+	    "atticus.a": -1,
+	    "atticus.w": 1
+	},
+	"alt": [
+	    {
+		"id": "college.scout.atticus.success"
+	    }
+	]
+    },
+    {
+	"id": "college.scout.atticus.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "passion": 1
+	},
+	"startdescription": "He talks fiercely on politics, on the rifts between men: national, economic, racial. As I listen, I find myself matching his fervour and his volume. Passersby glance at our exchange. 'Absolutely!' the American thumps his foot, shaking my hand vigorously. 'Absolutely, yes! You seem to reckon it the same way I do!'"
+    },
+    {
+	"id": "college.scout.william",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "william": 1
+	},
+	"slots": [
+	    {
+		"id": "needshistory",
+		"label": "History?",
+		"required": {
+		    "secrethistories": 2
+		}
+	    }
+	],
+	"startdescription": "I find myself in conversation with one of the faculty, picking apart Heracles and Hercules, Athena and Minerva. 'It's fascinating: how we, as a people, have never been satisfied with one interpretation of myth or history. Who keeps track of all the changes? What have we missed?' His eyes glint conspiratorially.",
+	"description": "Whatever the reason, the conversation dies out. The professor rises from his seat and shakes my hand. 'A pleasure meeting you,' he nods. 'I would love to talk more, but a class is expecting me shortly. We'll have to resume some other time.'",
+	"warmup": 60,
+	"effects": {
+	    "william": -1,
+	    "william.w": 1
+	},
+	"alt": [
+	    {
+		"id": "college.scout.william.success"
+	    }
+	]
+    },
+    {
+	"id": "college.scout.william.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "secrethistories": 2
+	},
+	"startdescription": "'I see we are of the same mind,' he whispers, 'when it comes to who exactly dictates what history is.' The professor adjusts his tie, and smiles.",
+    }
+]
+}

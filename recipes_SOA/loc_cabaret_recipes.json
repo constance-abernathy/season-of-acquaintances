@@ -1,0 +1,316 @@
+{
+"recipes": [
+        {
+            "id": "explorecabaret",
+            "actionid": "explore",
+            "label": "Visit the Ecdysis Club",
+            "requirements": {
+                "locationcabaret": 1,
+                "funds": 1,
+		"lore": -1,
+		"whereabouts": -1
+            },
+            "startdescription": "The entrance is lost beneath soft drapes of crimson, cinnabar and incarnadine. Above the door, the club motto: 'IN GI RUM IMUS NOC TE ET CON SUMI MUR IGNI'. It has been rendered as 'into night's circle we fly, until the fire enjoys us'.",
+            "description": ".",
+            "effects": {
+                "funds": -1
+            },
+            "craftable": true,
+            "deckeffects": {
+                "cabaretevents": 1
+            },
+            "linked": [
+                {
+                    "id": "cabaretpleasure",
+                    "chance": 100
+                },
+                {
+                    "id": "cabaretallure",
+                    "chance": 100
+                },
+                {
+                    "id": "cabareteducation",
+                    "chance": 100
+                },
+                {
+                    "id": "cabaretglimpse",
+                    "chance": 100
+                },
+                {
+                    "id": "cabaretharm",
+                    "chance": 100
+                },
+                {
+                    "id": "cabaretexposure",
+                    "chance": 100
+                },
+                {
+                    "id": "cabarethunger",
+                    "chance": 100
+                },
+                {
+                    "id": "cabaretfey",
+                    "chance": 100
+                }
+            ]
+        },
+    {
+	"id": "cabaret.scout",
+	"actionid": "explore",
+	"label": "Allude to occult truths?",
+	"startdescription": "I have heard things about the Ecdysis Club, and about the club's proprietor. But infamy, as it often does, draws a certain kind of guest to the premises. I am one such guest. There must be others like me here.",
+	"requirements": {
+	    "locationcabaret": 1,
+	    "lore": 1,
+	    "potentialacquaintances": 1,
+	    "potentialpatrons": 1,
+	    "funds": 1
+	},
+	"craftable": true,
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "scout.draw.howe",
+		"chance": 30
+	    },
+	    {
+		"id": "cabaret.scout.success.draw",
+		"chance": 70
+	    },
+	    {
+		"id": "scout.failure"
+	    },
+	]
+    },
+    {
+	"id": "cabaret.scout.success.draw",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"internaldeck": {
+	    "spec": [
+		"sulochana",
+		"lawrence.a",
+		"maximilian.a",
+		"victorien.a"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": false,
+	    "defaultcard": "mistakenidentity"
+	},
+	"linked": [
+	    {
+		"id": "cabaret.scout.sulochana"
+	    },
+	    {
+		"id": "cabaret.scout.lawrence"
+	    },
+	    {
+		"id": "cabaret.scout.maximilian"
+	    },
+	    {
+		"id": "cabaret.scout.victorien"
+	    },
+	    {
+		"id": "scout.depleted"
+	    }
+	]
+    },
+    {
+	"id": "cabaret.scout.sulochana",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "sulochana": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Purpose?",
+		"required": {
+		    "desire": 1,
+		    "mentor": 1
+		}
+	    }
+	],
+	"startdescription": "The floor of the Ecdysis is a laughing, drunken mass of human concentrate. I am of that mass, enjoying myself, watching the dancers twist on the stage. For a moment, my eyes tear away from the entertainment, and when I look up, I see a woman watching from the balcony on high. A cigarette smoulders in her fingers. Our eyes lock - is she searching for something?",
+	"description": "Our eyes don't remain for long. Her gaze moves on quickly, and I feel the tiniest bit of a chill for the remainder of the night.",
+	"warmup": 60,
+	"effects": {
+	    "sulochana": -1,
+	    "sulochana.w": 1
+	},
+	"alt": [
+	    {
+		"id": "cabaret.scout.sulochana.success.desire"
+	    },
+	    {
+		"id": "cabaret.scout.sulochana.success.mentor"
+	    }
+	]
+    },
+    {
+	"id": "cabaret.scout.sulochana.success.desire",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "desire": 1
+	},
+	"startdescription": "The woman cocks her head at me, and there is something serpentine about the motion. Soon after, she disappears from the place she stands on the balcony. And after the show is concluded, I am taken aside by a lean, olive-skinned Greek and brought backstage - there, the woman from the balcony is waiting. 'These things begin, usually, with introductions,' she tells me. She places a hand above her collarbone. 'Sulochana Amavasya.'",
+    },
+    {
+	"id": "cabaret.scout.sulochana.success.mentor",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "mentor": 1
+	},
+	"startdescription": "The woman cocks her head at me, and there is something serpentine about the motion. Soon after, she disappears from the place she stands on the balcony. And after the show is concluded, I am taken aside by a lean, olive-skinned Greek and brought backstage - there, the woman from the balcony is waiting. 'These things begin, usually, with introductions,' she tells me. She places a hand above her collarbone. 'Sulochana Amavasya.'",
+    },
+    {
+	"id": "cabaret.scout.lawrence",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "lawrence.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Wanderlust?",
+		"required": {
+		    "restlessness": 1
+		}
+	    }
+	],
+	"startdescription": "The bar at the Ecdysis seems like the place tonight. There, I meet a traveller from an antique land, or so he claims to be. He relates to me his adventures, his old comrades, his plans to write a book. 'It would fall tragically short of actually <i>being</i> abroad, of course. One should endeavour to see most of this world before we head off for the next, don't you think?'",
+	"description": "His face falls a little. 'It's not for everyone, of course. It can be a rather onerous thing, travelling. And dangerous, too!' The traveller fires off into another tale - something about shacking up with insurgents in Riyadh - but I am no longer listening.",
+	"warmup": 60,
+	"effects": {
+	    "lawrence.a": -1,
+	    "lawrence.w": 1
+	},
+	"alt": [
+	    {
+		"id": "cabaret.scout.lawrence.success"
+	    }
+	]
+    },
+    {
+	"id": "cabaret.scout.lawrence.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "restlessness": 1
+	},
+	"startdescription": "'Oh, indeed. There's a great many things to be had outside of one's rainy fatherland,' the traveller says, raising a glass. 'I will say - <i>power</i> is something I've not heard named amongst those things. It's true, I'm sure, but I've never heard it in conversation before.' I continue the conversation, and by its end he is clear on the kind of power I mean.",
+    },
+    {
+	"id": "cabaret.scout.maximilian",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "maximilian.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Constitution?",
+		"required": {
+		    "health": 1
+		}
+	    }
+	],
+	"startdescription": "Tonight, the club is sweet with indolence. I melt in and out of conversations, and end up with a gaunt-eyed man in the midst of the haze. 'I'm not sure I agree. Art is <i>more</i> than what appears on the canvas - it is the artist's experience. His pains, his weaknesses,' he says to me. I do not remember giving him my opinion on art. 'Here. Have a bit of my weakness.' The gaunt man holds his long pipe out to me.",
+	"description": "Whatever was in his pipe disagreed with me. I watched the man's face bubble like a decoction over a flame; I saw his words fall in sheets of grey from his mouth. And then, at some point, the man was not there.",
+	"warmup": 60,
+	"effects": {
+	    "maximilian.a": -1,
+	    "maximilian.w": 1
+	},
+	"alt": [
+	    {
+		"id": "cabaret.scout.maximilian.success"
+	    }
+	]
+    },
+    {
+	"id": "cabaret.scout.maximilian.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "health": 1
+	},
+	"startdescription": "I draw long on his pipe, and a tendril of smoke goes forth from my throat like a serpent, or a dragon. The gaunt man follows suit. Words follow him, though I lose them in the hazy minutes. 'You're right,' he says. I do not remember what I said, but I like being agreed with. 'We should speak again sometime. Perhaps you could sit for a portrait.'",
+    },
+    {
+	"id": "cabaret.scout.victorien",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "victorien.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Dexterity?",
+		"required": {
+		    "health": 1
+		}
+	    }
+	],
+	"startdescription": "At the rear bar of the Ecdysis is a cyclopean Frenchman, with whom I launch easily into conversation. A principal topic, of course, is his absent eye. 'Up for a game?' he grins, placing a knife on the counter and splaying his hand beside it. 'Make twenty passes between your fingers without drawing blood.' He demonstrates swiftly on himself, not a scratch earned. 'Then I'll tell you how I lost it.'",
+	"description": "I hiss when the blade nicks my finger, dropping it back on the countertop. The Frenchman laughs, wiping the steel on his trouser leg before stowing it back under his coat. 'Valiant, but no dice. You can always try again - so long as you have the fingers to spare.'",
+	"warmup": 60,
+	"effects": {
+	    "victorien.a": -1,
+	    "victorien.w": 1
+	},
+	"alt": [
+	    {
+		"id": "cabaret.scout.victorien.success"
+	    }
+	]
+    },
+    {
+	"id": "cabaret.scout.victorien.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "health": 1
+	},
+	"startdescription": "The Frenchman watches as I make the blade dance between my fingers - twenty passes, and no more. 'And without losing a finger,' he chuckles. 'Bravo - I suppose you've earned that story, now.' I listen to him spin his tale, and then I spin one of my own.",
+    }
+]
+}

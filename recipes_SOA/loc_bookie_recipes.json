@@ -1,0 +1,352 @@
+{
+"recipes": [
+    {
+	"id": "loc.bookie.attend",
+	"actionid": "explore",
+	"label": "Attend an illegal fight",
+	"startdescription": "No matter the locale, the fight is always 'downstairs.' A din of violent flesh and raucous yelling emanates from below, but a burly, flat-faced man prohibits my approach. He holds out his hand, palm up. If I want to watch, I'll have to pay.",
+	"requirements": {
+	    "loc.bookie": 1,
+	    "funds": 1,
+	    "lore": -1,
+	    "whereabouts": -1
+	},
+	"effects": {
+	    "funds": -1
+	},
+	"internaldeck": {
+	    "spec": [
+		"influenceheartc",
+		"influenceedgec",
+		"influenceknock",
+		"funds",
+		"notoriety"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": true,
+	    "defaultcard": "influenceedgec"
+	},
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "loc.bookie.endure"
+	    },
+	    {
+		"id": "loc.bookie.knockout"
+	    },
+	    {
+		"id": "loc.bookie.fight"
+	    },
+	    {
+		"id": "loc.bookie.bet"
+	    },
+	    {
+		"id": "loc.bookie.raid"
+	    }
+	],
+	"craftable": true
+    },
+    {
+	"id": "loc.bookie.endure",
+	"actionid": "explore",	
+	"label": "Attend an illegal fight",
+	"startdescription": "That night, I saw a man endure a spectacular amount of pain. His opponent had struck him so many times that his eye was swollen shut, and the teeth in his mouth had decreased in number. And with his bloody mouth, he smiled. Somehow, he did not go down that night.",
+	"requirements": {
+	    "influenceheart": 1
+	},
+	"effects": {
+	    "contentment": 1
+	},
+	"aspects": {
+	    "stale": 1
+	}
+    },
+    {
+	"id": "loc.bookie.knockout",
+	"actionid": "explore",	
+	"label": "Attend an illegal fight",
+	"startdescription": "The match was especially vicious tonight. The two men in the ring grunted like beasts as they fought. Then, a monumentous <i>thump</i> - the force of the blow was so great that we could see the droplets of perspiration fly off the struck man in great sheets. He went diving towards the ground, and remained there. The crowd roared in ecstasy. I roared with it.",
+	"requirements": {
+	    "influenceedgec": 1
+	},
+	"effects": {
+	    "contentment": 1
+	},
+	"aspects": {
+	    "stale": 1
+	}
+    },
+    {
+	"id": "loc.bookie.fight",
+	"actionid": "explore",	
+	"label": "Attend an illegal fight",
+	"startdescription": "Someone in the crowd slighted me that night, or I him - I did not much care for the distinction. The exchange of insults quickened, intensified, and soon enough my adversary and I were on the street. My ribs ached. There was blood in my mouth. But he, too, had wounds for which I could take credit. A pair of constables eventually collected us, and in the morning I stumbled out from a holding cell, mostly sober.",
+	"requirements": {
+	    "influenceknock": 1
+	},
+	"effects": {
+	    "influenceedgec": 1,
+	    "mystique": 1
+	},
+	"alt": [
+	    {
+		"id": "loc.bookie.wound",
+		"additional": true
+	    }
+	],
+	"aspects": {
+	    "stale": 1
+	}
+    },
+    {
+	"id": "loc.bookie.wound",
+	"actionid": "spit.edge",	
+	"label": "A Wound!",
+	"startdescription": "My activities on the previous night have taken a toll on my body -",
+	"tablereqs": {
+	    "health": 1
+	},
+	"aspects": {
+	    "damagehealth": 1
+	},
+	"slots": [
+	    {
+		"id": "needshealth",
+		"label": "Health",
+		"required": {
+		    "health": 1
+		},
+	 	"greedy": true
+	    }
+	],
+	"warmup": 15
+    },
+    {
+	"id": "loc.bookie.bet",
+	"actionid": "explore",	
+	"label": "Attend an illegal fight",
+	"startdescription": "I was feeling enterprising that night, and staked a wager with the bookies before the fight began. As luck would have it, I chose right - my fighter was victorious by the end of the fifth, or perhaps sixth, round. When I return the bookies, they press a sheaf of banknotes into my hand.",
+	"requirements": {
+	    "funds": 1
+	},
+	"effects": {
+	    "funds": 2,
+	    "contentment": 1
+	},
+	"aspects": {
+	    "stale": 1
+	}
+    },
+    {
+	"id": "loc.bookie.raid",
+	"actionid": "explore",	
+	"label": "Attend an illegal fight",
+	"startdescription": "A disaster! Policemen stormed down into the crowd, arresting and beating the audience members - someone must have tipped off the constabulary about tonight's fight. I see the bookies make away with most of their tallies and betting stubs, but others are not so lucky. I spring out from the commotion of human bodies into the street. Questions will follow this night.",
+	"requirements": {
+	    "notoriety": 1
+	},
+	"aspects": {
+	    "stale": 1
+	}
+    },
+    {
+	"id": "bookie.scout",
+	"actionid": "explore",
+	"label": "Allude to occult truths?",
+	"startdescription": "Murderers and smiths, soldiers and scoundrels - there are common powers they all revere, even if they do not know it. I might tease out some of those powers tonight, and in so doing attract new devotees.",
+	"requirements": {
+	    "loc.bookie": 1,
+	    "lore": 1,
+	    "potentialacquaintances": 1,
+	    "funds": 1
+	},
+	"craftable": true,
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "scout.draw.howe",
+		"chance": 30
+	    },
+	    {
+		"id": "bookie.scout.success.draw",
+		"chance": 70
+	    },
+	    {
+		"id": "scout.failure"
+	    },
+	]
+    },
+    {
+	"id": "bookie.scout.success.draw",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"internaldeck": {
+	    "spec": [
+		"edgar.a",
+		"roya.a",
+		"nadine.a"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": false,
+	    "defaultcard": "mistakenidentity"
+	},
+	"linked": [
+	    {
+		"id": "bookie.scout.edgar"
+	    },
+	    {
+		"id": "bookie.scout.roya"
+	    },
+	    {
+		"id": "bookie.scout.nadine"
+	    },
+	    {
+		"id": "scout.depleted"
+	    }
+	]
+    },
+    {
+	"id": "bookie.scout.edgar",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "edgar.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Audacity?",
+		"required": {
+		    "skillhealtha": 1,
+		    "skillhealthb": 1,
+		    "skillhealthc": 1,
+		    "skillhealthd_strength": 1,
+		    "skillhealthd_grace": 1
+		}
+	    }
+	],
+	"startdescription": "The match-bell clangs, and soon the crowd is vacating the ringside. A tall man roughly elbows me as he passes close, moving me aside. When I glare at him, he looks back, smirking meanly. 'Oh, you gonna do something?' he challenges me. 'Or are we just going to make eyes at each other?' His voice smacks of something American.",
+	"description": "Whether by cowardice or apathy, I remain rooted in place. He sneers when he sees I will not move against him, then spits. 'Thought so.'",
+	"warmup": 60,
+	"effects": {
+	    "edgar.a": -1,
+	    "edgar.w": 1
+	},
+	"alt": [
+	    {
+		"id": "bookie.scout.edgar.success"
+	    }
+	]
+    },
+    {
+	"id": "bookie.scout.edgar.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "ability": 1
+	},
+	"startdescription": "It's fast. I strike him in the jaw, hard. The man stumbles, and when he touches his lip his finger comes away red. 'Well, be still my heart,' he grins. Two policemen stop us when the brawl breaks out onto the street, and after they release us from our neighboring cells, the American tells me his name - and offers me a handshake.",
+    },
+    {
+	"id": "bookie.scout.roya",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "roya.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsemployment",
+		"label": "Strength?",
+		"required": {
+		    "skillhealtha": 1,
+		    "skillhealthb": 1,
+		    "skillhealthc": 1,
+		    "skillhealthd_strength": 1,
+		    "skillhealthd_grace": 1
+		}
+	    }
+	],
+	"startdescription": "In the aftermath of the match, labourers move to disassemble the ring. One of them wrestles with an especially burdensome load of wood and metal - it is surprising she can lift such a weight at all. A few planks fall from her arms as she works, and she swears. <i>'Ahmagh,'</i> the woman grunts.",
+	"description": "I watch her work for a few moments more, then leave the ringside. She looks like she can manage.",
+	"warmup": 60,
+	"effects": {
+	    "roya.a": -1,
+	    "roya.w": 1
+	},
+	"alt": [
+	    {
+		"id": "bookie.scout.roya.success"
+	    }
+	]
+    },
+    {
+	"id": "bookie.scout.roya.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "ability": 1
+	},
+	"startdescription": "She is surprised when I move to help her, and more surprised yet when I refuse payment. Surprised, but not ungrateful. 'That is not correct,' she shakes her head. 'If you do not want the money, you are either a fool, or after something else.' She pauses. 'You are strange. I am Roya.'",
+    },
+    {
+	"id": "bookie.scout.nadine",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "nadine.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Patience?",
+		"required": {
+		    "reason": 1
+		}
+	    }
+	],
+	"startdescription": "When one of the fighters is knocked down, the crowd is divided into cheers and laments. One of the not-so-fortunate betmakers is a young lady in a weathered cap, swearing like a sailor. 'Brilliant,' she grumbles. '<i>He'll go down in the sixth,</i> he says. Great tip, Hitchins.' I don't know who <i>Hitchins</i> is, but I could say something anyway.",
+	"description": "I look over once, maybe twice, but I either lack the interest or the patience required for comiseration with young, luckless ruffians. For the moment, at least. The woman disappears into the crowd as the bookies clear the premises.",
+	"warmup": 60,
+	"effects": {
+	    "nadine.a": -1,
+	    "nadine.w": 1
+	},
+	"alt": [
+	    {
+		"id": "bookie.scout.nadine.success"
+	    }
+	]
+    },
+    {
+	"id": "bookie.scout.nadine.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "ability": 1
+	},
+	"startdescription": "I throw a few words of concurrence her way, even though I have not made a bet on tonight's match. The woman nods vigorously, crumpling her betting stub in her fist and firing into a very, very lengthy opinionated tirade. 'Aye, that's exactly it,' she rants heartily. 'Hitchins <i>is</i> a right bastard. You're alright, though. You know, for listening.'",
+    }
+]
+}

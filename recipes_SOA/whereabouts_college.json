@@ -1,0 +1,181 @@
+{
+"recipes": [
+    {
+	"id": "attempt.klaus.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "klaus.w": 1,
+	    "loc.college": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "A Response?",
+		"required": {
+		    "reason": 1
+		}
+	    }
+	],
+	"startdescription": "Klaus is reading Freud when I find him again. His eyes spark with recognition. 'Oh, hello again,' he says, snapping the book shut. 'Did you... want to discuss neuroses again? Or have you learned something new?'",
+	"description": "'I apologize, but my sister is due for another therapy appointment,' Klaus admits. 'I really can't let her go unsupervised. <i>Bis später.'</i>",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "college.scout.klaus.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.millie.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "millie.w": 1,
+	    "loc.college": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needstext",
+		"label": "Literature?",
+		"required": {
+		    "text": 1
+		}
+	    }
+	],
+	"startdescription": "Millie is reading in the college library again, Gideon curled at her foot. When she sees me, she waves. 'My enigmatic friend appears again,' she croons. 'Did you find anything interesting to read?'",
+	"description": "Again, she smiles gently, though Gideon looks up at me disapprovingly. 'No rush. I'm usually here when I'm not at the Pershing Library. If you find something exciting, I'm all ears.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "college.scout.millie.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.marjorie.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "marjorie.w": 1,
+	    "loc.college": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Perceptiveness?",
+		"required": {
+		    "reason": 1
+		}
+	    }
+	],
+	"startdescription": "Marjorie sits before several small stacks of paper in an empty classroom, scribbling dutifully into a ledger. The door is open, and she sees me. 'Here to distract me, now? Don't make a habit of costing me time.'",
+	"description": "She looks up from her charts long enough to shake her head at me. 'Enough, if you would. Some of us have work to do.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "college.scout.marjorie.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.atticus.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "atticus.w": 1,
+	    "loc.college": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needstext",
+		"label": "Brio?",
+		"required": {
+		    "passion": 1
+		}
+	    }
+	],
+	"startdescription": "Atticus is on the college yard again, though this time a group of captivated students have massed around him. When he finishes his oration, he picks me out from the crowd. 'You're back. Did something I say speak to you?'",
+	"description": "'Maybe not. Ah, well!' Atticus clasps his hands, beaming. 'Rhetoric is a fickle beast. Not even the most eloquent tongue can reliably tame her. And still I try!'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "college.scout.atticus.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.william.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "william.w": 1,
+	    "loc.college": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needstext",
+		"label": "History?",
+		"required": {
+		    "secrethistories": 2
+		}
+	    }
+	],
+	"startdescription": "The professor is enjoying a steaming cup of hot cocoa when next I find him. When he spots me, he bids me to sit with him. 'I apologize for cutting our previous conversation short,' he says, tugging at his collar. 'Where were we? Depictions of Antaeus across the Africas? Or early Mycenaean founding stories?'",
+	"description": "Again, the clock chimes, and the professor gulps down the last of his hot cocoa as he rises from his seat. 'Pity, this always seems to happen when we meet. Find me after class if you can - I am very much interested in continuing this line of inquiry.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "college.scout.william.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.howe.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "howe.w": 1,
+	    "location": 1
+	},
+	"slots": [
+	    {
+		"id": "needsfunds",
+		"label": "Theft!",
+		"required": {
+		    "funds": 1
+		},
+		"greedy": true
+	    }
+	],
+	"startdescription": "The night streets, again. Soon enough, my thieving friend comes to visit -",
+	"linked": [
+	    {
+		"id": "scout.howe.attemptcatch"
+	    }
+	],
+	"warmup": 15,
+	"craftable": true
+    }
+]
+}

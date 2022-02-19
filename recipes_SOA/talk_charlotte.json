@@ -1,0 +1,158 @@
+{
+"recipes": [
+    {
+	"id": "talk.charlotte",
+	"label": "Discuss occult businesss with a Follower",
+	"actionid": "talk",
+	"startdescription": "",
+	"description": "",
+	"requirements": {
+	    "uq_charlotte": 1,
+	    "follower": 1
+	},
+	"warmup": 60,
+	"craftable": true,
+	"slots": [
+	    {
+		"id": "needstopic",
+		"label": "Subject",
+		"required": {
+		    "secrethistories": 1,
+		    "society": 1,
+		    "evidencelevel": 1,
+		    "hunter": 1,
+		    "independent": 1,
+		    "follower": 1,
+		    "tool": 1,
+		    "ingredient": 1,
+		    "annoyance": 1,
+		    "location": 1
+		}
+	    }
+	],
+	"alt": [
+	    {
+		"id": "charlotte.mimic.router"
+	    }
+	]
+    },
+    {
+	"id": "charlotte.mimic.router",
+	"actionid": "talk",
+	"label": "A Change Beneath the Skin?",
+	"startdescription": "Charlotte will spend time observing. She will adopt what peculiarities she can, while she can. [Charlotte will temporarily take on the main aspect of a mortal follower.]",
+	"requirements": {
+	    "charlotte.original": 1,
+	    "follower": 2,
+	    "summoned": -1
+	},
+	"linked": [
+	    {
+		"id": "charlotte.mimic.forge"
+	    },
+	    {
+		"id": "charlotte.mimic.heart"
+	    },
+	    {
+		"id": "charlotte.mimic.grail"
+	    },
+	    {
+		"id": "charlotte.mimic.knock"
+	    },
+	    {
+		"id": "charlotte.mimic.edge"
+	    },
+	    {
+		"id": "charlotte.mimic.winter"
+	    },
+	    {
+		"id": "charlotte.mimic.lantern"
+	    }
+	],
+    },
+    {
+	"id": "charlotte.mimic.lantern",
+	"actionid": "talk",
+	"label": "A Change Beneath the Skin",
+	"startdescription": "Charlotte has changed. At some point, she'll change again.",
+	"requirements": {
+	    "mimiclantern": 1
+	},
+	"aspects": {
+	    "shiftlantern": 1
+	}
+    },
+    {
+	"id": "charlotte.mimic.forge",
+	"actionid": "talk",
+	"label": "A Change Beneath the Skin",
+	"startdescription": "Charlotte has changed. At some point, she'll change again.",
+	"requirements": {
+	    "mimicforge": 1
+	},
+	"aspects": {
+	    "shiftforge": 1
+	}
+    },
+    {
+	"id": "charlotte.mimic.edge",
+	"actionid": "talk",
+	"label": "A Change Beneath the Skin",
+	"startdescription": "Charlotte has changed. At some point, she'll change again.",
+	"requirements": {
+	    "mimicedge": 1
+	},
+	"aspects": {
+	    "shiftedge": 1
+	}
+    },
+    {
+	"id": "charlotte.mimic.winter",
+	"actionid": "talk",
+	"label": "A Change Beneath the Skin",
+	"startdescription": "Charlotte has changed. At some point, she'll change again.",
+	"requirements": {
+	    "mimicwinter": 1
+	},
+	"aspects": {
+	    "shiftwinter": 1
+	}
+    },
+    {
+	"id": "charlotte.mimic.heart",
+	"actionid": "talk",
+	"label": "A Change Beneath the Skin",
+	"startdescription": "Charlotte has changed. At some point, she'll change again.",
+	"requirements": {
+	    "mimicheart": 1
+	},
+	"aspects": {
+	    "shiftheart": 1
+	}
+    },
+    {
+	"id": "charlotte.mimic.grail",
+	"actionid": "talk",
+	"label": "A Change Beneath the Skin",
+	"startdescription": "Charlotte has changed. At some point, she'll change again.",
+	"requirements": {
+	    "mimicgrail": 1
+	},
+	"aspects": {
+	    "shiftgrail": 1
+	}
+    },
+    {
+	"id": "charlotte.mimic.knock",
+	"actionid": "talk",
+	"label": "A Change Beneath the Skin",
+	"startdescription": "Charlotte has changed. At some point, she'll change again.",
+	"requirements": {
+	    "mimicknock": 1
+	},
+	"aspects": {
+	    "shiftknock": 1
+	}
+    }
+]
+}

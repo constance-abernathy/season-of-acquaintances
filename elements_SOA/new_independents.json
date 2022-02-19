@@ -1,0 +1,1627 @@
+{
+"elements": [
+    {
+	"id": "conrad.r",
+	"label": "Conrad, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_beachcomber": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "conrad.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "conrad.b"
+	},
+	"description": "A magician is, perhaps, the most honest thing there is: he says he will deceive you, and he does.",
+	"icon": "conrad.a",
+	"uniquenessgroup": "uq_conrad"
+    },
+    {
+	"id": "conrad.r.c",
+	"label": "Conrad, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_beachcomber": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "conrad.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "conrad.c"
+	},
+	"description": "Conrad could pinch the crown from a king's head while dreaming, and make away with it. But he dreams higher, these days - dangerously higher.",
+	"icon": "conrad.a",
+	"uniquenessgroup": "uq_conrad"
+    },
+    {
+	"id": "conrad.r.d",
+	"label": "'Corvino, the Great'",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_beachcomber": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "conrad.d"
+	},
+	"description": "'Vanishment - a classic, no? There something is, and in the next moment, poof! A novel little trick. But it is only ever complete when you conjure something back in its place. Here, then, is the trick: I will vanish, and in my place will appear something magnificent.'",
+	"icon": "conrad.a",
+	"uniquenessgroup": "uq_conrad"
+    },
+    {
+	"id": "josephine.r",
+	"label": "Josephine, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_moa": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "josephine.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "josephine.b"
+	},
+	"description": "What divine inspiration has struck dumb this holy fool?",
+	"icon": "josephine.a",
+	"uniquenessgroup": "uq_josephine"
+    },
+    {
+	"id": "josephine.r.c",
+	"label": "Josephine, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_moa": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "josephine.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "josephine.c"
+	},
+	"description": "Here is a bliss of wounds, a knot of devotion and agony. Sister Josephine is growing less and less with each passing day, but her faith is a thing swollen with blood.",
+	"icon": "josephine.a",
+	"uniquenessgroup": "uq_josephine"
+    },
+    {
+	"id": "josephine.r.d",
+	"label": "Saint Josephine",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_moa": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "josephine.d"
+	},
+	"description": "'Because I have called and you refused to listen, have stretched out my hand and no one has heeded, because you have ignored all my counsel and would have none of my reproof, I also will laugh at your calamity. Thus is as the Lord would have it.'",
+	"icon": "josephine.a",
+	"uniquenessgroup": "uq_josephine"
+    },
+    {
+	"id": "elizabeth.r",
+	"label": "Elizabeth, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_meniscate": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "elizabeth.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "elizabeth.b"
+	},
+	"description": "A new moon watches blindly from above. Elizabeth is gone.",
+	"icon": "elizabeth.a",
+	"uniquenessgroup": "uq_elizabeth"
+    },
+    {
+	"id": "elizabeth.r.c",
+	"label": "Elizabeth, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_meniscate": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "elizabeth.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "elizabeth.c"
+	},
+	"description": "In the odd storefront window, out from the depths of a puddle, reflected in a retina’s curve - we sometimes see a face that belongs to someone familiar, staring.",
+	"icon": "elizabeth.a",
+	"uniquenessgroup": "uq_elizabeth"
+    },
+    {
+	"id": "elizabeth.r.d",
+	"label": "Elizabeth, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_meniscate": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "elizabeth.d"
+	},
+	"description": "'We’re all just dreaming. Fog on the mirror. And you can never wake up, see? Not unless you let the right sort of light in through the curtains. The first curtain shrouded my face. The second curtain shrouded my mind. The third curtain is <i>you</i>. And the moon - it’s beautiful tonight. Come and see, won’t you? <i>Come and see.</i>'",
+	"icon": "elizabeth.a",
+	"uniquenessgroup": "uq_elizabeth"
+    },
+    {
+	"id": "howe.r",
+	"label": "Howe, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_mare": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "howe.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "howe.b"
+	},
+	"description": "Autumn has withered the leaves on the tree. Howe has left us.",
+	"icon": "howe.a",
+	"uniquenessgroup": "uq_howe"
+    },
+    {
+	"id": "howe.r.c",
+	"label": "Howe, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_mare": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "howe.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "howe.c"
+	},
+	"description": "A voice - a smiling shadow - whispers at his ear sometimes. The boy follows directions, and peril follows the boy.",
+	"icon": "howe.r.c",
+	"uniquenessgroup": "uq_howe"
+    },
+    {
+	"id": "howe.r.d",
+	"label": "Not Quite Howe, Anymore",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_mare": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "howe.d"
+	},
+	"description": "'The boy belongs to <i>me</i>. He’ll grow so tall, and his arms will stretch so wide, and all the things I love will gather under the boughs and be with him - be with <i>us</i>, down where the Sun can’t get in our eyes. It’ll be cream and sundaes and licorice candy in the shade. So, be a dear, and <i>get out of my way.</i>'",
+	"icon": "howe.r.c",
+	"uniquenessgroup": "uq_howe"
+    },
+    {
+	"id": "charlotte.r",
+	"label": "Charlotte, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_moth": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "charlotte.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "charlotte.b"
+	},
+	"description": "A journal, brimming with invective and crude poetry, was left for us in the mail one day.",
+	"icon": "charlotte.a",
+	"uniquenessgroup": "uq_charlotte"
+    },
+    {
+	"id": "charlotte.r.c",
+	"label": "Charlotte, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_moth": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "charlotte.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "charlotte.c"
+	},
+	"description": "Charlotte has abandoned her reason like old skin. Sometimes she is seen skipping stones across the Thames in a nightgown; sometimes she is seen staring into our windows.",
+	"icon": "charlotte.a",
+	"uniquenessgroup": "uq_charlotte"
+    },
+    {
+	"id": "charlotte.r.d",
+	"label": "Charlotte, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_moth": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "charlotte.d"
+	},
+	"description": "'The pitter-patter of not-quite-rain - it cools the inside of my head like springtime breeze, you know. It soothes. Seethes, maybe. I’m never certain. But on some nights, that pittering and a-pattering rattles my head something fierce. I’m bored of all that being on the inside of my skull. I want it on the outside. <i>Outside.</i>'",
+	"icon": "charlotte.a",
+	"uniquenessgroup": "uq_charlotte"
+    },
+    {
+	"id": "lawrence.r",
+	"label": "Lawrence, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_vagabond": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "lawrence.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "lawrence.b"
+	},
+	"description": "The fool’s journey begins with a single, ill-informed step.",
+	"icon": "lawrence.a",
+	"uniquenessgroup": "uq_lawrence"
+    },
+    {
+	"id": "lawrence.r.c",
+	"label": "Lawrence, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_vagabond": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "lawrence.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "lawrence.c"
+	},
+	"description": "Lawrence won’t be predicted, and he can’t be exhausted. We can expect him to be adventuring someplace distant most of the time - the truly dangerous moments are when he wanders near.",
+	"icon": "lawrence.a",
+	"uniquenessgroup": "uq_lawrence"
+    },
+    {
+	"id": "lawrence.r.d",
+	"label": "Lawrence, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_vagabond": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "charlotte.d"
+	},
+	"description": "'Sorry, old chap - if I go this way, you won’t be able to follow. Such a shame, too! You’ve been going at it quite diligently. If it were up to me, I’d have gotten us both tickets. Alas, there are no accolades for the second man to find El Dorado. The first step of the true journey, I’m afraid, belongs to me.'",
+	"icon": "lawrence.a",
+	"uniquenessgroup": "uq_lawrence"
+    },
+    {
+	"id": "klaus.r",
+	"label": "Klaus, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_watchman": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "klaus.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "klaus.b"
+	},
+	"description": "Klaus has exhausted all the possibilities of theory - now comes the time for practice.",
+	"icon": "klaus.a",
+	"uniquenessgroup": "uq_klaus"
+    },
+    {
+	"id": "klaus.r.c",
+	"label": "Klaus, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_watchman": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "klaus.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "klaus.c"
+	},
+	"description": "Klaus is armed with judgements and analyses. Synapse by synapse, he is building a better understanding of our motives, our impulses, and with that understanding he will grow only more formidable yet.",
+	"icon": "klaus.a",
+	"uniquenessgroup": "uq_klaus"
+    },
+    {
+	"id": "klaus.r.d",
+	"label": "Klaus, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_watchman": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "klaus.d"
+	},
+	"description": "'And what are you doing it all for? Yourself? You - you’re mastered by your impulses. Your mind is still operating on that primate-paradigm. Once this is all closed up, at least, I think I’ll finally have what I need to make her well again. No more delusions. I’ll set it all right, just like it was supposed to be.'",
+	"icon": "klaus.a",
+	"uniquenessgroup": "uq_klaus"
+    },
+    {
+	"id": "jerome.r",
+	"label": "Jerome, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_colonel": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "jerome.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "jerome.b"
+	},
+	"description": "We have earned ourselves a most cunning adversary.",
+	"icon": "jerome.a",
+	"uniquenessgroup": "uq_jerome"
+    },
+    {
+	"id": "jerome.r.c",
+	"label": "Jerome, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_colonel": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "jerome.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "jerome.c"
+	},
+	"description": "This is not Jerome’s usual sort of war, but there are similarities: plans to be laid, contests of skill and wit, and a price in blood. Jerome is not averse to that price becoming steep.",
+	"icon": "jerome.a",
+	"uniquenessgroup": "uq_jerome"
+    },
+    {
+	"id": "jerome.r.d",
+	"label": "Jerome, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_colonel": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "jerome.d"
+	},
+	"description": "'Understand this: there comes, in every war, a time when men - good men - must die for the world to endure. When the plan of action is issued, good men do not question, they <i>follow</i>. Even if the plan is severe, and unkind. That is posterity - <i>order</i>. And there is nothing greater in the world than that.'",
+	"icon": "jerome.a",
+	"uniquenessgroup": "uq_jerome"
+    },
+    {
+	"id": "marjorie.r",
+	"label": "Marjorie, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_madrugad": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "marjorie.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "marjorie.b"
+	},
+	"description": "Marjorie has left a letter expressing her dissatisfactions. The penmanship is impeccable.",
+	"icon": "marjorie.a",
+	"uniquenessgroup": "uq_marjorie"
+    },
+    {
+	"id": "marjorie.r.c",
+	"label": "Marjorie, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_madrugad": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "marjorie.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "marjorie.c"
+	},
+	"description": "Each passing sunrise is another tally for Marjorie to mark in her notes. There are, she likes to say, only so many of those left for us - she has calculated it as such.",
+	"icon": "marjorie.a",
+	"uniquenessgroup": "uq_marjorie"
+    },
+    {
+	"id": "marjorie.r.d",
+	"label": "Marjorie, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_madrugad": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "marjorie.d"
+	},
+	"description": "'I had made an effort to quantify - to rationalize what you are. In theory, you and I are very alike. Yet, there is an... <i>outlier</i>, somewhere. A wrinkle in the calculations. I did my best to reconcile, but you had passed the point of no return some time ago, and I failed to observe that. Consider this an effort to rectify my naivete.'",
+	"icon": "marjorie.a",
+	"uniquenessgroup": "uq_marjorie"
+    },
+    {
+	"id": "edgar.r",
+	"label": "Edgar, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "edgar.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "edgar.b"
+	},
+	"description": "Edgar has decided that we are bad for business.",
+	"icon": "edgar.a",
+	"uniquenessgroup": "uq_edgar"
+    },
+    {
+	"id": "edgar.r.c",
+	"label": "Edgar, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "edgar.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "edgar.c"
+	},
+	"description": "We've begun to receive weapons in the mail. Edgar is telling us that we need all the help we can get.",
+	"icon": "edgar.a",
+	"uniquenessgroup": "uq_edgar"
+    },
+    {
+	"id": "edgar.r.d",
+	"label": "Edgar, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "edgar.d"
+	},
+	"description": "'When a law becomes a limitation, break it. When an allegiance becomes a shackle, sever it. And when a teacher becomes a rival - well, I'm sure you can piece that last one together. You're clever. But not much else, and not for long.'",
+	"icon": "edgar.a",
+	"uniquenessgroup": "uq_edgar"
+    },
+    {
+	"id": "roya.r",
+	"label": "Roya, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "roya.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "roya.b"
+	},
+	"description": "When the hammer thinks it is the wielding hand, the hierarchy of things is broken.",
+	"icon": "roya.a",
+	"uniquenessgroup": "uq_roya"
+    },
+    {
+	"id": "roya.r.c",
+	"label": "Roya, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "roya.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "roya.c"
+	},
+	"description": "Roya has abandoned a return to form for something new. We have created our own order of monster by letting her get this far.",
+	"icon": "roya.a",
+	"uniquenessgroup": "uq_roya"
+    },
+    {
+	"id": "roya.r.d",
+	"label": "Roya, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "roya.d"
+	},
+	"description": "'Be quick. Strike from above. Kill. It was easy to live when the rules were so plain. But pain, hunger - these made me break his rules. So, I was rightly punished, I thought. Then, I realized he was <i>ahura</i>, as are you, and that it is an honour to pass from the shadow of the master. I will become what he never conceived, and what you will never achieve.'",
+	"icon": "roya.a",
+	"uniquenessgroup": "uq_roya"
+    },
+    {
+	"id": "ludwig.r",
+	"label": "Ludwig, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_forge": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "ludwig.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "ludwig.b"
+	},
+	"description": "'Nigredo, the first of four. The shortcomings of this extancy must be siphoned out and exposed. Lead is drawn from the earth.'",
+	"icon": "ludwig.a",
+	"uniquenessgroup": "uq_ludwig"
+    },
+    {
+	"id": "ludwig.r.c",
+	"label": "Ludwig, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_forge": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "ludwig.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "ludwig.c"
+	},
+	"description": "'Albedo, the second of four. Now begins the process of intrinsic purification. I will cut the perfect from the imperfect, and prepare for the refinement of the black to the white. Silver rises from lead.'",
+	"icon": "ludwig.a",
+	"uniquenessgroup": "uq_ludwig"
+    },
+    {
+	"id": "ludwig.r.d",
+	"label": "Ludwig, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_forge": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "ludwig.d"
+	},
+	"description": "'Xanthosis, the third. The moon gives way to the sun, and herein is the illuminance of silver into gold. I am aflame as the Great Work had so divinely circumscribed. Have you been paying attention? If you have, you know what comes afterwards. The Philosopher need only look inwards to find the Stone.'",
+	"icon": "ludwig.a",
+	"uniquenessgroup": "uq_ludwig"
+    },
+    {
+	"id": "victorien.r",
+	"label": "Victorien, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_colonel": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "victorien.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "victorien.b"
+	},
+	"description": "Never before has a one-eyed invalid managed to be so irksome.",
+	"icon": "victorien.a",
+	"uniquenessgroup": "uq_victorien"
+    },
+    {
+	"id": "victorien.r.c",
+	"label": "Victorien, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_colonel": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "victorien.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "victorien.c"
+	},
+	"description": "We must step quietly amongst the streets, now, and watch closely the shapes on the rooftops. He is never where we look - Victorien would not be so careless.",
+	"icon": "victorien.a",
+	"uniquenessgroup": "uq_victorien"
+    },
+    {
+	"id": "victorien.r.d",
+	"label": "Victorien, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_colonel": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "victorien.d"
+	},
+	"description": "'Did you know some men actually miss the war? Absurd, no? War tends to be such a messy affair. It takes fathers from families, sons from mothers - eyes, from the faces of handsome men! But, that war - it taught me how to stand, too. And that’s something I’ve got over you, <i>mon ami.</i>'",
+	"icon": "victorien.a",
+	"uniquenessgroup": "uq_victorien"
+    },
+    {
+	"id": "nadine.r",
+	"label": "Nadine, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "nadine.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "nadine.b"
+	},
+	"description": "Perhaps we were not grossly radical enough for her tastes.",
+	"icon": "nadine.a",
+	"uniquenessgroup": "uq_nadine"
+    },
+    {
+	"id": "nadine.r.c",
+	"label": "Nadine, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "nadine.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "nadine.c"
+	},
+	"description": "An anger boils beneath the air’s skin. Nerves are taut with dissent. Nadine is drumming up support for her little rebellion, and in time it may not be so little any more.",
+	"icon": "nadine.a",
+	"uniquenessgroup": "uq_nadine"
+    },
+    {
+	"id": "nadine.r.d",
+	"label": "Nadine, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_lionsmith": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "nadine.d"
+	},
+	"description": "<i>'Brothers; sisters - no more chains! This is the day we've suffered for! Too long have the blind presumed to lead; too long have the old presumed the future! This charade - this farce of masters - it breaks tonight!'</i>",
+	"icon": "nadine.a",
+	"uniquenessgroup": "uq_nadine"
+    },
+    {
+	"id": "yelena.r",
+	"label": "Yelena, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_wolf": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "yelena.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "yelena.b"
+	},
+	"description": "Another mad dog, biting the hand that feeds it. So be it.",
+	"icon": "yelena.a",
+	"uniquenessgroup": "uq_yelena"
+    },
+    {
+	"id": "yelena.r.c",
+	"label": "Yelena, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_wolf": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "yelena.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "yelena.c"
+	},
+	"description": "Yelena sulks in shadows with her vicious oaths, bristling like a beast for her next chance to hurt us. Yes - she’ll hurt us, and then everyone else.",
+	"icon": "yelena.a",
+	"uniquenessgroup": "uq_yelena"
+    },
+    {
+	"id": "yelena.r.d",
+	"label": "Yelena, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_wolf": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "yelena.d"
+	},
+	"description": "'Death - that is the fruit of the <i>Rodina</i>. The tzar, Lenin, Stalin; nine million, ten million. The revolution, the pogroms, ten million more. Mothers cooking and eating their babies. We tread on the bones of our fathers and drink the blood of our sons. There is nothing for it. That is why the snow falls white: to hide the blood.'",
+	"icon": "yelena.a",
+	"uniquenessgroup": "uq_yelena"
+    },
+    {
+	"id": "florence.r",
+	"label": "Florence, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_sir": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "florence.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "florence.b"
+	},
+	"description": "This chilly star is looking to burn anew.",
+	"icon": "florence.a",
+	"uniquenessgroup": "uq_florence"
+    },
+    {
+	"id": "florence.r.c",
+	"label": "Florence, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_sir": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "florence.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "florence.c"
+	},
+	"description": "There again is that old name, renewed in brilliant light and fresh paint. And all across the city, those who look upon her are made silent in awe.",
+	"icon": "florence.a",
+	"uniquenessgroup": "uq_florence"
+    },
+    {
+	"id": "florence.r.d",
+	"label": "Florence, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_sir": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "florence.d"
+	},
+	"description": "'Hush. The show is about to begin.'",
+	"icon": "florence.a",
+	"uniquenessgroup": "uq_florence"
+    },
+    {
+	"id": "ephraim.r",
+	"label": "Ephraim, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_elegiast": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "ephraim.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "ephraim.b"
+	},
+	"description": "Ephraim is out of practice, and he knows there’s only one way to remedy that.",
+	"icon": "ephraim.a",
+	"uniquenessgroup": "uq_ephraim"
+    },
+    {
+	"id": "ephraim.r.c",
+	"label": "Ephraim, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_elegiast": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "ephraim.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "ephraim.c"
+	},
+	"description": "A growing string of disappearances headlines the more recent issues of the Illustrated London News. Ephraim's name is not in the print, but it doesn't have to be.",
+	"icon": "ephraim.a",
+	"uniquenessgroup": "uq_ephraim"
+    },
+    {
+	"id": "ephraim.r.d",
+	"label": "Ephraim, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_elegiast": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "ephraim.d"
+	},
+	"description": "'Oh, those were beautiful times. I was famous, and at the same time, no-one knew who I was. My whole life, nobody noticed. But you did. And for that, I’ll dedicate this last addition - this last monument - to what you were.'",
+	"icon": "ephraim.a",
+	"uniquenessgroup": "uq_ephraim"
+    },
+    {
+	"id": "beatrice.r",
+	"label": "Beatrice, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_snow": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "beatrice.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "beatrice.b"
+	},
+	"description": "'...?'",
+	"icon": "beatrice.a",
+	"uniquenessgroup": "uq_beatrice"
+    },
+    {
+	"id": "beatrice.r.c",
+	"label": "Beatrice, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_snow": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "beatrice.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "beatrice.c"
+	},
+	"description": "'...!'",
+	"icon": "beatrice.a",
+	"uniquenessgroup": "uq_beatrice"
+    },
+    {
+	"id": "beatrice.r.d",
+	"label": "Beatrice, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_snow": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "beatrice.d"
+	},
+	"description": "'...'",
+	"icon": "beatrice.a",
+	"uniquenessgroup": "uq_beatrice"
+    },
+    {
+	"id": "atticus.r",
+	"label": "Atticus, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_thunderskin": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "atticus.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "atticus.b"
+	},
+	"description": "Atticus has always advocated for liberation - now, he is liberated of us.",
+	"icon": "atticus.a",
+	"uniquenessgroup": "uq_atticus"
+    },
+    {
+	"id": "atticus.r.c",
+	"label": "Atticus, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_thunderskin": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "atticus.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "atticus.c"
+	},
+	"description": "Atticus can find a friend almost anywhere, and his friends call him affable, articulate, charitable, hospitable, popular - <i>dangerous</i>.",
+	"icon": "atticus.a",
+	"uniquenessgroup": "uq_atticus"
+    },
+    {
+	"id": "atticus.r.d",
+	"label": "Atticus, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_thunderskin": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "atticus.d"
+	},
+	"description": "<i>'Make of your friends disciples, and make of your enemies friends. If any man should strike your face, repay him with a smile.</i> And those aren't just words, anymore. You may not believe me, but I do pray that, after all is said and done, we might still be friends.'",
+	"icon": "atticus.a",
+	"uniquenessgroup": "uq_atticus"
+    },
+    {
+	"id": "millie.r",
+	"label": "Millie, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_velvet": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "millie.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "millie.b"
+	},
+	"description": "Millie's answer is 'no'.",
+	"icon": "millie.a",
+	"uniquenessgroup": "uq_millie"
+    },
+    {
+	"id": "millie.r.c",
+	"label": "Millie, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_velvet": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "millie.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "millie.c"
+	},
+	"description": "It is difficult, now, to remember what Millie has done, and what she intends to do. The idea of her recedes like the moon behind a cloud, or like blood on fallow earth.",
+	"icon": "millie.a",
+	"uniquenessgroup": "uq_millie"
+    },
+    {
+	"id": "millie.r.d",
+	"label": "Millie, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_velvet": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "millie.d"
+	},
+	"description": "'Gideon used to bring in dead mice. Had to bury so many in the garden. Ghoulish, but it was his way of telling me he was fond of me. Now we’ll bring your failures to the Black-Flax. Maybe she’ll bury you with all the other secret things. Maybe you’ll only be forgotten. We’ll see, won’t we?'",
+	"icon": "millie.a",
+	"uniquenessgroup": "uq_millie"
+    },
+    {
+	"id": "lucetta.r",
+	"label": "Lucetta, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_saw": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "lucetta.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "lucetta.b"
+	},
+	"description": "A greedy little songbird is seeking more of the spotlight.",
+	"icon": "lucetta.a",
+	"uniquenessgroup": "uq_lucetta"
+    },
+    {
+	"id": "lucetta.r.c",
+	"label": "Lucetta, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_saw": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "lucetta.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "lucetta.c"
+	},
+	"description": "The overture is passed, and now we are in the throes of the main act. It is only a matter of time before the curtain is drawn upon us.",
+	"icon": "lucetta.a",
+	"uniquenessgroup": "uq_lucetta"
+    },
+    {
+	"id": "lucetta.r.d",
+	"label": "Lucetta, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_saw": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "lucetta.d"
+	},
+	"description": "'I cannot help if my excellence makes others discouraged. What should I do if someone gets hurt - <i>retire?</i> Who would be left to sing? <i>You?</i> You don’t understand what music is - it is <i>domination</i>. I make the audience think that for a precise moment in time there is only one way, one voice: <i>mine.</i>'",
+	"icon": "lucetta.a",
+	"uniquenessgroup": "uq_lucetta"
+    },
+    {
+	"id": "constance.r",
+	"label": "Constance, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_grail": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "constance.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "constance.b"
+	},
+	"description": "Someone with such an intact sense of compassion could have aided our work only for so long.",
+	"icon": "constance.a",
+	"uniquenessgroup": "uq_constance"
+    },
+    {
+	"id": "constance.r.c",
+	"label": "Constance, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_grail": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "constance.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "constance.c"
+	},
+	"description": "Kindness has made her picky with her meals, but Constance is there in the dark: engorging, splitting, budding. She did her best, she assures herself. The small, sad thing is doll-limp as her teeth sink in.",
+	"icon": "constance.a",
+	"uniquenessgroup": "uq_constance"
+    },
+    {
+	"id": "constance.r.d",
+	"label": "Constance, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_grail": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "constance.d"
+	},
+	"description": "'It’s just you, isn’t it? On that road you paved with your ambitions and your crimes? Well, the little ones have had quite enough, truth be told. They never got to cry, to laugh, to taste - some of them never even had names. But I can give them those things, now. And we’re all going to get a bite of </i>you.'</i>",
+	"icon": "constance.a",
+	"uniquenessgroup": "uq_constance"
+    },
+    {
+	"id": "maximilian.r",
+	"label": "Maximilian, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_flowermaker": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "maximilian.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "maximilian.b"
+	},
+	"description": "The drug-addled daydreamer is looking for a greater high.",
+	"icon": "maximilian.a",
+	"uniquenessgroup": "uq_maximilian"
+    },
+    {
+	"id": "maximilian.r.c",
+	"label": "Maximilian, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_flowermaker": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "maximilian.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "maximilian.c"
+	},
+	"description": "The airs are honeyed thick with sweetness that dulls the senses; indolence and suggestion blend into each other like pigment. These are the signs by which we know Maximilian to be near.",
+	"icon": "maximilian.a",
+	"uniquenessgroup": "uq_maximilian"
+    },
+    {
+	"id": "maximilian.r.d",
+	"label": "Maximilian, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_flowermaker": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "maximilian.d"
+	},
+	"description": "'Vice, vice, vice. You and I have both fallen in love with our respective poisons - mine is just the type that actually poisons you. These deepest delights, I suppose: partake, and be partaken of. But that is, and always will be, <i>his</i> promise. That is a bliss too perfect to refuse.'",
+	"icon": "maximilian.a",
+	"uniquenessgroup": "uq_maximilian"
+    },
+    {
+	"id": "daisy.r",
+	"label": "Daisy, a Troublemaker",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 2,
+	    "suspicious": 1,
+	    "loyalty_malachite": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "daisy.r.c",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "daisy.b"
+	},
+	"description": "Daisy has left us a bundle of chrysanthemums, and a strongly-worded card.",
+	"icon": "daisy.a",
+	"uniquenessgroup": "uq_daisy"
+    },
+    {
+	"id": "daisy.r.c",
+	"label": "Daisy, a Rival",
+	"aspects": {
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 3,
+	    "suspicious": 1,
+	    "loyalty_malachite": 1
+	},
+	"xtriggers": {
+	    "rival_promotion": "daisy.r.d",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "daisy.c"
+	},
+	"description": "We find - often, now - that flies have gone at our food, or that maggots have spoiled our bread. Summer’s promise has become summer’s threat, and Daisy plans to make good on that threat.",
+	"icon": "daisy.a",
+	"uniquenessgroup": "uq_daisy"
+    },
+    {
+	"id": "daisy.r.d",
+	"label": "Daisy, a Long in the Making",
+	"aspects": {
+	    "exalted": 1,
+	    "mortal": 1,
+	    "independent": 1,
+	    "rivalmarks": 4,
+	    "suspicious": 1,
+	    "loyalty_malachite": 1
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "recruiting": "daisy.d"
+	},
+	"description": "'I didn’t want to do this, for your information. I was happy in the garden. But you - I've never met anyone like <i>you</i> before. You’re just... <i>weeds.</i> And there's really only one thing for weeds. Oh well. Maybe something agreeable will grow where I put you. Something sweet, hopefully. Something to put in tea.'",
+	"icon": "daisy.a",
+	"uniquenessgroup": "uq_daisy"
+    },
+	{
+	    "id": "henri_r_c",
+	    "label": "Henri, a Renegade",
+	    "description": "The only true law, Henri has learned, is the law of appetites.",
+	    "aspects": {
+		"independent": 1,
+		"mortal": 1,
+		"rivalmarks": 3,
+		"disciple": 1,
+		"suspicious": 1,
+		"loyalty_grail": 1
+	    },
+            "xtriggers": {
+                "rival_promotion": "henri_r_d",
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "henri_c"
+            },
+	    "uniquenessgroup": "uq_henri",
+            "icon": "henri"
+	},
+	{
+	    "id": "henri_r_d",
+	    "label": "Henri, a Long in the Making",
+	    "description": "Henri has taken depravity within, and depravity without. He drips, he ferments, he salivates - he is almost ready.",
+            "aspects": {
+                "mortal": 1,
+                "independent": 1,
+                "exalted": 1,
+                "rivalmarks": 4,
+                "suspicious": 1,
+		"loyalty_grail": 1
+            },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "henri_d"
+            },
+	    "uniquenessgroup": "uq_henri",
+            "icon": "henri"
+	},
+	{
+	    "id": "kit_r",
+	    "label": "Kit, a Troublemaker",
+	    "description": "Uncle Douglas wouldn’t approve, but Kit is betting he won’t notice the change in interests.",
+	    "aspects": {
+		"independent": 1,
+		"mortal": 1,
+		"rivalmarks": 1,
+		"suspicious": 1
+	    },
+            "xtriggers": {
+                "rival_promotion": "kit_r_c",
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "kit_b"
+            },
+	    "uniquenessgroup": "uq_kit",
+            "icon": "kit"
+	},
+	{
+	    "id": "kit_r_c",
+	    "label": "Kit, a Renegade",
+	    "description": "Here and there, we are noticed. A turned head on the street-corner, a pair of cautious eyes from the high window. Somewhere, Kit is publishing another story.",
+	    "aspects": {
+		"independent": 1,
+		"mortal": 1,
+		"rivalmarks": 3,
+		"disciple": 1,
+		"suspicious": 1,
+		"loyalty_velvet": 1
+	    },
+            "xtriggers": {
+                "rival_promotion": "kit_r_d",
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "kit_c"
+            },
+	    "uniquenessgroup": "uq_kit",
+            "icon": "kit"
+	},
+	{
+	    "id": "kit_r_d",
+	    "label": "Kit, a Long in the Making",
+	    "description": "The headlines herald our ruination; the columns laugh at our foiled schemes. With wit like hers, she could have been a poet or a rhetorician - but Kit won’t settle for that, not anymore.",
+            "aspects": {
+                "mortal": 1,
+                "independent": 1,
+                "exalted": 1,
+                "rivalmarks": 4,
+                "suspicious": 1,
+		"loyalty_velvet": 1
+            },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "kit_d"
+            },
+	    "uniquenessgroup": "uq_kit",
+            "icon": "kit"
+	},
+	{
+	    "id": "lionel_r_c",
+	    "label": "Lionel, a Renegade",
+	    "description": "On the Somme, Lionel realized he would never truly return from the war. Only now has he realized the power in that notion.",
+	    "aspects": {
+		"independent": 1,
+		"mortal": 1,
+		"rivalmarks": 3,
+		"disciple": 1,
+		"suspicious": 1,
+		"loyalty_colonel": 1
+	    },
+            "xtriggers": {
+                "rival_promotion": "lionel_r_d",
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "lionel_c"
+            },
+	    "uniquenessgroup": "uq_lionel",
+            "icon": "lionel"
+	},
+	{
+	    "id": "lionel_r_d",
+	    "label": "Lionel, a Long in the Making",
+	    "description": "Lionel is back upon the warpath, now. His wit is as Alexander’s; his triumph is imminent as the sunrise. To stand in his way is to be extirpated.",
+            "aspects": {
+                "mortal": 1,
+                "independent": 1,
+                "exalted": 1,
+                "rivalmarks": 4,
+                "suspicious": 1,
+		"loyalty_colonel": 1
+            },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "lionel_d"
+            },
+	    "uniquenessgroup": "uq_lionel",
+            "icon": "lionel"
+	},
+	{
+	    "id": "shion_r_c",
+	    "label": "Shion, a Renegade",
+	    "description": "Every Know desires something. Shion is starting to remember that something - an epiphany beneath a sky of royal purple and peeling gold.",
+	    "aspects": {
+		"independent": 1,
+		"mortal": 1,
+		"rivalmarks": 3,
+		"disciple": 1,
+		"suspicious": 1,
+		"loyalty_horned": 1
+	    },
+            "xtriggers": {
+                "rival_promotion": "shion_r_d",
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "shion_c"
+            },
+	    "uniquenessgroup": "uq_shion",
+            "icon": "shion"
+	},
+	{
+	    "id": "shion_r_d",
+	    "label": "Shion, a Long in the Making",
+	    "description": "Sunset is no longer a safe hour for us. Shion is at the threshold of grim destiny, and she need only take one more step to achieve what she had seen in dreams.",
+            "aspects": {
+                "mortal": 1,
+                "independent": 1,
+                "exalted": 1,
+                "rivalmarks": 4,
+                "suspicious": 1,
+		"loyalty_horned": 1
+            },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "recruiting": "shion_d"
+            },
+	    "uniquenessgroup": "uq_shion",
+            "icon": "shion"
+	},
+]
+}

@@ -1,0 +1,264 @@
+{
+"recipes": [
+        {
+            "id": "explorelocationstreetsstrange",
+            "label": "Explore an uncanny tangle of streets by the light of the moon.",
+            "actionid": "explore",
+            "requirements": {
+                "locationstreetsstrange": 1,
+		"lore": -1,
+		"whereabouts": -1
+            },
+            "deckeffects": {
+                "streetsstrangefinds": 1
+            },
+            "startdescription": "Streets are strange in the hour called Meniscate.",
+            "description": "Visions pass me with pavane grace - a window over a wood, a garden of ice, a shivering sun, a woman of glass. I will return home, with reluctance.",
+            "warmup": 30,
+            "craftable": true
+        },
+    {
+	"id": "streets.scout",
+	"actionid": "explore",
+	"label": "Allude to occult truths?",
+	"startdescription": "You never know who you'll meet walking around in the moonlight. I'll venture into the evening, armed with secret knowledge, and any night-traveller I encounter will be made to listen.",
+	"requirements": {
+	    "locationstreetsstrange": 1,
+	    "lore": 1,
+	    "potentialacquaintances": 1
+	},
+	"craftable": true,
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "scout.draw.howe",
+		"chance": 30
+	    },
+	    {
+		"id": "streets.scout.success.draw",
+		"chance": 70
+	    },
+	    {
+		"id": "scout.failure"
+	    },
+	]
+    },
+    {
+	"id": "streets.scout.success.draw",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"internaldeck": {
+	    "spec": [
+		"yelena.a",
+		"charlotte.a",
+		"conrad.a",
+		"elizabeth.a"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": false,
+	    "defaultcard": "mistakenidentity"
+	},
+	"linked": [
+	    {
+		"id": "streets.scout.yelena"
+	    },
+	    {
+		"id": "streets.scout.charlotte"
+	    },
+	    {
+		"id": "streets.scout.conrad"
+	    },
+	    {
+		"id": "streets.scout.elizabeth"
+	    },
+	    {
+		"id": "scout.depleted"
+	    }
+	]
+    },
+    {
+	"id": "streets.scout.yelena",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "yelena.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsdread",
+		"label": "Pain?",
+		"required": {
+		    "dread": 1
+		}
+	    }
+	],
+	"startdescription": "A hunched, looming shape sits on a bench ahead. I draw closer, and I see the shape is a gnarled old woman. 'Keep walking,' she rasps without looking up. 'If you are looking for pain, stay.'",
+	"description": "I hesitate. Then, the old woman rises, and only then do I realize how massive she actually is. She makes good on her promise.",
+	"warmup": 60,
+	"effects": {
+	    "yelena.a": -1,
+	    "yelena.w": 1
+	},
+	"alt": [
+	    {
+		"id": "streets.scout.yelena.success"
+	    },
+	    {
+		"id": "loc.bookie.wound",
+		"additional": true
+	    }
+	]
+    },
+    {
+	"id": "streets.scout.yelena.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "dread": 1
+	},
+	"startdescription": "She grunts when I am finished speaking - kindred pains, or close to it. She makes room on the bench. I sit, and we do not speak for the rest of the night."
+    },
+    {
+	"id": "streets.scout.charlotte",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "charlotte.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Mischief?",
+		"required": {
+		    "passion": 1
+		}
+	    }
+	],
+	"startdescription": "My nighttime travails place me in the company of a figeting, narrow-faced woman - a German, or an Austrian. She has a cigarette but no light; I provide the latter. 'I stole it. The cigarette,' she tells me, exhaling. 'My brother says they'll worsen my anxieties. He says I should be in bed by eight.' She kicks a pebble. 'Will you tell him I was here?'",
+	"description": "'You're lying,' she says, the corners of her mouth tensing and untensing. 'You should learn to do that better.' She puts on the cigarette out on my lapel, and waltzes into the darkness without another word.",
+	"warmup": 60,
+	"effects": {
+	    "charlotte.a": -1,
+	    "charlotte.w": 1
+	},
+	"alt": [
+	    {
+		"id": "streets.scout.charlotte.success"
+	    }
+	]
+    },
+    {
+	"id": "streets.scout.charlotte.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "passion": 1
+	},
+	"startdescription": "The woman giggles appreciatively. 'I've made you a liar,' she laughs, clapping her hands. She passes me the cigarette. 'We'll be liars, both. Both of us.'"
+    },
+    {
+	"id": "streets.scout.conrad",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "conrad.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Percipience?",
+		"required": {
+		    "reason": 1
+		}
+	    }
+	],
+	"startdescription": "A wiry gentleman is out for a midnight stroll, same as I. Taking a silver band off his finger, he proposes a peculiar diversion: he bids me watch the ring pass between his hands. With a snap, it vanishes. He gives me a moment - presumably to marvel - and then pulls the ring from my pocket. 'Do you know how I put that there?' he asks, smug.",
+	"description": "'No? Well, that's the point I suppose,' he jokes. We talk a little more, about the stars and about art and about other frivolities, and I part ways with the gentleman feeling severely underwhelmed. Or perhaps I was cross that I truly did not know how he did his trick.",
+	"warmup": 60,
+	"effects": {
+	    "conrad.a": -1,
+	    "conrad.w": 1
+	},
+	"alt": [
+	    {
+		"id": "streets.scout.conrad.success"
+	    }
+	]
+    },
+    {
+	"id": "streets.scout.conrad.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "reason": 1
+	},
+	"startdescription": "He is taken aback for a moment, and then for a few moments after that. I go so far as to replicate his trick to drive the point. 'Well performed,' he nods, eyebrows raised. 'It's a neat party trick, isn't it?' I agree. But I tell him my interests go far beyond mere party tricks."
+    },
+    {
+	"id": "streets.scout.elizabeth",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "elizabeth.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Fascination?",
+		"required": {
+		    "fascination": 1
+		}
+	    }
+	],
+	"startdescription": "My evening walk takes me under a remote bridge. A grey-haired woman sleeps next to the water there. I try my best not to disturb her, but she wakes despite my best efforts, sitting upright. 'Do you have a mirror?' she asks, her hands outstretched. One side of her face is spiderwebbed with scars.",
+	"description": "For some reason, I elect to keep my distance from the mutilated, gibbering vagrant. My image reflected in the waters below hurries across and away. I glance back, and the woman is still holding her hands out, looking at me.",
+	"warmup": 60,
+	"effects": {
+	    "elizabeth.a": -1,
+	    "elizabeth.w": 1
+	},
+	"alt": [
+	    {
+		"id": "streets.scout.elizabeth.success"
+	    }
+	]
+    },
+    {
+	"id": "streets.scout.elizabeth.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "fascination": 1
+	},
+	"startdescription": "Something in me alights when the clouds part, and the moonlight strikes upon us like a great and milky eye. I beckon her towards the water, and she comes. We both peer over the edge, looking at our murky conterparts reflected in the obsidian waters. 'How serene,' she murmurs, shaking her head. 'How serene.'"
+    }
+]
+}

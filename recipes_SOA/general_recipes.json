@@ -1,0 +1,633 @@
+{
+"recipes": [
+        {
+            "id": "explorevault_expeditionbegun",
+            "label": "The Expedition Sets Off",
+            "actionid": "explore",
+            "requirements": {
+                "vault": 1,
+                "follower": 1,
+                "funds": 1
+            },
+            "startdescription": "I have given my agents the opportunity to serve. Let us hope it ends well for us all.",
+            "description": ".",
+            "linked": [
+                {
+                    "id": "explorevault.add.watchers"
+                },
+                {
+                    "id": "explorevault.add.monks"
+                },
+                {
+                    "id": "explorevault.add.dead"
+                },
+                {
+                    "id": "explorevault.add.serpent"
+                },
+                {
+                    "id": "explorevaulttick",
+                    "chance": 100
+                }
+            ],
+            "craftable": false,
+	    "aspects": {
+		"prepared_trigger": 1
+	    }
+        },
+        {
+            "id": "speakpublicly",
+            "label": "Speak of esoteric matters",
+            "actionid": "talk",
+            "requirements": {
+                "society": -1,
+                "lore": 1,
+		"winter": 99
+            },
+            "effects": {
+                "mystique": 1
+            },
+            "startdescription": "Talking publicly about the invisible arts will attract attention. Perhaps that's what I want.",
+            "description": ".",
+            "warmup": 60,
+            "craftable": true,
+            "deckeffects": {
+                "talkevents": 1
+            },
+            "linked": [
+                {
+                    "id": "talkfindacquaintance",
+                    "chance": 100
+                },
+                {
+                    "id": "talkfindpatron",
+                    "chance": 100
+                }
+            ]
+        },
+	{
+	    "id": "speakpubliclywarning",
+	    "label": "Too Much Scrutiny!",
+	    "actionid": "talk",
+	    "requirements": {
+		"society": -1,
+		"lore": 1
+	    },
+	    "startdescription": "To speak publicly of what I know is to invite a speedy incarceration. [Explore locations in the Capital with Lore to meet individuals who might be of use.]",
+	    "hintonly": true,
+	    "craftable": false
+	},
+        {
+            "id": "cultfoundation_complete",
+            "label": "OUR RISE BEGINS.",
+            "actionid": "establishcult",
+            "effects": {
+                "hq.temporary": 1,
+		"skillsecrecy_a": 1
+            },
+            "description": "I have founded my cult. This is a step to greater power. [Use your cult to recruit and promote followers. Talk with followers about your cult to send them out on cult business.]"
+        },
+	{
+	    "id": "hint_upgradediscretion",
+	    "label": "Increase my cult's discretion?",
+	    "actionid": "study",
+	    "requirements": {
+		"skillsecrecy_uq": 1
+	    },
+	    "startdescription": "Discretion is necessary to hide those of our order from prying authorities. If we have cultivated the proper Secrecy, we might be able to expand our number. [Upgrade your Cult Discretion with Secrecy to increase the maximum number of followers you can recruit.]",
+	    "hintonly": true,
+	    "craftable": false
+	},
+	{
+	    "id": "upgradediscretion_a",
+	    "label": "Increase my cult's discretion: Modest",
+	    "actionid": "study",
+	    "requirements": {
+		"skillsecrecy_a": 1,
+		"secrecy": 2
+	    },
+	    "effects": {
+		"secrecy": -99
+	    },
+	    "aspects": {
+		"upgrade_skillsecrecy": 1
+	    },
+	    "startdescription": "We will grow in the space that subtlety has earned us.",
+	    "description": "A bit of breathing room for our work, and for our devotees.",
+	    "warmup": 60,
+	    "craftable": true,
+	    "burnimage": "secrecyburnimage"
+	},
+	{
+	    "id": "upgradediscretion_b",
+	    "label": "Increase my cult's discretion: Considerable",
+	    "actionid": "study",
+	    "requirements": {
+		"skillsecrecy_b": 1,
+		"secrecy": 4
+	    },
+	    "effects": {
+		"secrecy": -99
+	    },
+	    "aspects": {
+		"upgrade_skillsecrecy": 1
+	    },
+	    "startdescription": "We will grow further yet in the space that subtlety has earned us.",
+	    "description": "Secrecy be our shield, and our sword.",
+	    "warmup": 60,
+	    "craftable": true,
+	    "burnimage": "secrecyburnimage"
+	},
+	{
+	    "id": "upgradediscretion_c",
+	    "label": "Increase my cult's discretion: Invisible",
+	    "actionid": "study",
+	    "requirements": {
+		"skillsecrecy_c": 1,
+		"secrecy": 6
+	    },
+	    "effects": {
+		"secrecy": -99
+	    },
+	    "aspects": {
+		"upgrade_skillsecrecy": 1
+	    },
+	    "startdescription": "We will grow further yet in the space that subtlety has earned us.",
+	    "description": "They shall not see us unless we intend it.",
+	    "warmup": 60,
+	    "craftable": true,
+	    "burnimage": "secrecyburnimage"
+	},
+        {
+            "id": "explorefindvault_g",
+            "label": "Look West, to the Evening Isles where the Long still walk",
+            "actionid": "explore",
+            "requirements": {
+                "fragmentsecrethistoriesg": 1,
+		"location": -1
+            },
+            "effects": {
+                "fragmentsecrethistoriesg": -1
+            },
+            "deckeffects": {
+                "vaultseveningisles": 1
+            },
+            "alt": [
+                {
+                    "id": "explorefindvault_h_floating",
+                    "chance": 50
+                }
+            ],
+            "startdescription": "Across a bright far sea, Port Noon lies. Exiles, monsters and visionaries have long favoured the waters around it. Perhaps we shouldn't get too close. But it might be useful to get close enough.",
+            "description": "This place merits closer investigation.",
+            "warmup": 60,
+            "craftable": true
+        },
+        {
+            "id": "explorefindvault_f",
+            "label": "Locate tombs and sorrows in the Lone and Level Sands",
+            "actionid": "explore",
+            "requirements": {
+                "fragmentsecrethistoriesf": 1,
+		"location": -1
+            },
+            "effects": {
+                "fragmentsecrethistoriesf": -1
+            },
+            "deckeffects": {
+                "vaultsloneandlevelsands": 1
+            },
+            "alt": [
+                {
+                    "id": "explorefindvault_h_floating",
+                    "chance": 50
+                }
+            ],
+            "startdescription": "'The River,' wrote the sage Mek, in the Book of the Centipede, 'runs through the sands out of myth and into legend.' This is the place the Centipede was born, they say. The sands of which Mek wrote hide perilous curiosities.",
+            "description": "This place merits closer investigation.",
+            "warmup": 60,
+            "craftable": true
+        },
+        {
+            "id": "explorefindvault_e",
+            "label": "Hunt for treasures in the Rending Mountains",
+            "actionid": "explore",
+            "requirements": {
+                "fragmentsecrethistoriese": 1,
+		"location": -1
+            },
+            "effects": {
+                "fragmentsecrethistoriese": -1
+            },
+            "deckeffects": {
+                "vaultsrendingmountains": 1
+            },
+            "alt": [
+                {
+                    "id": "explorefindvault_h_floating",
+                    "chance": 50
+                }
+            ],
+            "startdescription": "The Rending Mountains, it has been said, tear the flesh of history. It has generally only been said by people like Christopher Illopoly, but still, they are a good region to find the places that daylight history does not recognise.",
+            "description": "This place merits closer investigation.",
+            "warmup": 60,
+            "craftable": true
+        },
+        {
+            "id": "explorefindvault_d",
+            "label": "Uncover locations in the Land beyond the Forest",
+            "actionid": "explore",
+            "requirements": {
+                "fragmentsecrethistoriesd": 1,
+		"location": -1
+            },
+            "effects": {
+                "fragmentsecrethistoriesd": -1
+            },
+            "deckeffects": {
+                "vaultslandbeyondforest": 1
+            },
+            "alt": [
+                {
+                    "id": "explorefindvault_h_floating",
+                    "chance": 25
+                }
+            ],
+            "startdescription": "'Those stories that have been forbidden are the ones most apt for us to read.' - William Gore",
+            "description": "This place merits closer investigation.",
+            "warmup": 60,
+            "craftable": true
+        },
+        {
+            "id": "explorefindvault_c",
+            "label": "Find sites to explore on the Continent",
+            "actionid": "explore",
+            "requirements": {
+                "fragmentsecrethistoriesc": 1,
+		"location": -1
+            },
+            "effects": {
+                "fragmentsecrethistoriesc": -1
+            },
+            "deckeffects": {
+                "vaultscontinent": 1
+            },
+            "alt": [
+                {
+                    "id": "explorefindvault_h_floating",
+                    "chance": 10
+                }
+            ],
+            "startdescription": "Little wars, great intrigues, cryptic priesthoods, mystic crimes. All past, now, but what traces did they leave?",
+            "description": "This place merits closer investigation.",
+            "warmup": 60,
+            "craftable": true
+        },
+        {
+            "id": "explorefindvault_b",
+            "label": "Uncover sites in the Shires that feature in the Histories",
+            "actionid": "explore",
+            "requirements": {
+                "fragmentsecrethistoriesb": 1,
+		"location": -1
+            },
+            "effects": {
+                "fragmentsecrethistoriesb": -1
+            },
+            "deckeffects": {
+                "vaultsshires": 1
+            },
+            "alt": [
+                {
+                    "id": "explorefindvault_h_floating",
+                    "chance": 5
+                }
+            ],
+            "startdescription": "Odd nooks remain in the quiet countryside - here and there - for those who know where to look.",
+            "description": "This place merits closer investigation.",
+            "warmup": 60,
+            "craftable": true
+        },
+        {
+            "id": "explorefindvault_a",
+            "label": "Seek out the secret places of the city",
+            "actionid": "explore",
+            "requirements": {
+                "fragmentsecrethistories": 1,
+		"location": -1
+            },
+            "effects": {
+                "fragmentsecrethistories": -1
+            },
+            "deckeffects": {
+                "locationscapital": 1
+            },
+            "alt": [
+                {
+                    "id": "explorefindvault_h_floating",
+                    "chance": 2
+                }
+            ],
+            "startdescription": "There are places in the city where I can find extraordinary things... if I can sift the clues out of history and rumour.",
+            "description": "This place merits closer investigation.",
+            "warmup": 60,
+            "craftable": true
+        },
+        {
+            "id": "talktofollower",
+            "label": "Discuss occult business with a Follower",
+            "actionid": "talk",
+            "requirements": {
+                "society": -1,
+                "follower": 1,
+                "summoned": -1
+            },
+            "slots": [
+                {
+                    "id": "Subject",
+                    "label": "Subject",
+                    "description": "Our cult, for cult business; a target; or another topic.",
+                    "required": {
+                        "society": 1,
+                        "evidencelevel": 1,
+                        "hunter": 1,
+                        "independent": 1,
+                        "tool": 1,
+                        "ingredient": 1,
+                        "annoyance": 1,
+                        "location": 1
+                    }
+                }
+            ],
+            "comments": "We have clues upstream for recruitment/promotion, and we don't want this to override them, hence the society limitation.",
+            "alt": [
+                {
+                    "id": "talktohireling_rehire",
+                    "chance": 100
+                },
+                {
+                    "id": "talktodevotee_refire",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_givetool_router",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_cantgivetool",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_locationcabaret_lustsensation",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_locationcabaret_lustchange",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_locationstreetsstrange_lustenlightenment",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_locationauctionhouse_lustpower",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_locationcabaret_notinterested",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_locationstreetsstrange_notinterested",
+                    "chance": 100
+                },
+                {
+                    "id": "A_talktofollower_locationauctionhouse_notinterested",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_repairtoollanternbcracked",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_repairtoollanterndcracked",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_repairtoollanternfcracked",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction.repair.greatwork.sabotaged"
+                },
+                {
+                    "id": "A_follower_settrap_independent",
+                    "chance": 100
+                },
+                {
+                    "id": "A_follower_settrap_vault",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_murderhighwinter",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_craftworkhighforge",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_seducehighgrail",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_burglehighknock",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_charmhighheart",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_auguryhighlantern",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_hoodwinkhighmoth",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_abducthighedge",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_murdermidwinter",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_craftworkmidforge",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_seducemidgrail",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_burglemidknock",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_charmmidheart",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_augurymidlantern",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_hoodwinkmidmoth",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_abductmidedge",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_murderlowwinter",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_craftworklowforge",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_seducelowgrail",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_burglelowknock",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_charmlowheart",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_augurylowlantern",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_hoodwinklowmoth",
+                    "chance": 100
+                },
+                {
+                    "id": "followeraction_abductlowedge",
+                    "chance": 100
+                },
+                {
+                    "id": "track.hiding.lantern.high",
+                    "chance": 100
+                },
+                {
+                    "id": "track.hiding.lantern.med",
+                    "chance": 100
+                },
+                {
+                    "id": "track.hiding.lantern.low",
+                    "chance": 100
+                },
+                {
+                    "id": "track.hiding.knock.high",
+                    "chance": 100
+                },
+                {
+                    "id": "track.hiding.knock.med",
+                    "chance": 100
+                },
+                {
+                    "id": "track.hiding.knock.low",
+                    "chance": 100
+                },
+                {
+                    "id": "attackhunter.edge.high",
+                    "chance": 100
+                },
+                {
+                    "id": "attackhunter.edge.med",
+                    "chance": 100
+                },
+                {
+                    "id": "attackhunter.edge.low",
+                    "chance": 100
+                },
+                {
+                    "id": "attackhunter.winter.high",
+                    "chance": 100
+                },
+                {
+                    "id": "attackhunter.winter.med",
+                    "chance": 100
+                },
+                {
+                    "id": "attackhunter.winter.low",
+                    "chance": 100
+                },
+                {
+                    "id": "attackhunter.unsuitable",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyanceseducehighgrail",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyanceattackhighedge",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyanceseducemidgrail",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyanceattackmidedge",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyancederangemidmoth",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyanceseducelowgrail",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyanceattacklowedge",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyancederangelowmoth",
+                    "chance": 100
+                },
+                {
+                    "id": "annoyanceattacknoedge",
+                    "chance": 100
+                },
+                {
+                    "id": "evidencedestroymidmoth",
+                    "chance": 100
+                },
+                {
+                    "id": "evidencedestroylowmoth",
+                    "chance": 100
+                },
+                {
+                    "id": "evidencedestroynomoth",
+                    "chance": 100
+                }
+            ],
+            "startdescription": "Significant conversations in a smoky meeting-room. What do I need from my follower? [Add your cult, to send them out on cult business; send them after enemies; or raise another matter.]",
+            "description": "Nothing, then.",
+            "warmup": 60,
+            "craftable": true
+        }
+]
+}

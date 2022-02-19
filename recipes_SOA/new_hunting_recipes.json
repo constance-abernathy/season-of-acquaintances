@@ -1,0 +1,524 @@
+{
+"recipes": [
+        {
+            "id": "suspicion",
+            "label": "The Wrong Kind of Attention",
+            "actionid": "suspicion",
+            "requirements": {
+                "seasonsuspicion": 1
+            },
+            "slots": [
+                {
+                    "id": "Suspicion",
+                    "label": "An Adversary?",
+                    "required": {
+                        "hunter": 1
+                    },
+                    "greedy": true
+                }
+            ],
+            "startdescription": "The city is rife with journalists and detectives and other meddlers. How long will they leave me in peace?",
+            "description": "I'm safe for now. The meddlers' attention must be elsewhere. A relief.",
+            "warmup": 10,
+            "craftable": false,
+            "linked": [
+                {
+                    "id": "grab.reputation",
+                    "chance": 100
+                },
+                {
+                    "id": "suspiciontrycreatehunter",
+                    "chance": 70
+                }
+            ]
+        },
+        {
+            "id": "grab.reputation",
+            "label": "Searching for Clues...",
+            "actionid": "suspicion",
+            "requirements": {
+                "hunter": 1
+            },
+            "startdescription": "An adversary is asking questions about my activities...",
+            "slots": [
+                {
+                    "id": "Clues",
+                    "label": "Clues",
+                    "required": {
+                        "reputation": 1
+                    },
+                    "greedy": true
+                }
+            ],
+            "warmup": 30,
+            "linked": [
+	 	{
+		    "id": "trapped.woundhunter.high"
+		},
+	 	{
+		    "id": "trapped.woundhunter.med"
+		},
+	 	{
+		    "id": "trapped.woundhunter.low"
+		},
+		{
+		    "id": "observant.converttonotoriety",
+		    "chance": 70
+		},
+		{
+		    "id": "corrupt.bribe",
+		    "chance": 70
+		},
+		{
+		    "id": "belligerent.router",
+		    "chance": 70
+		},
+		{
+		    "id": "persuasive.router",
+		    "chance": 70
+		},
+                {
+                    "id": "suspicion_searchlongerforevidence"
+                },
+                {
+                    "id": "suspiciongrabevidence"
+                }
+            ]
+        },
+    {
+	"id": "trapped.woundhunter.high",
+	"actionid": "suspicion",
+	"label": "An Incendiary Trap!",
+	"startdescription": "The tripwire is tense with anticipation, and the release of that tension will be particularly destructive -",
+	"warmup": 15,
+	"requirements": {
+	    "trapped": 3
+	},
+	"linked": [
+	    {
+		"id": "trapped.woundhunter.success",
+		"chance": 80
+	    },
+	    {
+		"id": "trapped.woundhunter.failure"
+	    }
+	]
+    },
+    {
+	"id": "trapped.woundhunter.med",
+	"actionid": "suspicion",
+	"label": "An Incendiary Trap!",
+	"startdescription": "The tripwire is tense with anticipation, and the release of that tension will be particularly destructive -",
+	"warmup": 15,
+	"requirements": {
+	    "trapped": 2
+	},
+	"linked": [
+	    {
+		"id": "trapped.woundhunter.success",
+		"chance": 60
+	    },
+	    {
+		"id": "trapped.woundhunter.failure"
+	    }
+	]
+    },
+    {
+	"id": "trapped.woundhunter.low",
+	"actionid": "suspicion",
+	"label": "An Incendiary Trap!",
+	"startdescription": "The tripwire is tense with anticipation, and the release of that tension will be particularly destructive -",
+	"warmup": 15,
+	"requirements": {
+	    "trapped": 1
+	},
+	"linked": [
+	    {
+		"id": "trapped.woundhunter.success",
+		"chance": 40
+	    },
+	    {
+		"id": "trapped.woundhunter.failure"
+	    }
+	]
+    },
+    {
+	"id": "trapped.woundhunter.success",
+	"actionid": "suspicion",
+	"label": "An Incendiary Trap!",
+	"description": "Screams are lost in fire. Our adversary goes stumbling from the rubble, burned and bloodied.",
+	"effects": {
+	    "infamy": 1,
+	    "trapped": -99
+	},
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "hunter_wound",
+		"level": 1,
+		"additive": true
+	    },
+	    {
+		"filter": "hunter",
+		"mutate": "hiding",
+		"level": 1
+	    }
+	],
+	"alt": [
+	    {
+		"id": "tenacious.survives",
+		"chance": 40
+	    }
+	],
+	"linked": [
+	    {
+		"id": "hunter.kill"
+	    },
+	    {
+		"id": "hunter.yearhardened.kill"
+	    }
+	]
+    },
+    {
+	"id": "trapped.woundhunter.failure",
+	"actionid": "suspicion",
+	"label": "An Incendiary Trap!",
+	"description": "Our trap has failed its purpose. The Hunter, uncovering our device, has gone into hiding for fear of further danger.",
+	"effects": {
+	    "infamy": 1,
+	    "notoriety": 1,
+	    "trapped": -99
+	},
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "hiding",
+		"level": 1
+	    }
+	]
+    },
+    {
+	"id": "observant.converttonotoriety",
+	"actionid": "suspicion",
+	"label": "The Devil in the Details",
+	"startdescription": "An Observant Hunter is disentangling the consequential from the inconsequential...",
+	"warmup": 15,
+	"requirements": {
+	    "observant": 1,
+	    "mystique": 1
+	},
+	"effects": {
+	    "mystique": -1,
+	    "notoriety": 1
+	},
+	"linked": [
+	    {
+		"id": "corrupt.bribe",
+		"chance": 70
+	    },
+	    {
+		"id": "suspiciongrabevidence"
+	    },
+	]
+    },
+    {
+	"id": "corrupt.bribe",
+	"actionid": "suspicion",
+	"label": "Money Talks?",
+	"startdescription": "This Hunter has found proof of my crimes, but they have made it clear that one could arrange for them to un-find that proof. [Provide Spintriae to bribe this Hunter into discarding Reputation cards. You may need to do this multiple times to succeed.]",
+	"warmup": 30,
+	"requirements": {
+	    "reputation": 2,
+	    "corrupt": 1
+	},
+	"slots": [
+	    {
+		"id": "needsbribe",
+		"label": "A Bribe?",
+		"required": {
+		    "compensationvalue": 1
+		}
+	    }
+	],
+	"alt": [
+	    {
+		"id": "corrupt.bribe.attempt"
+	    }
+	],
+	"linked": [
+	    {
+		"id": "suspiciongrabevidence"
+	    }
+	]
+    },
+	{
+	    "id": "corrupt.bribe.attempt",
+	    "label": "Money Talks",
+	    "actionid": "suspicion",
+	    "startdescription": "This might be enough to buy my innocence. Or it might not.",
+	    "requirements": {
+		"corrupt": 1,
+		"notoriety": 1,
+		"compensationvalue": 1
+	    },
+	    "effects": {
+		"compensationvalue": -1,
+	    },
+	    "linked": [
+		{
+		    "id": "corrupt.bribemore",
+		    "chance": 40
+		},
+		{
+		    "id": "corrupt.bribesuccess"
+		}
+	    ]
+	},
+	{
+	    "id": "corrupt.bribemore",
+	    "label": "Not Quite Enough",
+	    "actionid": "suspicion",
+	    "startdescription": "My adversary smiles. 'Surely your freedom is worth a little more than that.'",
+	    "requirements": {
+		"corrupt": 1
+	    },
+	    "slots": [
+		{
+		    "id": "needsbribe",
+		    "label": "A Bribe?",
+		    "required": {
+			"compensationvalue": 1
+		    }
+		}
+	    ],
+	    "alt": [
+		{
+		    "id": "corrupt.bribepay"
+		}
+	    ],
+	   "linked": [
+		{
+		    "id": "suspiciongrabevidence"
+		}
+	    ],
+	    "warmup": 30,
+	    "craftable": false
+	},
+	{
+	    "id": "corrupt.bribesuccess",
+	    "label": "A Successful Bribe",
+	    "actionid": "suspicion",
+	    "startdescription": "This Hunter is satisfied - for now. A handshake seals the arrangement. Tonight, a file will be misplaced at the Central Office.",
+	    "effects": {
+		"reputation": -99,
+	    }
+	},
+	{
+	    "id": "belligerent.router",
+	    "label": "Justice by the Sword",
+	    "actionid": "suspicion",
+	    "startdescription": "A Belligerent Hunter is orchestrating an attack...",
+	    "warmup": 30,
+	    "requirements": {
+		"belligerent": 1,
+		"reputation": 2
+	    },
+	    "linked": [
+		{
+		    "id": "belligerent_launchattack_detectscarred",
+		    "chance": 50
+		},
+		{
+		    "id": "belligerent_launchattack_you"
+		}
+	    ]
+	},
+	{
+	    "id": "belligerent_launchattack_detectscarred",
+	    "label": "Justice by the Sword",
+	    "actionid": "suspicion",
+	    "startdescription": "This Hunter has given their associates a target, or is pursuing one themselves. There will be blood.",
+	    "requirements": {
+		"belligerent": 1,
+		"reputation": 2
+	    },
+	    "slots": [
+		{
+		    "id": "needswoundedfollower",
+		    "label": "Target",
+		    "required": {
+			"follower_scar_edge": 1,
+			"follower_scar_knock": 1,
+			"follower_scar_winter": 1
+		    },
+		    "forbidden": {
+			"independent": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "warmup": 15,
+	    "linked": [
+		{
+		    "id": "belligerent_attackfollower"
+		},
+		{
+		    "id": "belligerent_launchattack_detect"
+		}
+	    ]
+	},
+	{
+	    "id": "belligerent_launchattack_detect",
+	    "label": "Justice by the Sword",
+	    "actionid": "suspicion",
+	    "startdescription": "This Hunter has given their associates a target, or is pursuing one themselves. There will be blood.",
+	    "description": "Nothing. This Hunter could find no target for their mob justice.",
+	    "requirements": {
+		"belligerent": 1,
+		"reputation": 2
+	    },
+	    "slots": [
+		{
+		    "id": "needstarget",
+		    "label": "Target",
+		    "required": {
+			"follower": 1
+		    },
+		    "forbidden": {
+			"summoned": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "warmup": 15,
+	    "linked": [
+		{
+		    "id": "belligerent_attackfollower"
+		}
+	    ]
+	},
+	{
+	    "id": "belligerent_attackfollower",
+	    "label": "An Attack on the Street!",
+	    "actionid": "suspicion",
+	    "startdescription": "One of my followers has come under attack -",
+	    "description": "As luck would have it, my follower was able to hold their own against this assault. My adversary will retreat for now, but if I am not careful with our reputation, I can expect another attack in short order.",
+	    "requirements": {
+		"follower": 1,
+		"reputation": 2,
+		"belligerent": 1
+	    },
+	    "effects": {
+		"reputation": -99
+	    },
+	    "warmup": 15,
+	    "alt": [
+		{
+		    "id": "belligerent_attackfollowersuccess",
+		    "chance": 70
+		}
+	    ]
+	},
+	{
+	    "id": "belligerent_attackfollowersuccess",
+	    "label": "An Attack on the Street!",
+	    "actionid": "suspicion",
+	    "description": "The Hunter's assault is swift, and merciless. My follower will need medical attention.",
+	    "mutations": [
+		{
+		    "filter": "follower",
+		    "mutate": "follower_wound",
+		    "level": 1
+		},
+		{
+		    "filter": "follower",
+		    "mutate": "follower",
+		    "level": -1
+		}
+	    ],
+	    "effects": {
+		"reputation": -99
+	    },
+	},
+        {
+            "id": "belligerent_launchattack_you",
+            "actionid": "suspicion",
+            "label": "An Attack on the Street!",
+            "startdescription": "This Hunter is attempting to harm me directly -",
+	    "description": "The Hunter's assault is swift, and merciless. I will need medical attention.",
+            "slots": [
+                {
+                    "id": "health",
+                    "label": "Health",
+                    "required": {
+                        "health": 1,
+			"fatigue": 1
+                    },
+                    "greedy": true
+                }
+            ],
+            "aspects": {
+                "damagehealth": 1
+            },
+	    "effects": {
+		"reputation": -99
+	    },
+            "alt": [
+                {
+                    "id": "belligerent_launchattack_you_nonefound",
+                    "chance": 100
+                }
+            ],
+            "warmup": 30
+        },
+        {
+            "id": "belligerent_launchattack_you_nonefound",
+            "label": "A Final Sentencing",
+            "actionid": "suspicion",
+            "requirements": {
+                "health": -1,
+                "fatigue": -1
+            },
+            "startdescription": "This Hunter is making an attempt on my life! This will wound me - fatally so, if my body is not ready for the coming assault. [Supply Health immediately, or die.]",
+            "craftable": false,
+            "ending": "deathofthebody",
+            "signalEndingFlavour": "Melancholy"
+        },
+	{
+	    "id": "persuasive.router",
+	    "actionid": "suspicion",
+	    "label": "A Silver Tongue",
+	    "startdescription": "A Persuasive Hunter is attempting to sway a follower's loyalty...",
+	    "warmup": 15,
+	    "requirements": {
+		"persuasive": 1,
+		"reputation": 2
+	    },
+	    "slots": [
+		{
+		    "id": "needsfollower",
+		    "label": "Follower",
+		    "required": {
+			"follower": 1
+		    },
+		    "forbidden": {
+			"summoned": 1,
+			"hireling": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "linked": [
+		{
+		    "id": "persuasive.attempt"
+		}
+	    ]
+	},
+	{
+	    "id": "persuasive.attempt",
+	    "actionid": "suspicion",
+	    "label": "A Silver Tongue",
+	    "startdescription": "",
+	    "
+]
+}

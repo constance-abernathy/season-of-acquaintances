@@ -1,0 +1,292 @@
+{
+"elements": [
+        {
+            "id": "henri.hunter",
+            "label": "Inspector-General Gustav",
+            "aspects": {
+                "hunter": 1,
+                "mortal": 1,
+                "corrupt": 1,
+                "meticulous": 1,
+                "observant": 1
+            },
+            "description": "Henri Gustav: an unpleasant, slovenly agent of the law who, until recently, had defeated every charge of corruption brought against him in court. Recent scandal has landed him in the pocket of the Suppression Bureau.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "killhunter": "corpse",
+                "derangemortal": "henri_r_c",
+                "capturehunter": "investigator1prisoner",
+                "dissolution": "influencegraile"
+            },
+	    "icon": "henri"
+        },
+        {
+            "id": "lionel.hunter",
+            "label": "Sir Lionel Saxon",
+            "aspects": {
+                "hunter": 1,
+                "mortal": 1,
+                "belligerent": 1,
+                "grim": 1,
+                "tenacious": 1
+            },
+            "description": "Saxon’s years on the front put him into contact with the unnatural more than a few times. He won’t work directly under the Bureau on account of their 'leniency,' but a well-connected war hero with a penchant for extra-judicial justice will have his own ways to persecute us.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "killhunter": "corpse",
+                "derangemortal": "lionel_r_c",
+                "capturehunter": "investigator2prisoner",
+                "dissolution": "influenceedgee"
+            },
+	    "icon": "lionel"
+        },
+        {
+            "id": "kit.hunter",
+            "label": "Kit Fletcher",
+            "aspects": {
+                "hunter": 1,
+                "mortal": 1,
+                "publicist": 1,
+                "idealist": 1,
+                "erratic": 1
+            },
+            "description": "Miss Fletcher is a industrious little affixture at the offices of the Illustrated London News. Her noontime chats with a source in law enforcement have turned her into the most detestable sort of concerned citizen: one with a platform.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "killhunter": "corpse",
+                "derangemortal": "kit_r_c",
+                "capturehunter": "investigator3prisoner",
+                "dissolution": "influencehearte"
+            },
+	    "icon": "kit"
+        },
+        {
+            "id": "shion.hunter",
+            "label": "Lady Matsuoka",
+            "aspects": {
+                "hunter": 1,
+                "mortal": 1,
+                "clairvoyant": 1,
+                "mystic": 1,
+                "observant": 1
+            },
+            "description": "Shion Matsuoka is renowned in occult academia for her expertise in nyctodromy and horomachistry - and purportedly numbers amongst the Know. The Bureau occasionally defers to her when beset by particularly baffling crimes of revelation.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "killhunter": "corpse",
+                "derangemortal": "shion_r_c",
+                "capturehunter": "investigator4prisoner",
+                "dissolution": "influenceknocke"
+            },
+	    "icon": "shion"
+        },
+        {
+            "id": "investigator5",
+            "label": "E.S. Bostridge",
+            "aspects": {
+                "hunter": 1,
+                "mortal": 1,
+                "grim": 1,
+		"idealist": 1,
+                "observant": 1
+            },
+            "description": "Time has taken from him many things - his badge, his credibility, his vitality - but the dogged will of a lawman remains. He will be bound for the grave before he lets this cold case elude him a second time.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "killhunter": "corpse",
+                "capturehunter": "investigator5prisoner",
+                "dissolution": "influencewintere"
+            }
+        },
+        {
+            "id": "investigator6",
+            "label": "Father Maxwell",
+            "aspects": {
+                "hunter": 1,
+                "mortal": 1,
+                "persuasive": 1,
+                "mithridatic": 1,
+                "grim": 1,
+                "idealist": 1
+            },
+            "description": "An eloquent, dead-eyed man of faith with a habit of chewing on the inside of his mouth. To me, an enemy and a rival; to Josephine, a familiar face.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "killhunter": "corpse",
+                "capturehunter": "investigator6prisoner",
+                "dissolution": "influenceknocke"
+            }
+        },
+        {
+            "id": "investigator7",
+            "label": "Captain Rossetti",
+            "aspects": {
+                "hunter": 1,
+                "mortal": 1,
+                "belligerent": 1,
+                "year_hardened": 1,
+                "grim": 1,
+                "idealist": 1
+            },
+            "description": "Edgar tells me that Rossetti is a formidable man; that Rossetti is much older than he looks; that Rossetti is very hard to kill.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "killhunter": "corpse",
+                "capturehunter": "investigator7prisoner",
+                "dissolution": "influenceforgee"
+            }
+        },
+        {
+            "id": "henri_p",
+            "label": "Inspector-General Gustav: Captured!",
+            "aspects": {
+                "mortal": 1,
+                "prisoner": 1,
+                "grail": 7,
+                "edge": 3,
+                "heart": 3
+            },
+            "description": "Henri Gustav: an unpleasant, slovenly agent of the law. He won't be missed.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "henri_r_c",
+                "dissolution": "influencegraile"
+            },
+            "lifetime": 600,
+            "decayTo": "corpse",
+	    "icon": "henri_p"
+        },
+        {
+            "id": "lionel_p",
+            "label": "Lionel Saxon: Captured!",
+            "aspects": {
+                "prisoner": 1,
+                "mortal": 1,
+                "edge": 4,
+                "lantern": 3,
+                "grail": 3,
+                "heart": 3
+            },
+            "description": "Saxon’s years on the front put him into contact with the unnatural more than a few times. This will be his last.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lionel_r_c",
+                "dissolution": "influenceedgee"
+            },
+            "lifetime": 600,
+            "decayTo": "corpse",
+	    "icon": "lionel_p"
+        },
+        {
+            "id": "kit_p",
+            "label": "Kit Fletcher: Captured!",
+            "aspects": {
+                "prisoner": 1,
+                "mortal": 1,
+                "lantern": 3,
+                "grail": 3,
+                "heart": 7
+            },
+            "description": "Miss Fletcher is a melancholy little affixture against the wall of her cell.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "kit_r_c",
+                "dissolution": "influencehearte"
+            },
+            "lifetime": 600,
+            "decayTo": "corpse",
+	    "icon": "kit_p"
+        },
+        {
+            "id": "shion_p",
+            "label": "Lady Matsuoka: Captured!",
+            "aspects": {
+                "prisoner": 1,
+                "mortal": 1,
+                "knock": 4,
+                "lantern": 3,
+                "grail": 3,
+                "heart": 3
+            },
+            "description": "Shion Matsuoka is counted amongst the Know, and will soon be counted amongst the Dead.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "shion_r_c",
+                "dissolution": "influenceknocke"
+            },
+            "lifetime": 600,
+            "decayTo": "corpse",
+	    "icon": "shion_p"
+        },
+        {
+            "id": "investigator5prisoner",
+            "label": "E.S. Bostridge: Captured!",
+            "aspects": {
+                "prisoner": 1,
+                "mortal": 1,
+                "winter": 4,
+                "grail": 3,
+                "heart": 6
+            },
+            "description": "We've given this once-detective an opportunity to look through the bars from the other side.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "edward_r_c",
+                "dissolution": "influencewintere"
+            },
+            "lifetime": 600,
+            "decayTo": "corpse"
+        },
+        {
+            "id": "investigator6prisoner",
+            "label": "Father Maxwell: Captured!",
+            "aspects": {
+                "prisoner": 1,
+                "mortal": 1,
+                "knock": 7,
+                "grail": 3,
+                "heart": 3
+            },
+            "description": "No god comes to deliver him from me.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "dissolution": "influenceknocke"
+            },
+            "lifetime": 600,
+            "decayTo": "corpse"
+        },
+        {
+            "id": "investigator7prisoner",
+            "label": "Captain Rossetti: Captured!",
+            "aspects": {
+                "prisoner": 1,
+                "mortal": 1,
+                "forge": 4,
+                "edge": 3,
+                "grail": 3,
+                "heart": 3
+            },
+            "description": "Rossetti's vulgar baritone echoes incessantly off the walls of his cell. He has made some rather disparaging remarks about our mothers.",
+            "unique": true,
+            "xtriggers": {
+                "killmortal": "corpse",
+                "dissolution": "influenceforgee"
+            },
+            "lifetime": 600,
+            "decayTo": "corpse"
+        }
+]
+}

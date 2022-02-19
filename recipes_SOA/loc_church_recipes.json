@@ -1,0 +1,354 @@
+{
+"recipes": [
+    {
+	"id": "church.attend",
+	"actionid": "explore",
+	"label": "Make a visit to a quiet church?",
+	"startdescription": "To come here at all feels like a kind of farce. Still, the chapel itself retains an austere beauty. Even I can appreciate the way the sun illuminates St. Peter or St. Lucy in their stained-glass trappings.",
+	"requirements": {
+	    "loc.church": 1,
+	    "lore": -1,
+	    "whereabouts": -1
+	},
+	"extantreqs": {
+	    "priestjob": -1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"warmup": 60,
+	"craftable": true,
+        "internaldeck": {
+                "spec": [
+                    "contentment",
+		    "fleeting",
+		    "influencelantern",
+		    "influenceknock",
+		    "restlessness"
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+        },
+	"description": "@#contentment|The church is a pond of curated silence after the noon mass. Light shines through the glass face of St. Peter. A nun sweeps by the tabernacle. An old man is kneeling in the front pew, praying. This is the peace of a clear mind.\n#fleeting|As I sit in the pew, old memories come to roost. Why come they now? What brought these to the fore of my thoughts? They won't remain for long - perhaps I shall miss them.\n#influencelantern|I admired the stained-glass window where an angel was speaking to the Virgin Mother. A star was set in the angel's head, and the sunlight was caught behind it. For a singular moment, that glass star was as a sun itself.\n#influenceknock|I sat at one of the frontmost pews today. There, I could glimpse the great crucifix, taller than a man, mounted upon the church wall. The wooden Nazarene was weeping. Macabre, if you dwelt on it for too long. But perhaps that was the appeal.\n#restlessness|Space and aesthetics are not a cure-all for a mind in perpetual motion. Today, all I found at the church proper was unrelenting boredom.\n@"
+    },
+    {
+	"id": "priest.church.attend",
+	"actionid": "explore",
+	"label": "Visit another church?",
+	"startdescription": "I know the headmistress who presides over this rustic little church - the nuns do good work here. So, perhaps I shall come a visitor and stay for a while. The delight of my faith is that I am both student and teacher at once.",
+	"requirements": {
+	    "loc.church": 1,
+	    "lore": -1,
+	    "whereabouts": -1
+	},
+	"extantreqs": {
+	    "priestjob": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"warmup": 60,
+	"craftable": true,
+        "internaldeck": {
+                "spec": [
+                    "contentment",
+		    "fleeting",
+		    "influencelantern",
+		    "influenceknock",
+		    "influenceknock"
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+        },
+	"description": "@#contentment|The church is a pond of curated silence after the noon mass. Light shines through the glass face of St. Peter. A nun sweeps by the tabernacle. An old man is kneeling in the front pew, praying. This is the peace of a clear mind.\n#fleeting|As I sit in the pew, old memories come to roost. Why come they now? What brought these to the fore of my thoughts? They won't remain for long - perhaps I shall miss them.\n#influencelantern|I admired the stained-glass window where an angel was speaking to the Virgin Mother. A star was set in the angel's head, and the sunlight was caught behind it. For a singular moment, that glass star was as a sun itself.\n#influenceknock|I sat at one of the frontmost pews today. There, I could glimpse the great crucifix, taller than a man, mounted upon the church wall. The wooden Nazarene was weeping. Macabre, if you dwelt on it for too long. But perhaps that was the appeal.\n@"
+    },
+    {
+	"id": "church.scout",
+	"actionid": "explore",
+	"label": "Allude to occult truths?",
+	"startdescription": "There are places the invisible arts intersect with common religion, and here is a house of common religion. If I am looking for believers, then a church is not a bad place to start.",
+	"requirements": {
+	    "loc.church": 1,
+	    "lore": 1,
+	    "potentialacquaintances": 1
+	},
+	"craftable": true,
+	"warmup": 60,
+	"linked": [
+	    {
+		"id": "scout.draw.howe",
+		"chance": 30
+	    },
+	    {
+		"id": "church.scout.success.draw",
+		"chance": 70
+	    },
+	    {
+		"id": "scout.failure"
+	    },
+	]
+    },
+    {
+	"id": "church.scout.success.draw",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"internaldeck": {
+	    "spec": [
+		"ephraim.a",
+		"beatrice.a",
+		"constance.a",
+		"daisy.a",
+		"josephine.a"
+	    ],
+	    "draws": 1,
+	    "resetonexhaustion": false,
+	    "defaultcard": "mistakenidentity"
+	},
+	"linked": [
+	    {
+		"id": "church.scout.ephraim"
+	    },
+	    {
+		"id": "church.scout.beatrice"
+	    },
+	    {
+		"id": "church.scout.constance"
+	    },
+	    {
+		"id": "church.scout.daisy"
+	    },
+	    {
+		"id": "church.scout.josephine"
+	    },
+	    {
+		"id": "scout.depleted"
+	    }
+	]
+    },
+    {
+	"id": "church.scout.ephraim",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "ephraim.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Remembrance?",
+		"required": {
+		    "fleeting": 1
+		}
+	    }
+	],
+	"startdescription": "I press into the small graveyard the nuns keep behind the church. An old man is there, laying flowers at a grave-site. 'Daughter of a friend. He's over there, actually,' he says, pointing to another gravestone. 'Was with the police. Passed two years ago; never missed a Sunday here. I mean to visit him next  - it's a nice thing to be remembered, after all.'",
+	"description": "He only smiles, and places a heavy hand on my shoulder before moving to the next grave. 'Have a pleasant day, now.' His footsteps are quiet on the snow.",
+	"warmup": 60,
+	"effects": {
+	    "ephraim.a": -1,
+	    "ephraim.w": 1
+	},
+	"alt": [
+	    {
+		"id": "church.scout.ephraim.success"
+	    }
+	]
+    },
+    {
+	"id": "church.scout.ephraim.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "fleeting": 1
+	},
+	"startdescription": "The old man chews his lip a little when I reply. 'No, no... I wouldn't want to be forgotten, either. I'd say it's one of my greatest fears,' he muses. 'Legacy is what it is. I'd like to leave something behind.'"
+    },
+    {
+	"id": "church.scout.beatrice",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "beatrice.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Reminiscence?",
+		"required": {
+		    "fleeting": 1
+		}
+	    }
+	],
+	"startdescription": "In the graveyard behind the church, I see a wheelchair amidst the tombstones. An old woman is sunken into that wheelchair - she couldn't have possibly pushed herself up there, and yet there she is. Her eyes are staring into nothing. If I listen hard enough, I think I can hear the low rattle of her breathing.",
+	"description": "I draw close enough to determine the woman is not dead, but not much closer than that. Something about her unnerves. Besides, what use have I for a nearly-dead invalid?",
+	"warmup": 60,
+	"effects": {
+	    "beatrice.a": -1,
+	    "beatrice.w": 1
+	},
+	"alt": [
+	    {
+		"id": "church.scout.beatrice.success"
+	    }
+	]
+    },
+    {
+	"id": "church.scout.beatrice.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "fleeting": 1
+	},
+	"startdescription": "She latches onto me with one rank, bony talon, and smiles. 'Oh, it's good to see you, dear boy,' she rasps. 'I thought I'd lost you. I'll be out here for a few more minutes, I think. You go on inside; your mother's probably worried sick.'"
+    },
+    {
+	"id": "church.scout.constance",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "constance.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Reassurance?",
+		"required": {
+		    "contentment": 1
+		}
+	    }
+	],
+	"startdescription": "A woman in a burgundy cardigan is drying her eyes outside the confessional. 'Heavens, excuse me,' she tries to hide her distress with a smile. 'I'm making a scene, aren't I? It's just - well, I want to feel sure that I'm doing the right thing. Even though it's... very painful.'",
+	"description": "'I'm terribly sorry; you probably have no idea what I'm talking about,' she sniffs, wiping her eyes again. 'Forget what I said. You're not a confessor, after all.' She hurries out of the church, blowing her nose and wiping her mouth.",
+	"warmup": 60,
+	"effects": {
+	    "constance.a": -1,
+	    "constance.w": 1
+	},
+	"alt": [
+	    {
+		"id": "church.scout.constance.success"
+	    }
+	]
+    },
+    {
+	"id": "church.scout.constance.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "contentment": 1
+	},
+	"startdescription": "The woman smiles appreciatively when I offer her what scraps of assurance I can. 'That's sweet,' she says. 'I know it might not be much to you, but thank you for saying that.' There are, of course, painful things - even reprehensible things - we must do in the service of some greater goal. I would know. "
+    },
+    {
+	"id": "church.scout.daisy",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "daisy.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Enthusiasm?",
+		"required": {
+		    "passion": 1
+		}
+	    }
+	],
+	"startdescription": "I get to chatting with a young volunteer in the churchyard. She's tending a row of bellflowers when I find her, and talks at length about her affinity for things botanical. 'Had to get out from under my folks, sweet as they are. Now I'm here,' she tells me. 'London could use a few more spots of green, wouldn't you agree?'",
+	"description": "I listen, I smile, but the one thing I cannot offer this young lady in the current moment is genuine interest. We each bid each other a polite enough goodbye, and I leave her to play in the dirt.",
+	"warmup": 60,
+	"effects": {
+	    "daisy.a": -1,
+	    "daisy.w": 1
+	},
+	"alt": [
+	    {
+		"id": "church.scout.daisy.success"
+	    }
+	]
+    },
+    {
+	"id": "church.scout.daisy.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "passion": 1
+	},
+	"startdescription": "I am able to carry a more or less pleasant conversation with her on subjects like climate, food, nature, and all the rest. I, eventually, take control of the conversation. I tell her of arts of the earth, of the bees and the bud and all the flowering things. Honeyed words, but they do their job."
+    },
+    {
+	"id": "church.scout.josephine",
+	"actionid": "explore",
+	"label": "Someone of Note?",
+	"aspects": {
+	    "stale": 1
+	},
+	"requirements": {
+	    "josephine.a": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Faith?",
+		"required": {
+		    "injury": 1
+		}
+	    }
+	],
+	"startdescription": "A nun stands beneath the coloured window depicting the crucifixion, her back to me. At first I assume her to be sweeping the floor - but then I see she has no broom. The nun is picking feverishly at a hangnail. 'Oh!' she gasps when I ask if she's alright. 'I'm fine, y-yes. Thank you.' She hides her hands behind her back.",
+	"description": "She doesn't remain in the church for much longer. Quickly - almost in a panic - she turns on her heel and hurries for the rectory. Her finger is bleeding.",
+	"warmup": 60,
+	"effects": {
+	    "josephine.a": -1,
+	    "josephine.w": 1
+	},
+	"alt": [
+	    {
+		"id": "church.scout.josephine.success"
+	    }
+	]
+    },
+    {
+	"id": "church.scout.josephine.success",
+	"actionid": "explore",
+	"label": "Someone of Note",
+	"aspects": {
+	    "stale": 1,
+	    "hiring": 1
+	},
+	"requirements": {
+	    "injury": 1
+	},
+	"startdescription": "Her eyes grow bright when she sees the place my flesh is torn. I cannot show her for long - others might see - and when I pull my sleeve back down, she very nearly pulls it back up herself. 'I... I apologize.' I accept the apology, but also tell her the greatest apology is to be found in devotion."
+    }
+]
+}

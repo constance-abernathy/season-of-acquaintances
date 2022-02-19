@@ -1,0 +1,105 @@
+{
+"recipes": [
+    {
+	"id": "attempt.edgar.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "edgar.w": 1,
+	    "loc.bookie": 1,
+	    "funds": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Audacity?",
+		"required": {
+		    "skillhealtha": 1,
+		    "skillhealthb": 1,
+		    "skillhealthc": 1,
+		    "skillhealthd_strength": 1,
+		    "skillhealthd_grace": 1
+		}
+	    }
+	],
+	"startdescription": "A few patrons mill about ringside after the fight. One of them is that brash American from before - he sees me, and waves in mock greeting. 'Well, well,' he laughs, 'if it isn't my cowardly friend. Fancy seeing you here. Thought I scared you off for good.'",
+	"description": "'Not going to say <i>hello?</i> That's rude of you,' he snickers. Several of the other patrons snicker with him as I take my leave. My face is hot with indignation.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "bookie.scout.edgar.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.roya.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "roya.w": 1,
+	    "loc.bookie": 1,
+	    "funds": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Strength?",
+		"required": {
+		    "skillhealtha": 1,
+		    "skillhealthb": 1,
+		    "skillhealthc": 1,
+		    "skillhealthd_strength": 1,
+		    "skillhealthd_grace": 1
+		}
+	    }
+	],
+	"startdescription": "This time I spot the woman - the Persian - dealing with a drunkard at the doors of tonight's fight venue. The man slurs indignity after indignity at her, but she remains expressionless she guards the entrance. If she is being annoyed, she is doing a very good job of not showing it. If I so desired, I could address that annoyance.",
+	"description": "Not my place to meddle, at least for now. The Persian nods at me, recognizing my sobriety, and lets me downstairs. Behind, I hear the drunkard yelling all the louder as I descend the steps.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "bookie.scout.roya.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.nadine.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "nadine.w": 1,
+	    "loc.bookie": 1,
+	    "funds": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Patience?",
+		"required": {
+		    "reason": 1
+		}
+	    }
+	],
+	"startdescription": "After the fight, I step onto the street to see a cap-wearing young lady victimizing a much larger man. One of his eyes is blacked out, and it looks as though the young lady might black out the other one, too. 'Cost me a pretty sum tonight, Hitchins. Don't let me see you again,' she snarls, roughly releasing the man. Hitchins scampers off, and she turns to see me. 'What are <i>you</i> looking at?'",
+	"description": "I shrug, and she spits. She hefts something over her shoulder - a rifle strap, I realize - and stalks off the street.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "bookie.scout.nadine.success"
+	    }
+	]
+    }
+]
+}

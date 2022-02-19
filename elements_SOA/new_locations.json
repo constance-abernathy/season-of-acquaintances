@@ -1,0 +1,604 @@
+{
+"elements": [
+    {
+	"id": "loc.bookie",
+	"label": "East End Bookies",
+	"description": "The fights organized by this betting circuit are strictly off the books. Sometimes they gather in the basement of an Aldgate pub, sometimes in the rear room of a suspect casino. Tonight, the crowd throngs here.",
+	"aspects": {
+	    "location": 1,
+	    "potentialacquaintances": 1
+	},
+	"slots": [
+	    {
+		"id": "needsfunds",
+		"label": "Entry",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needslore",
+		"label": "Lore?",
+		"required": {
+		    "lore": 1
+		},
+		"description": "If I let slip a secret or two, I might attract notable individuals."
+	    }
+	],
+	"xtriggers": {
+	    "stale": "loc.bookie.closed"
+	},
+	"unique": true
+    },
+    {
+	"id": "loc.bookie.closed",
+	"label": "East End Bookies: Closed",
+	"description": "The fight is over, and the betting boards are being wiped clean. It'll be at least a week before the next match-bell rings.",
+	"resaturate": true,
+	"lifetime": 30,
+	"decayTo": "loc.bookie",
+	"icon": "loc.bookie"
+    },
+    {
+	"id": "loc.college",
+	"label": "The Imperial College",
+	"description": "A furious congregating point for the new academia of the Capital.",
+	"aspects": {
+	    "location": 1,
+	    "potentialacquaintances": 1,
+	    "potentialpatrons": 1
+	},
+	"slots": [
+	    {
+		"id": "needslore",
+		"label": "Lore?",
+		"required": {
+		    "lore": 1
+		},
+		"description": "If I let slip a secret or two, I might attract notable individuals."
+	    }
+	],
+	"xtriggers": {
+	    "stale": "loc.college.closed"
+	},
+	"unique": true
+    },
+    {
+	"id": "loc.college.closed",
+	"label": "The Imperial College: Closed",
+	"description": "The college once again reserves its amenities for its pupils - but next week, another lecturer will take the auditorium.",
+	"resaturate": true,
+	"lifetime": 30,
+	"decayTo": "loc.college",
+	"icon": "loc.college"
+    },
+    {
+	"id": "loc.church",
+	"label": "Church of Our Redeemer Seen",
+	"description": "A small, reserved chapel folded away into the city’s innards, run by a convent of reticent nuns.",
+	"aspects": {
+	    "location": 1,
+	    "potentialacquaintances": 1
+	},
+	"slots": [
+	    {
+		"id": "needslore",
+		"label": "Lore?",
+		"required": {
+		    "lore": 1
+		},
+		"description": "If I let slip a secret or two, I might attract notable individuals."
+	    }
+	],
+	"unique": true
+    },
+    {
+	"id": "membership.richclub",
+	"label": "A Membership at the Tiresiac",
+	"description": "A card of status, and a polished gold ring bearing a blinded eye - assurance of my passage through the exclusive doors of the Tiresiac. [This membership must be renewed periodically with Funds.]",
+	"aspects": {
+	    "proof": 1,
+	    "legacyplotitem": 1
+	},
+	"xtriggers": {
+	    "advancement": "membership.richclub"
+	},
+	"slots": [
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"lifetime": "500",
+	"decayTo": "membership.richclub.expired"
+    },
+    {
+	"id": "membership.richclub.expired",
+	"label": "An Expired Membership",
+	"description": "I've failed to remain timely with my club dues! Membership has never been a light expense, but its restoration will be heavier still. [A larger sum of Funds must be paid to restore an expired membership.]",
+	"aspects": {
+	    "proof": 1,
+	    "legacyplotitem": 1
+	},
+	"xtriggers": {
+	    "advancement": "membership.richclub"
+	},
+	"slots": [
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	]
+    },
+    {
+	"id": "loc.richclub.first",
+	"label": "The Tiresiac",
+	"description": "A retreat for those precious few with a gross excess of fortune and reputation. Most of the patrons who frequent this club are - or were - famous.",
+	"aspects": {
+	    "location": 1,
+	    "potentialacquaintances": 1,
+	    "potentialpatrons": 1
+	},
+	"xtriggers": {
+	    "advancement": "loc.richclub"
+	},
+	"slots": [
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Payment",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"unique": true,
+	"icon": "loc.richclub"
+    },
+    {
+	"id": "loc.richclub",
+	"label": "The Tiresiac",
+	"description": "A retreat for those precious few with a gross excess of fortune and reputation. Most of the patrons who frequent this club are - or were - famous.",
+	"aspects": {
+	    "location": 1,
+	    "potentialacquaintances": 1,
+	    "potentialpatrons": 1
+	},
+	"slots": [
+	    {
+		"id": "needslore",
+		"label": "Lore?",
+		"required": {
+		    "lore": 1
+		},
+		"description": "If I let slip a secret or two, I might attract notable individuals."
+	    }
+	],
+	"unique": true
+    },
+    {
+        "id": "locationcabaret",
+        "label": "The Ecdysis Club",
+        "aspects": {
+            "location": 1,
+	    "potentialacquaintances": 1,
+	    "potentialpatrons": 1,
+            "moth": 1,
+            "grail": 1,
+            "heart": 1
+        },
+        "description": "A cabaret with an occult reputation.",
+        "slots": [
+            {
+                "id": "Entry",
+                "label": "Entry",
+                "actionid": "explore",
+                "required": {
+                    "funds": 1,
+                    "sulochana": 1
+                }
+            },
+	    {
+		"id": "needslore",
+		"label": "Lore?",
+		"required": {
+		    "lore": 1
+		}
+	    }
+        ],
+        "xtriggers": {
+            "locationcabaret": "locationcabaretclosed"
+        },
+        "unique": true,
+        "uniquenessgroup": "uqcabaret"
+    },
+    {
+        "id": "locationstreetsstrange",
+        "label": "Streets Strange by Moonlight",
+        "aspects": {
+            "location": 1,
+	    "potentialacquaintances": 1
+        },
+	"slots": [
+	    {
+		"id": "needslore",
+		"label": "Lore?",
+	        "required": {
+		"lore": 1
+		}
+	    }
+	],
+        "description": "Sometimes, the light of the moon is a key to other spaces. I've found a place where, for a night or two, the streets curve in unfamiliar ways. If I walk here, I might find insight, or I might be touched by madness.",
+        "lifetime": 120
+    }
+]
+}

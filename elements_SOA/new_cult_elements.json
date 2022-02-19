@@ -1,0 +1,145 @@
+{
+"elements": [
+    {
+	"id": "secrecy",
+	"label": "Secrecy",
+	"description": "The more quietly we go about our business, the more business we may go about. [You can use this card to increase your cult's Discretion. Or, you might use it to destroy and downgrade other Reputation cards.]",
+	"lifetime": 300
+    },
+    {
+	"id": "skillsecrecy_a",
+	"label": "Cult Discretion: Amateur",
+	"description": "We are small in number - perhaps that is for the best. [Your cult can only support six members without arousing untenable suspicion.]",
+	"aspects": {
+	    "ability": 1
+	},
+	"xtriggers": {
+	    "upgrade_skillsecrecy": "skillsecrecy_b"
+	},
+	"slots": [
+	    {
+		"id": "needssecrecy",
+		"actionid": "study",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    }
+	],
+	"uniquenessgroup": "skillsecrecy_uq"
+    },
+    {
+	"id": "skillsecrecy_b",
+	"label": "Cult Discretion: Modest",
+	"description": "We are more, now, but still we are careful. [Your cult can support twelve members without arousing untenable suspicion.]",
+	"aspects": {
+	    "ability": 1
+	},
+	"xtriggers": {
+	    "upgrade_skillsecrecy": "skillsecrecy_c"
+	},
+	"slots": [
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    }
+	],
+	"uniquenessgroup": "skillsecrecy_uq"
+    },
+    {
+	"id": "skillsecrecy_c",
+	"label": "Cult Discretion: Considerable",
+	"description": "We throng in the shadows. [Your cult can support eighteen members without arousing untenable suspicion.]",
+	"aspects": {
+	    "ability": 1
+	},
+	"xtriggers": {
+	    "upgrade_skillsecrecy": "skillsecrecy_d"
+	},
+	"slots": [
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    },
+	    {
+		"id": "needssecrecy",
+		"label": "Secrecy",
+		"required": {
+		    "secrecy": 1
+		}
+	    }
+	],
+	"uniquenessgroup": "skillsecrecy_uq"
+    },
+    {
+	"id": "skillsecrecy_d",
+	"label": "Cult Discretion: Invisible",
+	"description": "We are as an invisible hand, and our reach is longer with each passing sunset. [Your cult can support twenty four members without arousing untenable suspicion.]",
+	"aspects": {
+	    "ability": 1
+	}
+    }
+]
+}

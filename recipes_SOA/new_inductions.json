@@ -1,0 +1,135 @@
+{
+"recipes": [
+    {
+	"id": "famous_induction",
+	"actionid": "famous_verb",
+	"label": "The Consequences of Fame",
+	"startdescription": "My follower benefits from their popularity, and suffers from it, too. The flash of eager cameras, the barking of unscrupulous reporters - an ill-informed word might spell disaster for our reputation.",
+	"description": "The crowd has had its fun. We take the first chance to escape the throng of sycophants and instigators, slipping away with our dignity mostly intact.",
+	"linked": [
+	    {
+		"id": "famous_induction",
+	 	"chance": 50
+	    }
+	],
+	"alt": [
+	    {
+		"id": "famous_induction.notoriety",
+		"chance": 30,
+		"additional": true
+	    },
+	    {
+		"id": "famous_induction.mystique",
+		"additional": true
+	    }
+	],
+	"warmup": 15
+    },
+    {
+	"id": "famous_induction.notoriety",
+	"actionid": "spit.lantern",
+	"label": "A Scandalous Gaffe!",
+	"startdescription": "We have uttered something the papers will run with for days on end -",
+	"effects": {
+	    "notoriety": 1
+	},
+	"warmup": 5
+    },
+    {
+	"id": "famous_induction.mystique",
+	"actionid": "spit.lantern",
+	"label": "A Intriguing Statement",
+	"startdescription": "Our words are not directly scandalous, but they are enough to keep the public interested a little longer -",
+	"effects": {
+	    "mystique": 1
+	},
+	"warmup": 5
+    },
+    {
+	"id": "enterprising_induction",
+	"actionid": "enterprising_verb",
+	"label": "An Opportunity for Profit",
+	"startdescription": "My follower has found an opportunity to benefit a little more from this endeavour -",
+	"effects": {
+	    "funds": 1
+	},
+	"linked": [
+	    {
+		"id": "enterprising_induction",
+		"chance": 30
+	    }
+	],
+	"warmup": 10
+    },
+    {
+	"id": "thorough_induction",
+	"actionid": "thorough_verb",
+	"label": "Veiled Movements",
+	"startdescription": "My follower has capitalized on preparations they've made to conceal their deeds -",
+	"effects": {
+	    "secrecy": 1
+	},
+	"warmup": 10
+    },
+    {
+	"id": "amicable_induction",
+	"actionid": "amicable_verb",
+	"label": "A Series of Pleasantries",
+	"startdescription": "My follower is possessed of an infectious sense of optimism - ",
+	"effects": {
+	    "contentment": 1
+	},
+	"warmup": 10
+    },
+    {
+	"id": "sentimental_induction",
+	"actionid": "sentimental_verb",
+	"label": "Minutes and Memory",
+	"startdescription": "My follower reminds me of certain moments, and certain forgotten things - ",
+	"effects": {
+	    "fleeting": 1
+	},
+	"warmup": 10
+    },
+    {
+	"id": "rambling_induction",
+	"actionid": "rambling_verb",
+	"label": "Diseased Knowledge",
+	"startdescription": "My follower does not always understand the things they say. I hope they do not.",
+	"effects": {
+	    "fascination": 1
+	},
+	"warmup": 10
+    },
+    {
+	"id": "morbid_induction",
+	"actionid": "morbid_verb",
+	"label": "Ghastly Exchanges",
+	"startdescription": "My follower does not mean to unnerve me when they speak. I am half-certain they do not.",
+	"effects": {
+	    "dread": 1
+	},
+	"warmup": 10
+    },
+    {
+	"id": "scholarly_induction",
+	"actionid": "scholarly_verb",
+	"label": "Edification in All Things",
+	"startdescription": "My follower's presence is conducive to learning -",
+	"effects": {
+	    "fact.rational": 1
+	},
+	"warmup": 10
+    },
+    {
+	"id": "impassioned_induction",
+	"actionid": "impassioned_verb",
+	"label": "Unlikely Inspiration",
+	"startdescription": "Here and there, my follower's knotted wit bears something striking -",
+	"effects": {
+	    "fact.eccentric": 1
+	},
+	"warmup": 10
+    }
+]
+}

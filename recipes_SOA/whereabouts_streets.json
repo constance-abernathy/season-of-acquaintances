@@ -1,0 +1,128 @@
+{
+"recipes": [
+    {
+	"id": "attempt.yelena.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "yelena.w": 1,
+	    "locationstreetsstrange": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Pain?",
+		"required": {
+		    "dread": 1
+		}
+	    }
+	],
+	"startdescription": "The hulking crone is in the same place I found her, sitting alone on a bench. She does not look at me as I approach, but she speaks: 'Why did you return? I was clear, the last time we met, about what I would do to you.'",
+	"description": "'I think I am growing to dislike you more, now,' the old woman rasps. Her voice is like the shearing of old metal. 'I don't like you. I don't like your face. It makes me want to do things to it.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "streets.scout.yelena.success"
+	    },
+	    {
+		"id": "loc.bookie.wound",
+		"additional": true
+	    }
+	]
+    },
+    {
+	"id": "attempt.charlotte.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "charlotte.w": 1,
+	    "locationstreetsstrange": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Mischief?",
+		"required": {
+		    "passion": 1
+		}
+	    }
+	],
+	"startdescription": "Tonight, Charlotte finds me. Her cigarette is lit this time, and she waves when she sees I recognize her. 'Hello again,' she says rather innocuously. 'So, you <i>didn't</i> tell my brother after all. That was nice. And what about tonight? Can I believe you?'",
+	"description": "She shakes her head, smiling, when I answer. 'Practice by telling small ones, first. That way you can learn to tell bigger ones. Grander ones.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "streets.scout.charlotte.success"
+	    },
+	]
+    },
+    {
+	"id": "attempt.conrad.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "conrad.w": 1,
+	    "locationstreetsstrange": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Percipience?",
+		"required": {
+		    "reason": 1
+		}
+	    }
+	],
+	"startdescription": "The magician and I meet again in the moonlight; it seems we are both habitual <i>noctambules.</i> 'A pleasant evening to you,' he says, doffing his hat. 'So, have you figured my trick yet? Would you like me to perform it again?'",
+	"description": "'Ah, no foul there, my friend,' he assures me. 'It took me years to learn a proper repetoire of tricks for routines. And only a night to lose it all.' He looks sad for a moment. Then, he laughs once, attempting to smile.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "streets.scout.conrad.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.elizabeth.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "elizabeth.w": 1,
+	    "locationstreetsstrange": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Fascination?",
+		"required": {
+		    "fascination": 1
+		}
+	    }
+	],
+	"startdescription": "I come to the vagrant's bridge again, drawn perhaps by the same morbidity that motivates children to visit zoos. As luck would have it, she is there under the masonry, already awake. 'You're back,' she chirps. 'Did you bring a mirror this time?' ",
+	"description": "This time, I tell her directly that I did not bring a mirror, and she pouts. 'How do you know you're still whole, then?' She turns over in the dark, nestling her face in leaves and old blankets, and does not move nor speak again.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "streets.scout.elizabeth.success"
+	    }
+	]
+    }
+]
+}

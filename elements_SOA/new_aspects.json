@@ -1,0 +1,548 @@
+{
+"elements": [
+    {
+	"id": "potentialacquaintances",
+	"label": "Potential Acquaintances",
+	"description": "Particularly useful individuals frequent this place.",
+	"isAspect": true
+    },
+    {
+	"id": "potentialpatrons",
+	"label": "Potential Patrons",
+	"description": "Particularly influential individuals frequent this place.",
+	"isAspect": true
+    },
+    {
+	"id": "whereabouts",
+	"label": "Whereabouts",
+	"description": "Details concerning the comings and goings of a notable individual. [If you failed to entice someone into your service, you can use this card to find them again.]",
+	"isAspect": true
+    },
+    {
+	"id": "skillsecrecy_uq",
+	"label": "Secrecy Skill",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "upgrade_skillsecrecy",
+	"label": "Upgrade Secrecy Skill",
+	"description": "",
+	"isAspect": true
+    },
+    {
+	"id": "trapped",
+	"label": "Trapped",
+	"description": "A very nasty surprise will befall the Hunter who decides to investigate this.",
+	"isAspect": true,
+	"icon": "peril"
+    },
+    {
+	"id": "charlotte.original",
+	"label": "Charlotte Original",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "mimiclantern",
+	"label": "mimic Lantern",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "mimicforge",
+	"label": "mimic Forge",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "mimicedge",
+	"label": "mimic Edge",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "mimicwinter",
+	"label": "mimic Winter",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "mimicheart",
+	"label": "mimic Heart",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "mimicgrail",
+	"label": "mimic Grail",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "mimicknock",
+	"label": "mimic Knock",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "shiftlantern",
+	"label": "mimic Lantern",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "shiftforge",
+	"label": "mimic Forge",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "shiftedge",
+	"label": "mimic Edge",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "shiftwinter",
+	"label": "mimic Winter",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "shiftheart",
+	"label": "mimic Heart",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "shiftgrail",
+	"label": "mimic Grail",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "shiftknock",
+	"label": "mimic Knock",
+	"description": "",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "prepared_trigger",
+	"label": "Prepared Trigger",
+	"description": "",
+	"isAspect": true
+    },
+    {
+	"id": "questcomplete",
+	"label": "Quest Complete",
+	"description": "",
+	"isAspect": true
+    },
+    {
+	"id": "follower_lustremembrance",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "believer",
+	"label": "Believer",
+	"description": "A fledgling devotee to the mysteries.",
+	"isAspect": true,
+	"isHidden": true
+    },
+    {
+	"id": "aromantic",
+	"label": "Cannot be Romanced",
+	"isAspect": true
+    },
+    {
+	"id": "scholarly",
+	"label": "Scholarly",
+	"description": "Someone who enjoys an abundance of time and literature. [Whenever this follower is used, there is a small chance they will produce Rational Observations, which can be used to address certain research challenges.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "scholarly_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "impassioned",
+	"label": "Impassioned",
+	"description": "Someone possessed of an overdeveloped sense of imagination. [Whenever this follower is used, there is a small chance they will produce Eccentric Notions, which can be used to address certain research challenges.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "impassioned_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "loyal",
+	"label": "Loyal",
+	"description": "One never knows how loyalty is born. [This follower cannot rebel against you.]",
+	"isAspect": true
+    },
+    {
+	"id": "famous",
+	"label": "Famous",
+	"description": "Someone blessed and cursed with renown. [Using this follower anywhere has a chance to produce Reputation cards. However, painting a portrait of this follower can produce unique rewards, and they excel at Cult Business.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "famous_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "jealous",
+	"label": "Jealous",
+	"description": "An unhealthy fixation; an acrid obsession; an easily-wounded heart. [When romancing another, this follower may gain Resentment.]",
+	"isAspect": true
+    },
+    {
+	"id": "pacifist",
+	"label": "Pacifist",
+	"description": "This one will follow, but only so far. [Harming, terrorizing, or killing innocents and adversaries will cause this follower to gain Resentment.]",
+	"isAspect": true
+    },
+    {
+	"id": "frail",
+	"label": "Frail",
+	"description": "We all must die, but this one is more inclined to end than most. [This follower will die at two scars rather than three.]",
+	"isAspect": true
+    },
+    {
+	"id": "bully",
+	"label": "Bully",
+	"description": "There is a dark joy to be found in gloating. [When you promote this follower, they will inflict Resentment on another random follower.]",
+	"isAspect": true
+    },
+    {
+	"id": "enterprising",
+	"label": "Enterprising",
+	"description": "It is one thing to seek opportunity; it is another to make it. [Whenever this follower is used, there is a small chance they will produce Funds.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "enterprising_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "thorough",
+	"label": "Thorough",
+	"description": "Someone who knows how to cover their tracks. [Whenever this follower is used, there is a small chance they will produce Secrecy.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "thorough_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "amicable",
+	"label": "Amicable",
+	"description": "Someone considered good company. [Whenever this follower is used, there is a small chance they will produce Contentment.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "amicable_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "sentimental",
+	"label": "Sentimental",
+	"description": "Conversations with this one tend to be memorable in some fashion. [Whenever this follower is used, there is a small chance they will produce a Fleeting Reminiscence.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "sentimental_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "rambling",
+	"label": "Rambling",
+	"description": "Oftentimes they speak nonsense, but sometimes they speak of something else. [Whenever this follower is used, there is a small chance they will produce Fascination.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "rambling_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "morbid",
+	"label": "Morbid",
+	"description": "Their words have a tendency to stick, and then to rot. [Whenever this follower is used, there is a small chance they will produce Dread.]",
+	"isAspect": true,
+	"induces": [
+	    {
+		"id": "morbid_induction",
+		"chance": 10
+	    }
+	]
+    },
+    {
+	"id": "defiant",
+	"label": "Defiant",
+	"description": "One never knows how loyalty is ended. [This follower can rebel at two Resentment.]",
+	"isAspect": true
+    },
+    {
+	"id": "prepared",
+	"label": "Prepared",
+	"description": "An experienced traveler; a seasoned provisioner; a reliable pair of hands. [This follower will automatically add one Fund to any expedition they are sent on.]",
+	"isAspect": true
+    },
+    {
+	"id": "resilient",
+	"label": "Resilient",
+	"description": "Some can live through more pain than seems reasonable. [This follower will die at four scars rather than three.]",
+	"isAspect": true
+    },
+    {
+	"id": "scar_grail",
+	"label": "Scar: Swollen Stitches",
+	"description": "There is only so much difference between man and meat.",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_moth",
+	"label": "Loyalty to the Moth",
+	"description": "'In vain, in vain - the all-composing hour\nResistless falls: the Muse obeys the power.\nShe comes! she comes! the sable throne behold\nOf Night primeval, and of Chaos old!'\n\n- Alexander Pope",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_malachite",
+	"label": "Loyalty to the Malachite",
+	"description": "'What gentle ghost, besprent with April dew,\nHails me so solemnly to yonder yew,\nAnd beckoning woos me, from the fatal tree\nTo pluck a garland for herself or me?'\n\n- Ben Jonson",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_vagabond",
+	"label": "Loyalty to the Vagabond",
+	"description": "'Much have I traveled in the realms of gold\nAnd many goodly states and kingdoms seen;\nRound many western islands have I been\nWhich bards in fealty to Apollo hold.'\n\n- John Keats",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_watchman",
+	"label": "Loyalty to the Watchman",
+	"description": "'The man who listens to Reason is lost; Reason enslaves all whose minds are not strong enough to master her.'\n\n- George Bernard Shaw",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_madrugad",
+	"label": "Loyalty to the Madrugad",
+	"description": "'In the dawn, armed with a burning patience, we shall enter the splendid Cities.'\n\n- Arthur Rimbaud",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_forge",
+	"label": "Loyalty to the Forge of Days",
+	"description": "'And the smith his iron measures hammered to the anvil’s chime; Thanking God, whose boundless wisdom makes the flowers of poesy bloom; In the forge’s dust and cinders, in the tissues of the loom.'\n\n- Henry Wadsworth Longfellow",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_colonel",
+	"label": "Loyalty to the Colonel",
+	"description": "'One man scorned and covered with scars still strove with his last ounce of courage to reach the unreachable stars; and the world will be better for this.'\n\n- Miguel de Cervantes",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_lionsmith",
+	"label": "Loyalty to the Lionsmith",
+	"description": "'I am going to be a storm - a flame - I need to fight whole armies alone; I have ten hearts; I have a hundred arms; I feel too strong to war with mortals - BRING ME GIANTS!'\n\n- Edmond Rostand",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_wolf",
+	"label": "Loyalty to the Wolf-Divided",
+	"description": "'Have I not the reason to hate and to despise myself? Indeed I do; and chiefly for not having hated and despised the world enough.'\n\n- William Hazlitt",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_sir",
+	"label": "Loyalty to the Sun-in-Rags",
+	"description": "'The splendid silence clings\nAround me: and around\nThe saddest of all kings\nCrowned, and again discrowned.'\n\n- Lionel Johnson",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_elegiast",
+	"label": "Loyalty to the Elegiast",
+	"description": "'Some hang above the tombs,\nSome weep in empty rooms,\nI, when the iris blooms,/nRemember.'\n\n- Mary Coleridge",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_snow",
+	"label": "Loyalty to Snow",
+	"description": "'Look in my face; my name is Might-have-been;\nI am also call'd No-more, Too-late, Farewell.'\n\n- Dante Gabriel Rossetti",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_thunderskin",
+	"label": "Loyalty to the Thunderskin",
+	"description": "'On with the dance! Let joy be unconfined;\nNo sleep till morn, when Youth and Pleasure meet\nTo chase the glowing Hours with flying feet.'\n\n- Lord Byron",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_velvet",
+	"label": "Loyalty to the Velvet",
+	"description": "'For secrets are edged tools,\nAnd must be kept from children and from fools.'\n\n- John Dryden",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_saw",
+	"label": "Loyalty to the Sister-and-Witch",
+	"description": "'The weird sisters, hand in hand,\nPosters of the sea and land,\nThus do go about, about.'\n\n- William Shakespeare",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_grail",
+	"label": "Loyalty to the Red Grail",
+	"description": "'It is only by enlarging the scope of one’s tastes and one’s fantasies, by sacrificing everything to pleasure, that the unfortunate individual called Man, thrown despite himself into this sad world, can succeed in gathering a few roses among life’s thorns.'\n\n- Marquis de Sade",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_flowermaker",
+	"label": "Loyalty to the Flowermaker",
+	"description": "'And whosoever of them ate of the honey-sweet fruit of the lotus, had no longer any wish to bring back word or to return, but there they were fain to abide among the Lotus-eaters, feeding on the lotus, and forgetful of their homeward way.'\n\n- Homer",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_beachcomber",
+	"label": "Loyalty to the Beachcomber",
+	"description": "'If men had wings and bore black feathers, few of them would be clever enough to be crows.'\n\n- Henry Ward Beecher",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_moa",
+	"label": "Loyalty to the Mother of Ants",
+	"description": "'Yet some there be that by due steps aspire\nTo lay their just hands on that golden key\nThat opes the palace of Eternity.'\n\n- John Milton",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_meniscate",
+	"label": "Loyalty to the Meniscate",
+	"description": "'Slowly, silently, now the moon\nWalks the night in her silver shoon;\nThis way, and that, she peers, and sees\nSilver fruit upon silver trees.'\n\n- Walter de la Mare",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_horned",
+	"label": "Loyalty to the Horned Axe",
+	"description": "'On that day I will punish all who leap over the threshold, who fill the house of their master with violence and deceit.'\n\n- Zephaniah 1:9",
+	"isAspect": true
+    },
+    {
+	"id": "loyalty_mare",
+	"label": "Loyalty to the Mare-in-the-Tree",
+	"description": "'I reside at Table Mountain, and my name is Truthful James;\nI am not up to small deceit, or any sinful games.'\n\n- Francis Brett Hart",
+	"isAspect": true
+    },
+		{
+			"id": "tenacious",
+			"label": "Tenacious",
+			"description": "This Hunter will outmanoeuvre or endure perhaps one physical assault in three, even when the attack would otherwise be unstoppable.",
+			"isaspect": true
+		},
+		{
+			"id": "mystic",
+			"label": "Mystic",
+			"description": "This Hunter will usually withstand or outwit attacks by creatures of the Mansus, even if those attacks would otherwise be unstoppable. They are also more likely to retaliate when you send summonings to track them down.",
+			"isaspect": true
+		},
+		{
+			"id": "published",
+			"label": "Published",
+			"description": "Even if I destroyed every print copy of my adversary's work, the public consciousness will ensure the information lives for much longer. [Published Evidence cannot be destroyed.]",
+			"isaspect": true
+		},
+		{
+			"id": "observant",
+			"label": "Observant",
+			"description": "This Hunter can sometimes turn Mystique they pick up into Notoriety.",
+			"isaspect": true
+		},
+		{
+			"id": "corrupt",
+			"label": "Corrupt",
+			"description": "This Hunter can sometimes be bribed to overlook criminal evidence... but their price may become steep.",
+			"isaspect": true
+		},
+		{
+			"id": "belligerent",
+			"label": "Belligerent",
+			"description": "This Hunter may sometimes use Notoriety to plan and order physical attacks on you and your followers. They are also more likely to retaliate when you send mortal followers to track them down.",
+			"isaspect": true
+		},
+		{
+			"id": "clairvoyant",
+			"label": "Clairvoyant",
+			"description": "While this Hunter is on the board, there is a chance that dreaming in the Mansus will produce Notoriety.",
+			"isaspect": true
+		},
+		{
+			"id": "publicist",
+			"label": "Publicist",
+			"description": "Evidence produced by this Hunter will be made available to the public, and cannot be destroyed.",
+			"isaspect": true
+		},
+		{
+			"id": "year_hardened",
+			"label": "Year-Hardened",
+			"description": "This Hunter must suffer four wounds to be defeated, rather than three.",
+			"isaspect": true
+		},
+		{
+			"id": "mithridatic",
+			"label": "Mithridatic",
+			"description": "Poisons will not affect this Hunter.",
+			"isaspect": true
+		},
+	 	{
+			"id": "persuasive",
+			"label": "Persuasive",
+			"description": "This Hunter will not produce Evidence. Instead, they will attempt to sow Resentment amongst your followers using Notoriety and other Reputation cards.",
+			"isaspect": true
+		},
+		{
+			"id": "hunter_wound",
+			"label": "A Hunter's Wound",
+			"description": "This hunter has paid the price for their curiosity. [A hunter will perish after suffering three wounds, unless they posses unnatural fortitude.]",
+			"isaspect": true
+		},
+		{
+			"id": "hiding",
+			"label": "In Hiding",
+			"description": "Recent calamity has driven this Hunter into hiding. [A Hunter possessing this aspect cannot be targeted by your attacks. Speaking to a Lantern or Knock follower about them may uncover their hiding place.]",
+			"isaspect": true
+		}
+]
+}

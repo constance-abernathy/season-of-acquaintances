@@ -1,0 +1,220 @@
+{
+"recipes": [
+    {
+	"id": "attempt.poppy.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "poppy.w": 1,
+	    "loc.richclub": 1
+	},
+	"extantreqs": {
+	    "membership.richclub": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsmorbidity",
+		"label": "Morbidity?",
+		"required": {
+		    "influencewinter": 1,
+		    "influencewinterc": 1,
+		    "influencewintere": 1,
+		    "influencewinterg": 1
+		}
+	    }
+	],
+	"startdescription": "I see the old woman again in the Colchian Room. She nods politely at me and smiles. 'Hello again,' she coughs. 'I see we're both still kicking about. When do think that will change, I wonder?'",
+	"description": "'Mm. I suppose that's right. Who knows?' she concedes. But she says it as though she is on first-name terms with that <i>who.</i>",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "richclub.scout.poppy.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.rocheford.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "rocheford.w": 1,
+	    "loc.richclub": 1
+	},
+	"extantreqs": {
+	    "membership.richclub": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsvault",
+		"label": "An Exotic Locale?",
+		"required": {
+		    "vault": 1
+		},
+		"forbidden": {
+		    "vaultcapital": 1,
+		    "vaultshires": 1
+		}
+	    }
+	],
+	"startdescription": "The Frenchman is again in the Colchian Room, sighing at the latest to come from <i>The Invisible Sun.</i> 'It is a wonder we still have readership,' he shakes his head. 'There must be someplace else - someplace where we <i>cannot</i> come away without a story.'",
+	"description": "No-one comes to the man's rhetorical rescue. He puts out his cigar on a tin ashtray, mutters something about 'sending Armitage to the Australias,' and storms out from the room.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "richclub.scout.rocheford.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.florence.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "florence.w": 1,
+	    "loc.richclub": 1
+	},
+	"extantreqs": {
+	    "membership.richclub": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsfleeting",
+		"label": "Nostalgia?",
+		"required": {
+		    "fleeting": 1
+		}
+	    }
+	],
+	"startdescription": "I find the Delphian Room occupied by her again, and only her. Another woman whom she looks like graces the screen ahead. 'You're being cruel, now,' the woman hisses, wiping her nose. 'I said want to be <i>alone.'</i>",
+	"description": "'Go; stay; I don't much care either way,' she sniffs. 'I <i>don't.'</i> Her sentence cracks at the end, and she stifles a sob. There is nothing profitable to be had by staying here.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "richclub.scout.florence.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.lucetta.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "lucetta.w": 1,
+	    "loc.richclub": 1
+	},
+	"extantreqs": {
+	    "membership.richclub": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needstalent",
+		"label": "Talent?",
+		"required": {
+		    "paintingmastermoth": 1,
+		    "paintingmasterlantern": 1,
+		    "paintingmasterforge": 1,
+		    "paintingmasteredge": 1,
+		    "paintingmasterwinter": 1,
+		    "paintingmasterheart": 1,
+		    "paintingmastergrail": 1,
+		    "paintingmasterknock": 1
+		}
+	    }
+	],
+	"startdescription": "The singer and I encounter each other once more, this time in the Colchian Room. A martini sparkles in her hand. 'Ah, you again. The artless one. Or have you developed mastery in a given talent since last we met? I'd love to know.'",
+	"description": "She is none too impressed. 'You should buy a ticket to the Royal Opera House,' she recommends, draining the last of her martini. 'Perhaps seeing me perform will inspire you to make something of yourself.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "richclub.scout.lucetta.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.ludwig.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "ludwig.w": 1,
+	    "loc.richclub": 1
+	},
+	"extantreqs": {
+	    "membership.richclub": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needslore",
+		"label": "Knowledge?",
+		"required": {
+		    "skillreasonc": 1,
+		    "skillreasond_concentration": 1,
+		    "skillreasond_illumination": 1
+		}
+	    }
+	],
+	"startdescription": "Amongst the Athenian Room's guests, I spot the German. He pretends not to see me, but cannot keep the charade when I speak directly to him. 'You're bothering me again. I suppose this means you've found a way to assist my research, yes?'",
+	"description": "The German shakes his head at me. 'Ignorance, again,' he sighs. 'Do you really have nothing other to do? Pick up a book - you might learn something.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "richclub.scout.ludwig.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.jerome.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "jerome.w": 1,
+	    "loc.richclub": 1
+	},
+	"extantreqs": {
+	    "membership.richclub": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needswit",
+		"label": "Cunning?",
+		"required": {
+		    "skillreasonc": 1,
+		    "skillreasond_concentration": 1,
+		    "skillreasond_illumination": 1
+		}
+	    }
+	],
+	"startdescription": "My adversary is lounging in the Colchian Room again. He raises his hand in greeting when he sees me, and smiles with his mouth. 'Do you have the time for another game? Well, I suppose that depends on how quickly I can make you capitulate.'",
+	"description": "The game is no more than thirty minutes; the result is victory for my gentleman opponent. 'A pleasure, as always,' he tells me. 'Though you could stand to learn a bit more from your mistakes. It might improve you performance in many matters - chess included.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "richclub.scout.jerome.success"
+	    }
+	]
+    },
+]
+}

@@ -1,0 +1,602 @@
+{
+"elements": [
+    {
+	"id": "charlotte.b.resting",
+	"label": "Charlotte, Recovering",
+	"aspects": {
+	    "mortal": 1,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"resaturate": true,
+	"lifetime": 300,
+	"decayTo": "charlotte.b",
+	"icon": "charlotte.b",
+	"description": "Charlotte's mind is slowly coming back to itself."
+    },
+    {
+	"id": "charlotte.c.resting",
+	"label": "Charlotte, Recovering",
+	"aspects": {
+	    "mortal": 1,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"resaturate": true,
+	"lifetime": 300,
+	"decayTo": "charlotte.c",
+	"icon": "charlotte.b",
+	"description": "Charlotte's mind is slowly coming back to itself."
+    },
+    {
+	"id": "charlotte.d.resting",
+	"label": "Charlotte, Recovering",
+	"aspects": {
+	    "mortal": 1,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"resaturate": true,
+	"lifetime": 300,
+	"decayTo": "charlotte.d",
+	"icon": "charlotte.b",
+	"description": "Charlotte's mind is slowly coming back to itself."
+    },
+    {
+	"id": "charlotte.b.lantern",
+	"label": "Charlotte, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "lantern": 2,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "charlotte.c",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte was instructed to keep a journal for her worries and whims. She has never been seen carrying a journal.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.lantern",
+	"lifetime": 300,
+	"decayTo": "charlotte.b.resting"
+    },
+    {
+	"id": "charlotte.c.lantern",
+	"label": "Charlotte, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "lantern": 5,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "charlotte.d",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte rarely keeps her appointments or her promises, now - there is little about her that keeps at all.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.lantern",
+	"lifetime": 300,
+	"decayTo": "charlotte.c.resting"
+    },
+    {
+	"id": "charlotte.d.lantern",
+	"label": "Charlotte, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "lantern": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_moth": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r.c"
+	},
+	"description": "Dead leaves crackling under the press of bare feet, naps taken beneath the wayside bridges. The bending wind in dry, unwatched places, and the lulling laughter from nowhere at nothing: Charlotte.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.lantern",
+	"lifetime": 300,
+	"decayTo": "charlotte.d.resting"
+    },
+    {
+	"id": "charlotte.b.forge",
+	"label": "Charlotte, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "forge": 2,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "charlotte.c",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte was instructed to keep a journal for her worries and whims. She has never been seen carrying a journal.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.forge",
+	"lifetime": 300,
+	"decayTo": "charlotte.b.resting"
+    },
+    {
+	"id": "charlotte.c.forge",
+	"label": "Charlotte, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "forge": 5,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "charlotte.d",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte rarely keeps her appointments or her promises, now - there is little about her that keeps at all.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.forge",
+	"lifetime": 300,
+	"decayTo": "charlotte.c.resting"
+    },
+    {
+	"id": "charlotte.d.forge",
+	"label": "Charlotte, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "forge": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_moth": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r.c"
+	},
+	"description": "Dead leaves crackling under the press of bare feet, naps taken beneath the wayside bridges. The bending wind in dry, unwatched places, and the lulling laughter from nowhere at nothing: Charlotte.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.forge",
+	"lifetime": 300,
+	"decayTo": "charlotte.d.resting"
+    },
+    {
+	"id": "charlotte.b.edge",
+	"label": "Charlotte, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "edge": 2,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "charlotte.c",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte was instructed to keep a journal for her worries and whims. She has never been seen carrying a journal.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.edge",
+	"lifetime": 300,
+	"decayTo": "charlotte.b.resting"
+    },
+    {
+	"id": "charlotte.c.edge",
+	"label": "Charlotte, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "edge": 5,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "charlotte.d",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte rarely keeps her appointments or her promises, now - there is little about her that keeps at all.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.edge",
+	"lifetime": 300,
+	"decayTo": "charlotte.c.resting"
+    },
+    {
+	"id": "charlotte.d.edge",
+	"label": "Charlotte, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "edge": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_moth": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r.c"
+	},
+	"description": "Dead leaves crackling under the press of bare feet, naps taken beneath the wayside bridges. The bending wind in dry, unwatched places, and the lulling laughter from nowhere at nothing: Charlotte.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.edge",
+	"lifetime": 300,
+	"decayTo": "charlotte.d.resting"
+    },
+    {
+	"id": "charlotte.b.winter",
+	"label": "Charlotte, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "winter": 2,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "charlotte.c",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte was instructed to keep a journal for her worries and whims. She has never been seen carrying a journal.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.winter",
+	"lifetime": 300,
+	"decayTo": "charlotte.b.resting"
+    },
+    {
+	"id": "charlotte.c.winter",
+	"label": "Charlotte, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "winter": 5,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "charlotte.d",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte rarely keeps her appointments or her promises, now - there is little about her that keeps at all.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.winter",
+	"lifetime": 300,
+	"decayTo": "charlotte.c.resting"
+    },
+    {
+	"id": "charlotte.d.winter",
+	"label": "Charlotte, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "winter": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_moth": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r.c"
+	},
+	"description": "Dead leaves crackling under the press of bare feet, naps taken beneath the wayside bridges. The bending wind in dry, unwatched places, and the lulling laughter from nowhere at nothing: Charlotte.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.winter",
+	"lifetime": 300,
+	"decayTo": "charlotte.d.resting"
+    },
+    {
+	"id": "charlotte.b.heart",
+	"label": "Charlotte, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "heart": 2,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "charlotte.c",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte was instructed to keep a journal for her worries and whims. She has never been seen carrying a journal.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.heart",
+	"lifetime": 300,
+	"decayTo": "charlotte.b.resting"
+    },
+    {
+	"id": "charlotte.c.heart",
+	"label": "Charlotte, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "heart": 5,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "charlotte.d",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte rarely keeps her appointments or her promises, now - there is little about her that keeps at all.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.heart",
+	"lifetime": 300,
+	"decayTo": "charlotte.c.resting"
+    },
+    {
+	"id": "charlotte.d.heart",
+	"label": "Charlotte, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "heart": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_moth": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r.c"
+	},
+	"description": "Dead leaves crackling under the press of bare feet, naps taken beneath the wayside bridges. The bending wind in dry, unwatched places, and the lulling laughter from nowhere at nothing: Charlotte.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.heart",
+	"lifetime": 300,
+	"decayTo": "charlotte.d.resting"
+    },
+    {
+	"id": "charlotte.b.grail",
+	"label": "Charlotte, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "grail": 2,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "charlotte.c",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte was instructed to keep a journal for her worries and whims. She has never been seen carrying a journal.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.grail",
+	"lifetime": 300,
+	"decayTo": "charlotte.b.resting"
+    },
+    {
+	"id": "charlotte.c.grail",
+	"label": "Charlotte, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "grail": 5,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "charlotte.d",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte rarely keeps her appointments or her promises, now - there is little about her that keeps at all.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.grail",
+	"lifetime": 300,
+	"decayTo": "charlotte.c.resting"
+    },
+    {
+	"id": "charlotte.d.grail",
+	"label": "Charlotte, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "grail": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_moth": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r.c"
+	},
+	"description": "Dead leaves crackling under the press of bare feet, naps taken beneath the wayside bridges. The bending wind in dry, unwatched places, and the lulling laughter from nowhere at nothing: Charlotte.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.grail",
+	"lifetime": 300,
+	"decayTo": "charlotte.d.resting"
+    },
+    {
+	"id": "charlotte.b.knock",
+	"label": "Charlotte, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "knock": 2,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "charlotte.c",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte was instructed to keep a journal for her worries and whims. She has never been seen carrying a journal.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.knock",
+	"lifetime": 300,
+	"decayTo": "charlotte.b.resting"
+    },
+    {
+	"id": "charlotte.c.knock",
+	"label": "Charlotte, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "knock": 5,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "charlotte.d",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "Charlotte rarely keeps her appointments or her promises, now - there is little about her that keeps at all.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.knock",
+	"lifetime": 300,
+	"decayTo": "charlotte.c.resting"
+    },
+    {
+	"id": "charlotte.d.knock",
+	"label": "Charlotte, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "knock": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_moth": 1,
+	    "rambling": 1,
+	    "impassioned": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r.c"
+	},
+	"description": "Dead leaves crackling under the press of bare feet, naps taken beneath the wayside bridges. The bending wind in dry, unwatched places, and the lulling laughter from nowhere at nothing: Charlotte.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.knock",
+	"lifetime": 300,
+	"decayTo": "charlotte.d.resting"
+    }
+]
+}

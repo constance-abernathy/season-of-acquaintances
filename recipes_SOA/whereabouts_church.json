@@ -1,0 +1,154 @@
+{
+"recipes": [
+    {
+	"id": "attempt.ephraim.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "ephraim.w": 1,
+	    "loc.church": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Remembrance?",
+		"required": {
+		    "fleeting": 1
+		}
+	    }
+	],
+	"startdescription": "The graveyard-bird is there again, visiting the same two gravestones. 'Welcome back,' the old man jokes. 'Fancy seeing you here again. Am I to guess you were visiting someone as well?' A bouquet of white roses rests in his hands.",
+	"description": "The old man sees I have nothing of substance to say to him, and I see exactly the same. 'Well, I'll leave you to it, I suppose,' he nods. 'Would hate to interrupt someone's grieving.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "church.scout.ephraim.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.beatrice.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "beatrice.w": 1,
+	    "loc.church": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Reminiscence?",
+		"required": {
+		    "fleeting": 1
+		}
+	    }
+	],
+	"startdescription": "This time, I find the wheelchair and its occupant in the church proper. In the silence of the interior, her ragged breathing is more grating than ever. Still, none of the other chapelgoers seem to pay her any mind. She makes a feeble motion with her hand - is she beckoning for me?",
+	"description": "I think of sparing a few words with the old crone, but restrain myself. How foolish would I look trying to speak with someone already so lost? I am certain her caretaker, irresponsible as they must be, will come soon and take charge of her.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "church.scout.beatrice.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.constance.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "constance.w": 1,
+	    "loc.church": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Reassurance?",
+		"required": {
+		    "contentment": 1
+		}
+	    }
+	],
+	"startdescription": "The same woman from the confessional is present at today's mass. I make an effort to bump into her after the proceedings are finished, and she recognizes me with no small smattering of embarassment. 'Ah, you again,' she says. 'I was in quite a state last we spoke. You'll have to forgive me for that; I was... unwell, I suppose.'",
+	"description": "'Perhaps we'll bump into each other again. I promise I'm usually more put-together,' the woman laughs somewhat uneasily. Tugging her burgundy sweater tighter around her, she waves goodbye and takes her leave. She was more composed this time, but I could see something still troubled her deeply.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "church.scout.constance.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.daisy.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "daisy.w": 1,
+	    "loc.church": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Enthusiasm?",
+		"required": {
+		    "passion": 1
+		}
+	    }
+	],
+	"startdescription": "The Irish volunteer is trimming at a rosebush next I see her. The amiable young lady hears my approach, and waves when she sees me coming down the stony churchyard path. 'Afternoon!' she chirps. 'Hope you're doing well today! I've been tending the yard, as you can see. Makes you sweat, but all the best work does, no?'",
+	"description": "Her enthusiasm for the natural is no less diminished from last time. My patience, however, is not as withstanding. I endeavour to keep this conversation as short as I can - perhaps this time she'll notice my disinterest.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "church.scout.daisy.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.josephine.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "josephine.w": 1,
+	    "loc.church": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needsreason",
+		"label": "Faith?",
+		"required": {
+		    "injury": 1
+		}
+	    }
+	],
+	"startdescription": "The self-same nun - the one who I had seen picking at her finger - is again in the chapel. Sweeping, this time. She glances up at me when I enter the church, and her manner becomes a degree more frantic. Perhaps she is embarrassed. I could have words with her about what had transpired last we spoke.",
+	"description": "No - perhaps now is not the time. I'll let her attend her duties in what peace she can afford. I don't have the proof of kindred faith I need to sway one such as her.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "church.scout.josephine.success"
+	    }
+	]
+    },
+]
+}

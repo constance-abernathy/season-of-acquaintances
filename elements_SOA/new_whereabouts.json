@@ -1,0 +1,696 @@
+{
+"elements": [
+    {
+	"id": "conrad.w",
+	"label": "Whereabouts: Conrad",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationstreetsstrange": 1
+		}
+	    }
+	],
+	"description": "I know where a certain magician tends to appear.",
+	"xtriggers": {
+	    "hiring": "conrad.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "josephine.w",
+	"label": "Whereabouts: Sister Josephine",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.church": 1
+		}
+	    }
+	],
+	"description": "I know where a certain sister likes to contemplate her devotions.",
+	"xtriggers": {
+	    "hiring": "josephine.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "elizabeth.w",
+	"label": "Whereabouts: Elizabeth",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationstreetsstrange": 1
+		}
+	    }
+	],
+	"description": "I know where a certain lunatic takes her moonlight strolls.",
+	"xtriggers": {
+	    "hiring": "elizabeth.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "charlotte.w",
+	"label": "Whereabouts: Charlotte",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationstreetsstrange": 1
+		}
+	    }
+	],
+	"description": "I know where a certain young woman sneaks out in the night.",
+	"xtriggers": {
+	    "hiring": "charlotte.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "lawrence.w",
+	"label": "Whereabouts: Lawrence",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationcabaret": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Entry",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"description": "I know where a certain wanderer rests his feet.",
+	"xtriggers": {
+	    "hiring": "lawrence.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "howe.w",
+	"label": "Whereabouts: Howe",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationstreetsstrange": 1,
+		    "locationcabaret": 1,
+		    "loc.church": 1,
+		    "loc.college": 1,
+		    "loc.bookie": 1,
+		    "loc.richclub": 1
+		}
+	    }
+	],
+	"description": "I know where a certain pickpocket makes his score. I'll wait for him.",
+	"xtriggers": {
+	    "hiring": "howe.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "klaus.w",
+	"label": "Whereabouts: Klaus",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.college": 1
+		}
+	    }
+	],
+	"description": "I know where a certain graduate attends his studies.",
+	"xtriggers": {
+	    "hiring": "klaus.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "jerome.w",
+	"label": "Whereabouts: Jerome",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.richclub": 1
+		}
+	    }
+	],
+	"description": "I know where a certain war hero reminisces on his victories.",
+	"xtriggers": {
+	    "hiring": "jerome.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "marjorie.w",
+	"label": "Whereabouts: Marjorie",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.college": 1
+		}
+	    }
+	],
+	"description": "I know where a certain clerk goes to keep her mind sharp.",
+	"xtriggers": {
+	    "hiring": "marjorie.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "edgar.w",
+	"label": "Whereabouts: Edgar",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.bookie": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Entry",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"description": "I know where a certain American likes to do business.",
+	"xtriggers": {
+	    "hiring": "edgar.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "roya.w",
+	"label": "Whereabouts: Roya",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.bookie": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Entry",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"description": "I know where a certain Persian goes to find work.",
+	"xtriggers": {
+	    "hiring": "roya.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "ludwig.w",
+	"label": "Whereabouts: Ludwig",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.richclub": 1
+		}
+	    }
+	],
+	"description": "I know where a certain chemist goes to maintain and enjoy his privacy.",
+	"xtriggers": {
+	    "hiring": "ludwig.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "victorien.w",
+	"label": "Whereabouts: Victorien",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationcabaret": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Entry",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"description": "I know where a certain sharpshooter likes to take his drinks.",
+	"xtriggers": {
+	    "hiring": "victorien.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "nadine.w",
+	"label": "Whereabouts: Nadine",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.bookie": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Entry",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"description": "I know where a certain firebrand goes to enjoy a good row.",
+	"xtriggers": {
+	    "hiring": "nadine.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "yelena.w",
+	"label": "Whereabouts: Yelena",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationstreetsstrange": 1
+		}
+	    }
+	],
+	"description": "I know where a certain Russian goes to be alone with her grief.",
+	"xtriggers": {
+	    "hiring": "yelena.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "florence.w",
+	"label": "Whereabouts: Florence",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.richclub": 1
+		}
+	    }
+	],
+	"description": "I know where a certain actress goes to sulk and play at relevance.",
+	"xtriggers": {
+	    "hiring": "florence.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "ephraim.w",
+	"label": "Whereabouts: Ephraim",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.church": 1
+		}
+	    }
+	],
+	"description": "I know where a certain retiree goes to gloat at God's expense.",
+	"xtriggers": {
+	    "hiring": "ephraim.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "beatrice.w",
+	"label": "Whereabouts: Beatrice",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.church": 1
+		}
+	    }
+	],
+	"description": "I know where a certain centenarian is taken to relive half-remembered routines.",
+	"xtriggers": {
+	    "hiring": "beatrice.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "atticus.w",
+	"label": "Whereabouts: Atticus",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.college": 1
+		}
+	    }
+	],
+	"description": "I know where a certain rhetorician likes to exchange ideas and forge friendships.",
+	"xtriggers": {
+	    "hiring": "atticus.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "millie.w",
+	"label": "Whereabouts: Millie",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.college": 1
+		}
+	    }
+	],
+	"description": "I know where a certain librarian goes to catch up on the newest reading.",
+	"xtriggers": {
+	    "hiring": "millie.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "lucetta.w",
+	"label": "Whereabouts: Lucetta",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.richclub": 1
+		}
+	    }
+	],
+	"description": "I know where a certain soprano likes to unwind away from her thronging admirers.",
+	"xtriggers": {
+	    "hiring": "lucetta.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "constance.w",
+	"label": "Whereabouts: Constance",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.church": 1
+		}
+	    }
+	],
+	"description": "I know where a certain midwife goes to reassure herself.",
+	"xtriggers": {
+	    "hiring": "constance.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "maximilian.w",
+	"label": "Whereabouts: Maximilian",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationcabaret": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Entry",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"description": "I know where a certain bohemian goes to find his inspirations.",
+	"xtriggers": {
+	    "hiring": "maximilian.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "daisy.w",
+	"label": "Whereabouts: Daisy",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [	    
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.church": 1
+		}
+	    }
+	],
+	"description": "I know where a certain young lady still observes her family's faith.",
+	"xtriggers": {
+	    "hiring": "daisy.a"
+	},
+	"unique": true
+    },
+    {
+	"id": "william.w",
+	"label": "Whereabouts: William",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.college": 1
+		}
+	    }
+	],
+	"description": "I know where a certain professor both teaches and disputes history.",
+	"xtriggers": {
+	    "hiring": "william"
+	},
+	"unique": true
+    },
+    {
+	"id": "rocheford.w",
+	"label": "Whereabouts: Rocheford",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.richclub": 1
+		}
+	    }
+	],
+	"description": "I know where a certain editor mulls over the latest publications.",
+	"xtriggers": {
+	    "hiring": "rocheford"
+	},
+	"unique": true
+    },
+    {
+	"id": "beek.w",
+	"label": "Whereabouts: Beek",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.bookie": 1
+		}
+	    }
+	],
+	"description": "I know where a certain syndicate boss sometimes holds court.",
+	"xtriggers": {
+	    "hiring": "beek"
+	},
+	"unique": true
+    },
+    {
+	"id": "sulochana.w",
+	"label": "Whereabouts: Sulochana",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "locationcabaret": 1
+		}
+	    },
+	    {
+		"id": "needsfunds",
+		"label": "Entry",
+		"required": {
+		    "funds": 1
+		}
+	    }
+	],
+	"description": "I know where the proprietor of the club lurks.",
+	"xtriggers": {
+	    "hiring": "sulochana"
+	},
+	"unique": true
+    },
+    {
+	"id": "poppy.w",
+	"label": "Whereabouts: Poppy",
+	"aspects": {
+	    "whereabouts": 1,
+	    "secrethistories": 1
+	},
+	slots: [
+	    {
+		"id": "needslocation",
+		"label": "Location",
+		"required": {
+		    "loc.richclub": 1
+		}
+	    }
+	],
+	"description": "I know where an amiable woman of property likes to muse on her morbidities.",
+	"xtriggers": {
+	    "hiring": "poppyready"
+	},
+	"unique": true
+    },
+]
+}

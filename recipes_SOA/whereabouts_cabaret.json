@@ -1,0 +1,132 @@
+{
+"recipes": [
+    {
+	"id": "attempt.sulochana.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "sulochana.w": 1,
+	    "locationcabaret": 1,
+	    "funds": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Purpose?",
+		"required": {
+		    "desire": 1,
+		    "mentor": 1
+		}
+	    }
+	],
+	"startdescription": "Another evening at the Ecdysis. This time I am the one looking - I look above, past the human throng, where satins and pricking golden lights hang from the ceiling. There again, at the high balcony: the proprietor. She is looking, too.",
+	"description": "Same as the last, she pays me no mind. I shuffle out out the club with all the rest. Is there truly nothing remarkable to be seen in me?",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "cabaret.scout.sulochana.success.desire"
+	    },
+	    {
+		"id": "cabaret.scout.sulochana.success.mentor"
+	    }
+	]
+    },
+    {
+	"id": "attempt.lawrence.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "lawrence.w": 1,
+	    "locationcabaret": 1,
+	    "funds": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Wanderlust",
+		"required": {
+		    "restlessness": 1
+		}
+	    }
+	],
+	"startdescription": "The traveller is again at the bar, writing in a book poorly bound with twine. He looks up only when I am standing over his shoulder. 'Ah, you again,' he wearily smiles. 'Something on your mind?'",
+	"description": "He <i>hmms</i> thoughtfully, but his eyes look bothered - annoyed, even - and swiftly retreats to the innards of his book. Perhaps now is not the time.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "cabaret.scout.lawrence.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.maximilian.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "maximilian.w": 1,
+	    "locationcabaret": 1,
+	    "funds": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Constitution?",
+		"required": {
+		    "health": 1
+		}
+	    }
+	],
+	"startdescription": "The haze of that previous night is gone, but the gaunt-eyed artist from before is once again at the Ecdysis. He recognizes me with a wave, and I him. 'We never did finish our conversation about art,' he drones, already the thrall of some affective substance. 'Shall we resume?' The man holds out that long pipe again, sweetly smouldering.",
+	"description": "The herb in the pipe is different, but no less amiable to me. My throat catches on the vapours. The gaunt-eyed man is yelling - or is he laughing? - and the room, somehow, begins to sweat. When I come down from my stupor, I am home. I am unsure of how that is so.",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "cabaret.scout.maximilian.success"
+	    }
+	]
+    },
+    {
+	"id": "attempt.victorien.w",
+	"actionid": "explore",
+	"label": "Seek out a particular someone?",
+	"requirements": {
+	    "victorien.w": 1,
+	    "locationcabaret": 1,
+	    "funds": 1
+	},
+	"aspects": {
+	    "stale": 1
+	},
+	"slots": [
+	    {
+		"id": "needssomething",
+		"label": "Dexterity",
+		"required": {
+		    "health": 1
+		}
+	    } 
+	],
+	"startdescription": "<i>'Bonsoir,'</i> says the cyclopean Frenchman. The two of us are again at the club's bar, meditating away from the noisesome stage. I ask him for his knife; I ask to play his game again, and he obliges. 'You still want to know about my eye, then? Very well. I can call it at ten this time, if you'd like.'",
+	"description": "The Frenchman tuts, grinning again, and presses his napkin to my bleeding finger. 'I had a comrade who lost his ring finger trying to beat me at this,' he chides, folding the knife back into his coat. 'The one thing you two share is a very admirable sense of persistence.'",
+	"craftable": true,
+	"warmup": 60,
+	"alt": [
+	    {
+		"id": "cabaret.scout.victorien.success"
+	    }
+	]
+    },
+]
+}

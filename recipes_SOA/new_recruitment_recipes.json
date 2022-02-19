@@ -1,0 +1,2394 @@
+{
+"recipes": [
+	{
+	    "id": "bully.trigger",
+	    "actionid": "bully_verb",
+	    "label": "Sharp Egos",
+	    "startdescription": "One of my followers has taken an especial satisfaction in their station, and moves quickly to gloat on their newfound status -",
+	    "mutations": [
+		{
+		    "filter": "bully",
+		    "mutate": "annoyance",
+		    "level": 1
+		}
+	    ],
+	    "linked": [
+		{
+		    "id": "bully.trigger.grab"
+		}
+	    ]
+	},
+	{
+	    "id": "bully.trigger.grab",
+	    "actionid": "bully_verb",
+	    "label": "Sharp Egos",
+	    "startdescription": "One of my followers moves quickly to gloat on their newfound status -",
+	    "slots": [
+		{
+		    "id": "needsvictim",
+		    "label": "Victim",
+		    "required": {
+			"believer": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "mutations": [
+		{
+		    "filter": "follower",
+		    "mutate": "resentment",
+		    "level": 1,
+		    "additive": true
+		}
+	    ],
+	    "linked": [
+		{
+		    "id": "bully.trigger.restore"
+		}
+	    ],
+	    "warmup": 15
+	},
+	{
+	    "id": "bully.trigger.restore",
+	    "actionid": "bully_verb",
+	    "label": "Sharp Egos",
+	    "startdescription": "Pride, the beast that devours its brothers.",
+	    "mutations": [
+		{
+		    "filter": "annoyance",
+		    "mutate": "resentment",
+		    "level": -1
+		},
+		{
+		    "filter": "annoyance",
+		    "mutate": "annoyance",
+		    "level": -1
+		},
+	    ]
+	},
+        {
+            "id": "recruitacquaintancehint",
+            "label": "Recruit a new Follower?",
+            "actionid": "talk",
+            "requirements": {
+                "society": 1,
+                "acquaintance": 1,
+		"edge": -1,
+		"forge": -1,
+		"moth": -1,
+		"lantern": -1,
+		"winter": -1,
+		"heart": -1,
+		"grail": -1,
+		"knock": -1
+            },
+            "startdescription": "To recruit a follower, I will need a little of the power we revere. I might glean it from an Influence, or a Tool, or an Ingredient, or just the Lore of our tradition.",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "talk_nointeraction_mortal",
+            "label": "Nothing to say?",
+            "actionid": "talk",
+            "requirements": {
+                "mortal": 1,
+		"society": -1
+            },
+            "startdescription": "'I don't believe we have anything to say to each other.'",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceclue",
+            "label": "Recruit an Acquaintance?",
+            "actionid": "talk",
+            "requirements": {
+                "society": 1,
+                "mortal": 1,
+                "follower": -1,
+		"edge": -1,
+		"forge": -1,
+		"moth": -1,
+		"lantern": -1,
+		"winter": -1,
+		"heart": -1,
+		"grail": -1,
+		"knock": -1
+            },
+            "startdescription": "This one might be ready to achieve the next level, if I can supply something more.",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceedge",
+            "label": "Recruit an Acquaintance, by invoking Edge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 99,
+                "edge": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Before they speak the words, the novice must sharpen a knife so it can separate a drifting thread. An it be not sharp enough, it will be the worse for them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceedge_secrecya_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "edge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": 6
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+	    "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceedge_secrecya",
+            "label": "Recruit an Acquaintance, by invoking Edge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "edge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": -6
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Before they speak the words, the novice must sharpen a knife so it can separate a drifting thread. An it be not sharp enough, it will be the worse for them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceedge_secrecyb_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "edge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": 12
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+	    "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceedge_secrecyb",
+            "label": "Recruit an Acquaintance, by invoking Edge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "edge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": -12
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Before they speak the words, the novice must sharpen a knife so it can separate a drifting thread. An it be not sharp enough, it will be the worse for them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceedge_secrecyc_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "edge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": 18
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+	    "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceedge_secrecyc",
+            "label": "Recruit an Acquaintance, by invoking Edge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "edge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": -18
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Before they speak the words, the novice must sharpen a knife so it can separate a drifting thread. An it be not sharp enough, it will be the worse for them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceedge_secrecyd_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "edge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": 24
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+	    "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceedge_secrecyd",
+            "label": "Recruit an Acquaintance, by invoking Edge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "edge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": -24
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Before they speak the words, the novice must sharpen a knife so it can separate a drifting thread. An it be not sharp enough, it will be the worse for them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceforge",
+            "label": "Recruit an Acquaintance, by invoking Forge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 99,
+                "forge": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony requires a searing. Only a little one; but they will carry the mark all their life.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceforge_secrecya_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "forge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": 6
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "hintonly": true,
+            "craftable": false
+        },
+        {
+            "id": "recruitacquaintanceforge_secrecya",
+            "label": "Recruit an Acquaintance, by invoking Forge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "forge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": -6
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony requires a searing. Only a little one; but they will carry the mark all their life.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceforge_secrecyb_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "forge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": 12
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "hintonly": true,
+            "craftable": false
+        },
+        {
+            "id": "recruitacquaintanceforge_secrecyb",
+            "label": "Recruit an Acquaintance, by invoking Forge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "forge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": -12
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony requires a searing. Only a little one; but they will carry the mark all their life.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceforge_secrecyc_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "forge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": 18
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "hintonly": true,
+            "craftable": false
+        },
+        {
+            "id": "recruitacquaintanceforge_secrecyc",
+            "label": "Recruit an Acquaintance, by invoking Forge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "forge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": -18
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony requires a searing. Only a little one; but they will carry the mark all their life.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceforge_secrecyd_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "forge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": 24
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "hintonly": true,
+            "craftable": false
+        },
+        {
+            "id": "recruitacquaintanceforge_secrecyd",
+            "label": "Recruit an Acquaintance, by invoking Forge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "forge": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": -24
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony requires a searing. Only a little one; but they will carry the mark all their life.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancegrail",
+            "label": "Recruit an Acquaintance, by invoking Grail",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 99,
+                "grail": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "They will not forget the savour I have given them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancegrail_secrecya_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "grail": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": 6
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancegrail_secrecya",
+            "label": "Recruit an Acquaintance, by invoking Grail",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "grail": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": -6
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "They will not forget the savour I have given them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancegrail_secrecyb_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "grail": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": 12
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancegrail_secrecyb",
+            "label": "Recruit an Acquaintance, by invoking Grail",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "grail": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": -12
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "They will not forget the savour I have given them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancegrail_secrecyc_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "grail": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": 18
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancegrail_secrecyc",
+            "label": "Recruit an Acquaintance, by invoking Grail",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "grail": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": -18
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "They will not forget the savour I have given them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancegrail_secrecyd_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "grail": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": 24
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancegrail_secrecyd",
+            "label": "Recruit an Acquaintance, by invoking Grail",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "grail": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": -24
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "They will not forget the savour I have given them.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceheart",
+            "label": "Recruit an Acquaintance, by invoking Heart",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 99,
+                "heart": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony is resonant as thunder in a church. I know it well. I wrote it myself.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceheart_secrecya_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "heart": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": 6
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceheart_secrecya",
+            "label": "Recruit an Acquaintance, by invoking Heart",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "heart": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": -6
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony is resonant as thunder in a church. I know it well. I wrote it myself.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceheart_secrecyb_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "heart": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": 12
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceheart_secrecyb",
+            "label": "Recruit an Acquaintance, by invoking Heart",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "heart": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": -12
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony is resonant as thunder in a church. I know it well. I wrote it myself.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceheart_secrecyc_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "heart": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": 18
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceheart_secrecyc",
+            "label": "Recruit an Acquaintance, by invoking Heart",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "heart": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": -18
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony is resonant as thunder in a church. I know it well. I wrote it myself.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceheart_secrecyd_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "heart": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": 24
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceheart_secrecyd",
+            "label": "Recruit an Acquaintance, by invoking Heart",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "heart": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": -24
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "The ceremony is resonant as thunder in a church. I know it well. I wrote it myself.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceknock",
+            "label": "Recruit an Acquaintance, by invoking Knock",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 99,
+                "knock": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Only a little wound. Just enough to give homage to the powers that open.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceknock_secrecya_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "knock": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": 6
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceknock_secrecya",
+            "label": "Recruit an Acquaintance, by invoking Knock",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "knock": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": -6
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Only a little wound. Just enough to give homage to the powers that open.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceknock_secrecyb_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "knock": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": 12
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceknock_secrecyb",
+            "label": "Recruit an Acquaintance, by invoking Knock",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "knock": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": -12
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Only a little wound. Just enough to give homage to the powers that open.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceknock_secrecyc_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "knock": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": 18
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceknock_secrecyc",
+            "label": "Recruit an Acquaintance, by invoking Knock",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "knock": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": -18
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Only a little wound. Just enough to give homage to the powers that open.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintanceknock_secrecyd_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "knock": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": 24
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintanceknock_secrecyd",
+            "label": "Recruit an Acquaintance, by invoking Knock",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "knock": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": -24
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Only a little wound. Just enough to give homage to the powers that open.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancelantern",
+            "label": "Recruit an Acquaintance, by invoking Lantern",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 99,
+                "lantern": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "A dozen lights blaze. There is no place for shadow in these rites, and no place for mercy.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancelantern_secrecya_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "lantern": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": 6
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancelantern_secrecya",
+            "label": "Recruit an Acquaintance, by invoking Lantern",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "lantern": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": -6
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "A dozen lights blaze. There is no place for shadow in these rites, and no place for mercy.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancelantern_secrecyb_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "lantern": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": 12
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancelantern_secrecyb",
+            "label": "Recruit an Acquaintance, by invoking Lantern",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "lantern": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": -12
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "A dozen lights blaze. There is no place for shadow in these rites, and no place for mercy.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancelantern_secrecyc_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "lantern": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": 18
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancelantern_secrecyc",
+            "label": "Recruit an Acquaintance, by invoking Lantern",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "lantern": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": -18
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "A dozen lights blaze. There is no place for shadow in these rites, and no place for mercy.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancelantern_secrecyd_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "lantern": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": 24
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancelantern_secrecyd",
+            "label": "Recruit an Acquaintance, by invoking Lantern",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "lantern": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": -24
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "A dozen lights blaze. There is no place for shadow in these rites, and no place for mercy.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancemoth",
+            "label": "Recruit an Acquaintance, by invoking Moth",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 99,
+                "moth": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Moth sheds its skin. The novice must only shed their clothes, and their past.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancemoth_secrecya_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "moth": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": 6
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancemoth_secrecya",
+            "label": "Recruit an Acquaintance, by invoking Moth",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "moth": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": -6
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Moth sheds its skin. The novice must only shed their clothes, and their past.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancemoth_secrecyb_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "moth": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": 12
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancemoth_secrecyb",
+            "label": "Recruit an Acquaintance, by invoking Moth",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "moth": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": -12
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Moth sheds its skin. The novice must only shed their clothes, and their past.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancemoth_secrecyc_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "moth": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": 18
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancemoth_secrecyc",
+            "label": "Recruit an Acquaintance, by invoking Moth",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "moth": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": -18
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Moth sheds its skin. The novice must only shed their clothes, and their past.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancemoth_secrecyd_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "moth": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": 24
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancemoth_secrecyd",
+            "label": "Recruit an Acquaintance, by invoking Moth",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "moth": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": -24
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "Moth sheds its skin. The novice must only shed their clothes, and their past.",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancewinter",
+            "label": "Recruit an Acquaintance, by invoking Winter",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 99,
+                "winter": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "I will speak only and exactly nine words. The novice will speak none at all. ",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancewinter_secrecya_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "winter": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": 6
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancewinter_secrecya",
+            "label": "Recruit an Acquaintance, by invoking Winter",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "winter": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_a": 1,
+		"believer": -6
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "I will speak only and exactly nine words. The novice will speak none at all. ",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancewinter_secrecyb_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "winter": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": 12
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancewinter_secrecyb",
+            "label": "Recruit an Acquaintance, by invoking Winter",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "winter": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_b": 1,
+		"believer": -12
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "I will speak only and exactly nine words. The novice will speak none at all. ",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancewinter_secrecyc_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "winter": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": 18
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancewinter_secrecyc",
+            "label": "Recruit an Acquaintance, by invoking Winter",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "winter": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_c": 1,
+		"believer": -18
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "I will speak only and exactly nine words. The novice will speak none at all. ",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "recruitacquaintancewinter_secrecyd_fail",
+            "label": "The Limits of Discretion",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "winter": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": 24
+	    },
+            "startdescription": "To induct any additional members now would compromise my cult's ability to stay hidden. Until we learn to be more discreet, we cannot grow our ranks. [Upgrade your Cult Discretion card to allow more members into your cult.]",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "recruitacquaintancewinter_secrecyd",
+            "label": "Recruit an Acquaintance, by invoking Winter",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "acquaintance": 1,
+                "follower": -1,
+                "mortal": 1,
+                "winter": 1
+            },
+	    "extantreqs": {
+		"skillsecrecy_d": 1,
+		"believer": -24
+	    },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "recruiting": 1
+            },
+            "startdescription": "This one is ready.",
+            "description": "I will speak only and exactly nine words. The novice will speak none at all. ",
+            "warmup": 30,
+            "craftable": true,
+            "burnimage": "freemasons"
+        },
+        {
+            "id": "promotetodiscipleedge",
+            "label": "Promote a Believer by invoking Edge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationedge": 1,
+                "follower": 1,
+                "disciple": -1,
+                "independent": -1,
+                "mortal": 1,
+                "edge": 7
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotiontodisciple": 1
+            },
+            "startdescription": "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+            "description": "'My scars are weapons. Through striving I rise to victory. There is no defeat but annihilation. In the light of the Bright Edge we know ourselves. I pledge myself to the service of the strongest.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promotetodiscipleforge",
+            "label": "Promote a Believer by invoking Forge",
+            "actionid": "talk",
+            "requirements": {
+                "venerationforge": 1,
+                "follower": 1,
+                "disciple": -1,
+                "independent": -1,
+                "mortal": 1,
+                "forge": 7
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotiontodisciple": 1
+            },
+            "startdescription": "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+            "description": "'I am destroyed. I am remade. Now I sear my skin, and by these marks shall I be known. I pledge myself to the flame, and I shall not flinch from any remaking.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promotetodisciplegrail",
+            "label": "Promote a Believer by invoking Grail",
+            "actionid": "talk",
+            "requirements": {
+                "venerationgrail": 1,
+                "follower": 1,
+                "disciple": -1,
+                "independent": -1,
+                "mortal": 1,
+                "grail": 7
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotiontodisciple": 1
+            },
+            "startdescription": "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+            "description": "In pain are we born. In hunger are we embraced. In delight are we devoured. These are the gates of the body, and this is Her promise: not all that is born decays. In remembrance of that promise, we give ourselves to the Feast.",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promotetodiscipleheart",
+            "label": "Promote a Believer by invoking Heart",
+            "actionid": "talk",
+            "requirements": {
+                "venerationheart": 1,
+                "follower": 1,
+                "disciple": -1,
+                "independent": -1,
+                "mortal": 1,
+                "heart": 7
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotiontodisciple": 1
+            },
+            "startdescription": "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+            "description": "'We cede our mouths to the thunder. We cede our feet to the dance. We cede our skins to the night. We do not cease; we do not cease; we do not cease.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promotetodiscipleknock",
+            "label": "Promote a Believer by invoking Knock",
+            "actionid": "talk",
+            "requirements": {
+                "venerationknock": 1,
+                "follower": 1,
+                "disciple": -1,
+                "independent": -1,
+                "mortal": 1,
+                "knock": 7
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotiontodisciple": 1
+            },
+            "startdescription": "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+            "description": "'To she who was flesh, I offer my wounds. To she who was stone, I offer this moment, where my old self divides from my new. To she who came from Light, I offer my secrets. The door is opened.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promotetodisciplelantern",
+            "label": "Promote a Believer by invoking Lantern",
+            "actionid": "talk",
+            "requirements": {
+                "venerationlantern": 1,
+                "follower": 1,
+                "disciple": -1,
+                "independent": -1,
+                "mortal": 1,
+                "lantern": 7
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotiontodisciple": 1
+            },
+            "startdescription": "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+            "description": "'He navigates. Now you are the map. He illuminates. You were the darkness. He is not compassionate. You will not show compassion. Our compass is Knowledge and our course is Glory.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promotetodisciplemoth",
+            "label": "Promote a Believer by invoking Moth",
+            "actionid": "talk",
+            "requirements": {
+                "venerationmoth": 1,
+                "follower": 1,
+                "disciple": -1,
+                "independent": -1,
+                "mortal": 1,
+                "moth": 7
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotiontodisciple": 1
+            },
+            "startdescription": "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+            "description": "'Now the scissors, and then the knife. Now the wood, and then the bones. Now the flutter of the moon, and then the dappling of the soul. He was blood, and so will we be.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promotetodisciplewinter",
+            "label": "Promote a Believer by invoking Winter",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "follower": 1,
+                "disciple": -1,
+                "independent": -1,
+                "mortal": 1,
+                "winter": 7
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotiontodisciple": 1
+            },
+            "startdescription": "My follower will kneel as a novice, and rise as an initiate. I will administer the necessary oaths myself.",
+            "description": "'Now you shed your blood, as the Sun's blood was shed. Now your past is divided from your future, as the Wolf was divided. You were not born. Your service ends only in dissolution. Arise, in silence.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promoteto_d_edge",
+            "label": "Attempt to Exalt a Disciple to an Assassin",
+            "actionid": "talk",
+            "requirements": {
+                "cultedge_1": 1,
+                "follower": 1,
+                "edge": 21,
+                "exalted": -1,
+                "potential": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotionto_d_edge": 1
+            },
+            "startdescription": "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+            "description": "'As the Lionsmith knelt to the Colonel, so now I kneel. My service ends in death, or in the resolution of strengths.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promoteto_d_forge",
+            "label": "Attempt to Exalt a Disciple to a Reshaper",
+            "actionid": "talk",
+            "requirements": {
+                "cultforge_1": 1,
+                "follower": 1,
+                "forge": 21,
+                "exalted": -1,
+                "potential": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotionto_d_forge": 1
+            },
+            "startdescription": "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+            "description": "'I am the hammer and the anvil; I am the fire's touch and the iron's blessing. I pledge myself to the final conflagration.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promoteto_d_grail",
+            "label": "Attempt to Exalt a Disciple to a Cyprian",
+            "actionid": "talk",
+            "requirements": {
+                "cultgrail_1": 1,
+                "follower": 1,
+                "grail": 21,
+                "exalted": -1,
+                "potential": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotionto_d_grail": 1
+            },
+            "startdescription": "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+            "description": "'By the Copper and the Crow, by She for whom we Hunger and She who Hungers for us, I pledge myself to be the Feaster and the Feast. I will be devoured and I will devour.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promoteto_d_heart",
+            "label": "Attempt to Exalt a Disciple to a Tarantellist",
+            "actionid": "talk",
+            "requirements": {
+                "cultheart_1": 1,
+                "follower": 1,
+                "heart": 21,
+                "exalted": -1,
+                "potential": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotionto_d_heart": 1
+            },
+            "startdescription": "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+            "description": "'By the Pine and the Knife, by the Drum and the Circle, I pledge myself to lead the Dance that does not end. This is my service, but in the end, it is only the Dance that I serve. '",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promoteto_d_knock",
+            "label": "Attempt to Exalt a Disciple to a Key",
+            "actionid": "talk",
+            "requirements": {
+                "cultknock_1": 1,
+                "follower": 1,
+                "knock": 21,
+                "exalted": -1,
+                "potential": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotionto_d_knock": 1
+            },
+            "startdescription": "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+            "description": "'No lock remains. No door remains. No gate remains. No wall remains. No fortress is closed against me. No country forbids me. No law binds but the law of the Mother. I am a Key, and this is my use.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promoteto_d_lantern",
+            "label": "Attempt to Exalt a Disciple to a Seer",
+            "actionid": "talk",
+            "requirements": {
+                "cultlantern_1": 1,
+                "follower": 1,
+                "lantern": 21,
+                "exalted": -1,
+                "potential": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotionto_d_lantern": 1
+            },
+            "startdescription": "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+            "description": "'I pledge myself to light the way for the willing and for the unwilling. I pledge myself to navigate. I pledge myself to illuminate. I pledge myself against mercy. I will walk the path that is shown, no matter the price.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promoteto_d_moth",
+            "label": "Attempt to Exalt a Disciple to a Skintwister",
+            "actionid": "talk",
+            "requirements": {
+                "cultmoth_1": 1,
+                "follower": 1,
+                "moth": 21,
+                "exalted": -1,
+                "potential": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotionto_d_moth": 1
+            },
+            "startdescription": "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+            "description": "'This was my past, but now I am changed. These are my garments, which I set aside. Here is my skin, but it is loaned to me. Here is my name, which is only a blindfold. Here is the Wood, where we strangle the light. Here I was, and here I am not.'",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+        {
+            "id": "promoteto_d_winter",
+            "label": "Attempt to Exalt a Disciple",
+            "actionid": "talk",
+            "requirements": {
+                "venerationwinter": 1,
+                "venerationedge": -1,
+                "venerationforge": -1,
+                "venerationgrail": -1,
+                "venerationheart": -1,
+                "venerationlantern": -1,
+                "venerationknock": -1,
+                "venerationmoth": -1,
+                "follower": 1,
+                "winter": 21,
+                "exalted": -1,
+                "potential": 1
+            },
+            "effects": {
+                "ingredient": -1,
+                "influence": -1
+            },
+            "aspects": {
+                "promotionto_d_winter": 1
+            },
+            "startdescription": "Only a rare few - those most suited to service in our mysteries - may achieve this rank.",
+            "description": "\"'...?' '...?' '...?'\r\n\t\t\r\n\t\t'...'\"",
+            "warmup": 60,
+            "craftable": true,
+	    "alt": [
+		{
+		    "id": "bully.trigger",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "follower": 1
+			}
+		    }
+		}
+	    ]
+        },
+]
+}

@@ -1,0 +1,3210 @@
+{
+"elements": [
+    {
+	"id": "conrad.a",
+	"label": "Conrad, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustenlightenment": 1
+	},
+	"xtriggers": {
+	    "recruiting": "conrad.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "conrad.r"
+	},
+	"description": "Conrad had to abscond the stage after one of his assistants vanished ‘too successfully.’ Nowadays, his dexterity is turned to more illicit industries.",
+	"uniquenessgroup": "uq_conrad",
+    },
+    {
+	"id": "conrad.b",
+	"label": "Conrad, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "knock": 2,
+	    "follower_lustenlightenment": 1,
+	    "enterprising": 1,
+	    "thorough": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "conrad.c",
+	    "capturefollower": "conrad.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "conrad.r"
+	},
+	"description": "Ideally, a magician has two dexterous hands and two sharp eyes. Conrad has volunteered all of these, and more.",
+	"uniquenessgroup": "uq_conrad",
+    },
+    {
+	"id": "conrad.c",
+	"label": "Conrad, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "knock": 5,
+	    "follower_lustenlightenment": 1,
+	    "enterprising": 1,
+	    "thorough": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_knock": "conrad.d",
+	    "capturefollower": "conrad.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "conrad.r"
+	},
+	"description": "Conrad has a troublesome habit of taking what does not belong to him. Yet, as of late, he has begun to take things that do not belong to anyone.",
+	"uniquenessgroup": "uq_conrad",
+	"icon": "conrad.b"
+    },
+    {
+	"id": "conrad.d",
+	"label": "Conrad, a Key",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "knock": 10,
+	    "follower_lustenlightenment": 1,
+	    "loyalty_beachcomber": 1,
+	    "enterprising": 1,
+	    "thorough": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "conrad.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "conrad.r.c"
+	},
+	"description": "Conrad likes to help himself to a cup of tea whenever he stops someplace to pocket a keepsake. He has attested that the café off St. James keeps better tea than the royal cupboard, but knows his tastes have turned strange with the rest of him.",
+	"uniquenessgroup": "uq_conrad",
+	"icon": "conrad.b"
+    },
+    {
+	"id": "josephine.a",
+	"label": "Sister Josephine, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustenlightenment": 1
+	},
+	"xtriggers": {
+	    "recruiting": "josephine.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "josephine.r"
+	},
+	"description": "A nervous, conscience-stricken young lady enlisted with one of the local convents. Josephine, the other sisters say, is a model servant of Christ.",
+	"uniquenessgroup": "uq_josephine",
+    },
+    {
+	"id": "josephine.b",
+	"label": "Sister Josephine, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "knock": 2,
+	    "follower_lustenlightenment": 1,
+	    "rambling": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "josephine.c",
+	    "capturefollower": "josephine.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "josephine.r"
+	},
+	"description": "Sister Josephine dedicates more fervour to her penance than is deemed seemly.",
+	"uniquenessgroup": "uq_josephine",
+    },
+    {
+	"id": "josephine.c",
+	"label": "Sister Josephine, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "knock": 5,
+	    "follower_lustenlightenment": 1,
+	    "rambling": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_knock": "josephine.d",
+	    "capturefollower": "josephine.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "josephine.r"
+	},
+	"description": "Josephine is given to song, to visions, to fits of weeping - she must wear bandages where her faith became especially demanding, and sit long in the warm waters when she has finished.",
+	"uniquenessgroup": "uq_josephine",
+	"icon": "josephine.b"
+    },
+    {
+	"id": "josephine.d",
+	"label": "Sister Josephine, a Key",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "knock": 10,
+	    "follower_lustenlightenment": 1,
+	    "loyalty_moa": 1,
+	    "rambling": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "josephine.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "josephine.r.c"
+	},
+	"description": "But I am pierced through for your transgressions,\nI am crushed for your iniquities;\nThe chastening for your well-being fell upon Me,\nand by My scourging you are healed.",
+	"uniquenessgroup": "uq_josephine",
+	"icon": "josephine.b"
+    },
+    {
+	"id": "elizabeth.a",
+	"label": "Elizabeth, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustenlightenment": 1
+	},
+	"xtriggers": {
+	    "recruiting": "elizabeth.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "elizabeth.r"
+	},
+	"description": "An aloof, wandering woman with a lunatic lilt in her voice, and an evident pedigree in suffering. She says that the nighttime sky is the only roof she would sleep beneath.",
+	"uniquenessgroup": "uq_elizabeth",
+    },
+    {
+	"id": "elizabeth.b",
+	"label": "Elizabeth, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "knock": 2,
+	    "follower_lustenlightenment": 1,
+	    "rambling": 1,
+	    "impassioned": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "elizabeth.c",
+	    "capturefollower": "elizabeth.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "elizabeth.r"
+	},
+	"description": "When there is no access to a mirror, Elizabeth will retrace her scars, and sigh relief when she realizes they are still there.",
+	"uniquenessgroup": "uq_elizabeth",
+    },
+    {
+	"id": "elizabeth.c",
+	"label": "Elizabeth, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "knock": 5,
+	    "follower_lustenlightenment": 1,
+	    "rambling": 1,
+	    "impassioned": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_knock": "elizabeth.d",
+	    "capturefollower": "elizabeth.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "elizabeth.r"
+	},
+	"description": "Elizabeth keeps a shard of mirror in her pocket. She grips it tight enough to bleed, but never to shatter. She must see what sometimes looks back through the glass.",
+	"uniquenessgroup": "uq_elizabeth",
+	"icon": "elizabeth.b"
+    },
+    {
+	"id": "elizabeth.d",
+	"label": "Elizabeth, a Key",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "knock": 10,
+	    "follower_lustenlightenment": 1,
+	    "loyalty_meniscate": 1,
+	    "rambling": 1,
+	    "impassioned": 1,
+	    "mimicknock": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "elizabeth.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "elizabeth.r.c"
+	},
+	"description": "Elizabeth cannot be turned from. Her scars are evening clouds; her remaining eye: a night-sun. She will never be whole. She is beautiful.",
+	"uniquenessgroup": "uq_elizabeth",
+	"icon": "elizabeth.b"
+    },
+    {
+	"id": "charlotte.a",
+	"label": "Charlotte, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustchange": 1
+	},
+	"xtriggers": {
+	    "recruiting": "charlotte.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r"
+	},
+	"description": "A fitful, mendacious young lady with a pronounced nervous streak. She’s come to the Capital under the care of her brother, waiting on some cure for that very nervosity.",
+	"uniquenessgroup": "uq_charlotte",
+    },
+    {
+	"id": "charlotte.b",
+	"label": "Charlotte, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "moth": 2,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1,
+	    "charlotte.original": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "charlotte.c",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r",
+	    "shiftlantern": "charlotte.b.lantern",
+	    "shiftforge": "charlotte.b.forge",
+	    "shiftedge": "charlotte.b.edge",
+	    "shiftwinter": "charlotte.b.winter",
+	    "shiftheart": "charlotte.b.heart",
+	    "shiftgrail": "charlotte.b.grail",
+	    "shiftknock": "charlotte.b.knock",
+	},
+	"description": "Charlotte was instructed to keep a journal for her worries and whims. She has never been seen carrying a journal.",
+	"uniquenessgroup": "uq_charlotte",
+    },
+    {
+	"id": "charlotte.c",
+	"label": "Charlotte, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "moth": 5,
+	    "follower_lustchange": 1,
+	    "rambling": 1,
+	    "impassioned": 1,
+	    "charlotte.original": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "charlotte.d",
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r",
+	    "shiftlantern": "charlotte.c.lantern",
+	    "shiftforge": "charlotte.c.forge",
+	    "shiftedge": "charlotte.c.edge",
+	    "shiftwinter": "charlotte.c.winter",
+	    "shiftheart": "charlotte.c.heart",
+	    "shiftgrail": "charlotte.c.grail",
+	    "shiftknock": "charlotte.c.knock",
+	},
+	"description": "Charlotte rarely keeps her appointments or her promises, now - there is little about her that keeps at all.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.b"
+    },
+    {
+	"id": "charlotte.d",
+	"label": "Charlotte, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "moth": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_moth": 1,
+	    "rambling": 1,
+	    "impassioned": 1,
+	    "charlotte.original": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "charlotte.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "charlotte.r.c",
+	    "shiftlantern": "charlotte.d.lantern",
+	    "shiftforge": "charlotte.d.forge",
+	    "shiftedge": "charlotte.d.edge",
+	    "shiftwinter": "charlotte.d.winter",
+	    "shiftheart": "charlotte.d.heart",
+	    "shiftgrail": "charlotte.d.grail",
+	    "shiftknock": "charlotte.d.knock",
+	},
+	"description": "Dead leaves crackling under the press of bare feet, naps taken beneath the wayside bridges. The bending wind in dry, unwatched places, and the lulling laughter from nowhere at nothing: Charlotte.",
+	"uniquenessgroup": "uq_charlotte",
+	"icon": "charlotte.b"
+    },
+    {
+	"id": "howe.a",
+	"label": "Howe, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1
+	},
+	"xtriggers": {
+	    "recruiting": "howe.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "howe.r"
+	},
+	"description": "A clever boy - perhaps too clever for his own good. Youthfulness, however, never travels too far from impressionability. This listless waif might be made into a useful one.",
+	"uniquenessgroup": "uq_howe",
+    },
+    {
+	"id": "howe.b",
+	"label": "Howe, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "moth": 2,
+	    "aromantic": 1,
+	    "frail": 1,
+	    "bully": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "howe.c",
+	    "capturefollower": "howe.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "howe.r"
+	},
+	"description": "Howe likes to come with small gifts and knicknacks, though he acts the fool when pressed on where he acquires them.",
+	"uniquenessgroup": "uq_howe",
+    },
+    {
+	"id": "howe.c",
+	"label": "Howe, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "moth": 5,
+	    "aromantic": 1,
+	    "frail": 1,
+	    "bully": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "howe.d",
+	    "capturefollower": "howe.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "howe.r"
+	},
+	"description": "A child's smile is a very potent deception, though Howe’s smile is more a mask than an expression. He is not known to take it off while in the presence of others.",
+	"uniquenessgroup": "uq_howe",
+	"icon": "howe.b"
+    },
+    {
+	"id": "howe.d",
+	"label": "Howe, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "moth": 10,
+	    "aromantic": 1,
+	    "frail": 1,
+	    "bully": 1,
+	    "loyalty_mare": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "howe.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "howe.r.c"
+	},
+	"description": "When a name\nis as easily stolen as two-pence,\nwhere will you hide\nyour treasures?",
+	"uniquenessgroup": "uq_howe",
+	"icon": "howe.b"
+    },
+    {
+	"id": "lawrence.a",
+	"label": "Lawrence, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustchange": 1
+	},
+	"xtriggers": {
+	    "recruiting": "lawrence.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "lawrence.r"
+	},
+	"description": "Map-maker, memoirist, and a self-proclaimed ‘citizen of no nation’. Mr. Thackery is a chronic wanderer who not only lives out of his suitcase - he can’t quite live without it.",
+	"uniquenessgroup": "uq_lawrence",
+    },
+    {
+	"id": "lawrence.b",
+	"label": "Lawrence, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "moth": 2,
+	    "follower_lustchange": 1,
+	    "prepared": 1,
+	    "sentimental": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "lawrence.c",
+	    "capturefollower": "lawrence.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "lawrence.r",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "Lawrence is always heading someplace else.",
+	"uniquenessgroup": "uq_lawrence",
+    },
+    {
+	"id": "lawrence.c",
+	"label": "Lawrence, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "moth": 5,
+	    "follower_lustchange": 1,
+	    "prepared": 1,
+	    "sentimental": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_moth": "lawrence.d",
+	    "capturefollower": "lawrence.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "lawrence.r",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "His hair is always windswept, his clothes threadbare, but Lawrence’s humour remains brilliant so long as he is outbound.",
+	"uniquenessgroup": "uq_lawrence",
+	"icon": "lawrence.b"
+    },
+    {
+	"id": "lawrence.d",
+	"label": "Lawrence, a Skintwister",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "moth": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_vagabond": 1,
+	    "prepared": 1,
+	    "sentimental": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "lawrence.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "lawrence.r.c",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "So long as there is a place where feet have not trod earth, Lawrence will wander. So long as there is a place eyes have not borne witness, Lawrence will set his sights further. The compass is caprice and the meridian is Glory, and the pilgrim who walks this way needs no map.",
+	"uniquenessgroup": "uq_lawrence",
+	"icon": "lawrence.b"
+    },
+    {
+	"id": "klaus.a",
+	"label": "Klaus, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustenlightenment": 1
+	},
+	"xtriggers": {
+	    "recruiting": "klaus.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "klaus.r"
+	},
+	"description": "A hopeful, eclectic young graduate with an aptitude for analysis of the human mind. He’s come to the Capital with his sister, in search of new ideas to aid her treatment.",
+	"uniquenessgroup": "uq_klaus",
+    },
+    {
+	"id": "klaus.b",
+	"label": "Klaus, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "lantern": 2,
+	    "pacifist": 1,
+	    "scholarly": 1,
+	    "follower_lustenlightenment": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "klaus.c",
+	    "capturefollower": "klaus.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "klaus.r"
+	},
+	"description": "No matter the subject of a conversation, Klaus always has his pen and his notebook ready, and always comes away with notes.",
+	"uniquenessgroup": "uq_klaus",
+    },
+    {
+	"id": "klaus.c",
+	"label": "Klaus, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "lantern": 5,
+	    "pacifist": 1,
+	    "scholarly": 1,
+	    "follower_lustenlightenment": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_lantern": "klaus.d",
+	    "capturefollower": "klaus.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "klaus.r"
+	},
+	"description": "Klaus poses questions in much the same way a scalpel is posed unto and into flesh.",
+	"uniquenessgroup": "uq_klaus",
+	"icon": "klaus.b"
+    },
+    {
+	"id": "klaus.d",
+	"label": "Klaus, a Seer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "lantern": 10,
+	    "pacifist": 1,
+	    "scholarly": 1,
+	    "follower_lustenlightenment": 1,
+	    "loyalty_watchman": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "klaus.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "klaus.r.c"
+	},
+	"description": "Klaus is the method, and the method is perfected. Consciousness is as malleable as clay. With only a word, he can seed an impulse, a desire, an aversion; with only a suggestion, he can plant an idea, a memory, a truth.",
+	"uniquenessgroup": "uq_klaus",
+	"icon": "klaus.b"
+    },
+    {
+	"id": "jerome.a",
+	"label": "Jerome, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustenlightenment": 1
+	},
+	"xtriggers": {
+	    "recruiting": "jerome.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "jerome.r"
+	},
+	"description": "Lieutenant Jerome Alexander earned his accolades during the Great War. He's been praised as a peerless strategian, but some say his efficiency is due only to his gross pragmatism, and his dispathy for his fellow man.",
+	"uniquenessgroup": "uq_jerome",
+    },
+    {
+	"id": "jerome.b",
+	"label": "Jerome, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "lantern": 2,
+	    "follower_lustenlightenment": 1,
+	    "famous": 1,
+	    "bully": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "jerome.c",
+	    "capturefollower": "jerome.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "jerome.r",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "It’s been quite some time since the war, but Jerome’s shrewd intellect is quick to arm, and quick to work.",
+	"uniquenessgroup": "uq_jerome",
+    },
+    {
+	"id": "jerome.c",
+	"label": "Jerome, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "lantern": 5,
+	    "follower_lustenlightenment": 1,
+	    "famous": 1,
+	    "bully": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_lantern": "jerome.d",
+	    "capturefollower": "jerome.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "jerome.r",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "Jerome considers our work arithmetic: lives are figures and assets; schemes are operations and formulae. And death is merely a statistic.",
+	"uniquenessgroup": "uq_jerome",
+	"icon": "jerome.b"
+    },
+    {
+	"id": "jerome.d",
+	"label": "Jerome, a Seer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "lantern": 10,
+	    "follower_lustenlightenment": 1,
+	    "famous": 1,
+	    "bully": 1,
+	    "loyalty_colonel": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "jerome.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "jerome.r.c",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "Cunning is the greatest weapon of any commander, but Jerome does not wield a weapon - he wields an arsenal. There is no room for uncertainty nor sympathy in his gambit. When he gives the order, men will have no choice but to follow.",
+	"uniquenessgroup": "uq_jerome",
+	"icon": "jerome.b"
+    },
+    {
+	"id": "marjorie.a",
+	"label": "Marjorie, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustenlightenment": 1
+	},
+	"xtriggers": {
+	    "recruiting": "marjorie.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "marjorie.r"
+	},
+	"description": "The terse, flinty secretary at a Capital courthouse, Ms. Hawkes is a stickler in every sense of the word. She prefers pen and ink over typist’s tools.",
+	"uniquenessgroup": "uq_marjorie",
+    },
+    {
+	"id": "marjorie.b",
+	"label": "Marjorie, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "lantern": 2,
+	    "follower_lustenlightenment": 1,
+	    "bully": 1,
+	    "scholarly": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "marjorie.c",
+	    "capturefollower": "marjorie.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "marjorie.r"
+	},
+	"description": "Marjorie rises always at the break of dawn, and meets the day with rigor and prudence.",
+	"uniquenessgroup": "uq_marjorie",
+    },
+    {
+	"id": "marjorie.c",
+	"label": "Marjorie, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "lantern": 5,
+	    "follower_lustenlightenment": 1,
+	    "bully": 1,
+	    "scholarly": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_lantern": "marjorie.d",
+	    "capturefollower": "marjorie.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "marjorie.r"
+	},
+	"description": "It is uncommon for Marjorie to err in her routines, now. On the rare occasion her pen slips or tea spills, she will launch into obscenities, or go wildly to sobbing.",
+	"uniquenessgroup": "uq_marjorie",
+	"icon": "marjorie.b"
+    },
+    {
+	"id": "marjorie.d",
+	"label": "Marjorie, a Seer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "lantern": 10,
+	    "follower_lustenlightenment": 1,
+	    "bully": 1,
+	    "scholarly": 1,
+	    "loyalty_madrugad": 1,
+	    "mimiclantern": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "marjorie.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "marjorie.r.c"
+	},
+	"description": "Marjorie’s judgement is remorseless and inflexible; Marjorie’s breath is cold and slow. Marjorie is the hoary-bright of the morning sun, and she will tolerate no untidiness.",
+	"uniquenessgroup": "uq_marjorie",
+	"icon": "marjorie.b"
+    },
+    {
+	"id": "edgar.a",
+	"label": "Edgar, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustpower": 1
+	},
+	"xtriggers": {
+	    "recruiting": "edgar.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "edgar.r"
+	},
+	"description": "Edgar Lamont Reeves has been a marine, a Pinkerton, and a 'life insurance salesman.' His Western vulgarity belies a mind suited for more surreptitious industries.",
+	"uniquenessgroup": "uq_edgar",
+    },
+    {
+	"id": "edgar.b",
+	"label": "Edgar, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "forge": 2,
+	    "follower_lustpower": 1,
+	    "bully": 1,
+	    "enterprising": 1,
+	    "defiant": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "edgar.c",
+	    "capturefollower": "edgar.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "edgar.r"
+	},
+	"description": "Edgar is selfish in the way that best begets efficiency, and cruel in only the most precise measures.",
+	"uniquenessgroup": "uq_edgar",
+    },
+    {
+	"id": "edgar.c",
+	"label": "Edgar, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "forge": 5,
+	    "follower_lustpower": 1,
+	    "bully": 1,
+	    "enterprising": 1,
+	    "defiant": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_forge": "edgar.d",
+	    "capturefollower": "edgar.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "edgar.r"
+	},
+	"description": "Where his work is impeded, Edgar is known to break rules. Where his ambitions are impeded, Edgar is known to break people.",
+	"uniquenessgroup": "uq_edgar",
+	"icon": "edgar.b"
+    },
+    {
+	"id": "edgar.d",
+	"label": "Edgar, a Reshaper",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "forge": 10,
+	    "follower_lustpower": 1,
+	    "bully": 1,
+	    "enterprising": 1,
+	    "defiant": 1,
+	    "loyalty_lionsmith": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "edgar.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "edgar.r.c"
+	},
+	"description": "The strength of Edgar’s grip could crush coal into diamond. His blood courses like fire; his heart pounds like an engine. Stand close to him, and the faint whirring of clockwork becomes audible.",
+	"uniquenessgroup": "uq_edgar",
+	"icon": "edgar.b"
+    },
+    {
+	"id": "roya.a",
+	"label": "Roya, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustpower": 1
+	},
+	"xtriggers": {
+	    "recruiting": "roya.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "roya.r"
+	},
+	"description": "A towering émigré from newly christened Iran. Roya earns her keep at the dockyards and foundries with arresting efficacy, but she always looks troubled when the gulls pass overhead, laughing.",
+	"uniquenessgroup": "uq_roya",
+    },
+    {
+	"id": "roya.b",
+	"label": "Roya, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "forge": 2,
+	    "prepared": 1,
+	    "resilient": 1,
+	    "follower_lustpower": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "roya.c",
+	    "capturefollower": "roya.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "roya.r",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "Roya knows there is nothing simpler, and nothing more applicable, than strength.",
+	"uniquenessgroup": "uq_roya",
+    },
+    {
+	"id": "roya.c",
+	"label": "Roya, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "forge": 5,
+	    "follower_lustpower": 1,
+	    "prepared": 1,
+	    "resilient": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_forge": "roya.d",
+	    "capturefollower": "roya.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "roya.r",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "Roya goes to each task with terrifying dedication, usually drawing an audience. She does not shirk; she does not flinch; she does not tire.",
+	"uniquenessgroup": "uq_roya",
+	"icon": "roya.b"
+    },
+    {
+	"id": "roya.d",
+	"label": "Roya, a Reshaper",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "forge": 10,
+	    "follower_lustpower": 1,
+	    "prepared": 1,
+	    "resilient": 1,
+	    "loyalty_lionsmith": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "roya.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "roya.r.c",
+	    "prepared_trigger": [
+		{
+		    "id": "funds",
+		    "morpheffect": "spawn"
+		}
+	    ]
+	},
+	"description": "Muscles like worked bronze, youthful with heat. Underneath burns the savage impression of age and inhuman design. This is not Roya’s old shape, but it serves its purposes. ",
+	"uniquenessgroup": "uq_roya",
+	"icon": "roya.b"
+    },
+    {
+	"id": "ludwig.a",
+	"label": "Ludwig, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1
+	},
+	"xtriggers": {
+	    "recruiting": "ludwig.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "ludwig.r"
+	},
+	"description": "Ludwig Gödel-Bruckheimer was ruled dead in 1918 by the German police after his laboratory was destroyed in a fire. This man bears a striking resemblance to the polyglot chemist.",
+	"uniquenessgroup": "uq_ludwig",
+    },
+    {
+	"id": "ludwig.b",
+	"label": "Ludwig, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "forge": 2,
+	    "scholarly": 1,
+	    "thorough": 1,
+	    "aromantic": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "ludwig.c",
+	    "capturefollower": "ludwig.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "ludwig.r"
+	},
+	"description": "The physical science, Ludwig knows, is only elevated by the science of the spirit.",
+	"uniquenessgroup": "uq_ludwig",
+    },
+    {
+	"id": "ludwig.c",
+	"label": "Ludwig, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "forge": 5,
+	    "scholarly": 1,
+	    "thorough": 1,
+	    "aromantic": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_forge": "ludwig.d",
+	    "capturefollower": "ludwig.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "ludwig.r"
+	},
+	"description": "Ludwig is outgrowing the need for fire as we understand it. There are cleverer ways he might sear, or split, or sublimate the world around him.",
+	"uniquenessgroup": "uq_ludwig",
+	"icon": "ludwig.b"
+    },
+    {
+	"id": "ludwig.d",
+	"label": "Ludwig, a Reshaper",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "forge": 10,
+	    "scholarly": 1,
+	    "thorough": 1,
+	    "aromantic": 1,
+	    "loyalty_forge": 1,
+	    "mimicforge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "ludwig.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "ludwig.r.c"
+	},
+	"description": "Ludwig is on speaking terms with matter and with energy. His right hand creates, and his left hand destroys. Nothing goes unrefined in the wake of his touch.",
+	"uniquenessgroup": "uq_ludwig",
+	"icon": "ludwig.b"
+    },
+    {
+	"id": "victorien.a",
+	"label": "Victorien, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustsensation": 1
+	},
+	"xtriggers": {
+	    "recruiting": "victorien.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "victorien.r"
+	},
+	"description": "A French veteran with an easy voice and a penchant for gallows humor. Every time someone asks him how he lost his eye, Victorien de Morsiér spins a different story.",
+	"uniquenessgroup": "uq_victorien",
+    },
+    {
+	"id": "victorien.b",
+	"label": "Victorien, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "edge": 2,
+	    "morbid": 1,
+	    "amicable": 1,
+	    "follower_lustsensation": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "victorien.c",
+	    "questcomplete": "victorien.b.alt",
+	    "capturefollower": "victorien.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "victorien.r"
+	},
+	"description": "Victorien still clamps his right eye shut before pulling the trigger - a habit he’ll kill eventually, he says.",
+	"uniquenessgroup": "uq_victorien",
+    },
+    {
+	"id": "victorien.c",
+	"label": "Victorien, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "edge": 5,
+	    "morbid": 1,
+	    "amicable": 1,
+	    "follower_lustsensation": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_edge": "victorien.d",
+	    "questcomplete": "victorien.c.alt",
+	    "capturefollower": "victorien.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "victorien.r"
+	},
+	"description": "Victorien’s remaining eye is slowly learning to catch up with his gun-hand. Victorien’s missing eye already has.",
+	"uniquenessgroup": "uq_victorien",
+	"icon": "victorien.b"
+    },
+    {
+	"id": "victorien.d",
+	"label": "Victorien, an Assassin",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "edge": 10,
+	    "morbid": 1,
+	    "amicable": 1,
+	    "follower_lustsensation": 1,
+	    "loyalty_colonel": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "victorien.p",
+	    "questcomplete": "victorien.d.alt",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "victorien.r.c"
+	},
+	"description": "To make it sporting for his targets, Victorien sometimes deigns to close his eye - but that, too, is something of a cruel joke.",
+	"uniquenessgroup": "uq_victorien",
+	"icon": "victorien.b"
+    },
+    {
+	"id": "nadine.a",
+	"label": "Nadine, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustpower": 1
+	},
+	"xtriggers": {
+	    "recruiting": "nadine.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "nadine.r"
+	},
+	"description": "A short-fused, loud-mouthed young lady of subversive politics. Nadine is well-acquainted with what the inside of a holding cell looks like, but even that is a badge of honour for her.",
+	"uniquenessgroup": "uq_nadine",
+    },
+    {
+	"id": "nadine.b",
+	"label": "Nadine, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "edge": 2,
+	    "defiant": 1,
+	    "impassioned": 1,
+	    "follower_lustpower": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "nadine.c",
+	    "questcomplete": "nadine.b.alt",
+	    "capturefollower": "nadine.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "nadine.r"
+	},
+	"description": "A disagreement is an invitation for a clash, and Nadine likes to disagree.",
+	"uniquenessgroup": "uq_nadine",
+    },
+    {
+	"id": "nadine.c",
+	"label": "Nadine, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "edge": 5,
+	    "defiant": 1,
+	    "impassioned": 1,
+	    "follower_lustpower": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_edge": "nadine.d",
+	    "questcomplete": "nadine.c.alt",
+	    "capturefollower": "nadine.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "nadine.r"
+	},
+	"description": "Nadine has stoked and tempered her disdain for authority. She will go fearlessly against even the most titantic adversity.",
+	"uniquenessgroup": "uq_nadine",
+	"icon": "nadine.b"
+    },
+    {
+	"id": "nadine.d",
+	"label": "Nadine, an Assassin",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "edge": 10,
+	    "defiant": 1,
+	    "impassioned": 1,
+	    "follower_lustpower": 1,
+	    "loyalty_lionsmith": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "nadine.p",
+	    "questcomplete": "nadine.d.alt",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "nadine.r.c"
+	},
+	"description": "Her tongue, her heart, her raised fist - a trumpet, a drum, a striking hammer. Here strides tomorrow's intrepid vanguard against yesterday, and she does not yield in the face of any power.",
+	"uniquenessgroup": "uq_nadine",
+	"icon": "nadine.b"
+    },
+    {
+	"id": "yelena.a",
+	"label": "Yelena, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustremembrance": 1
+	},
+	"xtriggers": {
+	    "recruiting": "yelena.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "yelena.r"
+	},
+	"description": "During the Revolution, Yelena's husband fought for the whites and her sons fought for the reds - and now they fight no more. She has had her laugh at life’s black joke.",
+	"uniquenessgroup": "uq_yelena",
+    },
+    {
+	"id": "yelena.b",
+	"label": "Yelena, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "edge": 2,
+	    "defiant": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "follower_lustremembrance": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "yelena.c",
+	    "questcomplete": "yelena.b.alt",
+	    "capturefollower": "yelena.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "yelena.r"
+	},
+	"description": "Yelena gives people what she thinks they deserve.",
+	"uniquenessgroup": "uq_yelena",
+    },
+    {
+	"id": "yelena.c",
+	"label": "Yelena, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "edge": 5,
+	    "defiant": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "follower_lustremembrance": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_edge": "yelena.d",
+	    "questcomplete": "yelena.c.alt",
+	    "capturefollower": "yelena.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "yelena.r"
+	},
+	"description": "Yelena's grief refined to hatred long ago, but now it bubbles to the surface. It seethes behind her eyes, beneath her nails, between her teeth.",
+	"uniquenessgroup": "uq_yelena",
+	"icon": "yelena.b"
+    },
+    {
+	"id": "yelena.d",
+	"label": "Yelena, an Assassin",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "edge": 10,
+	    "defiant": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "follower_lustremembrance": 1,
+	    "loyalty_wolf": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "yelena.p",
+	    "questcomplete": "yelena.d.alt",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "yelena.r.c"
+	},
+	"description": "Cruelty is the maxim. There will be no quarter, no glory, no distinction. Here and there, the world cultivates its savage things, and Yelena is one of them, now.",
+	"uniquenessgroup": "uq_yelena",
+	"icon": "yelena.b"
+    },
+    {
+	"id": "florence.a",
+	"label": "Florence, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustremembrance": 1
+	},
+	"xtriggers": {
+	    "recruiting": "florence.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "florence.r"
+	},
+	"description": "'The Queen of Silence' once fronted all the marquees in the Capital - but when cinema invented itself a voice, she was gradually and inevitably pushed out of the spotlight. Florence Stoker is a fading sort of opulence.",
+	"uniquenessgroup": "uq_florence",
+    },
+    {
+	"id": "florence.b",
+	"label": "Florence, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "winter": 2,
+	    "follower_lustremembrance": 1,
+	    "jealous": 1,
+	    "sentimental": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "florence.c",
+	    "capturefollower": "florence.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "florence.r"
+	},
+	"description": "Florence can’t help but to reminisce, and she keeps a handkerchief ready for such moments.",
+	"uniquenessgroup": "uq_florence",
+    },
+    {
+	"id": "florence.c",
+	"label": "Florence, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "winter": 5,
+	    "follower_lustremembrance": 1,
+	    "jealous": 1,
+	    "sentimental": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_winter": "florence.d",
+	    "capturefollower": "florence.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "florence.r"
+	},
+	"description": "The manipulation of light, the dulling of colour, the architecture of silence - she was smitten with all of these, once. Florence nurses that once-love as if it were an ailing infant, or a hiding dagger.",
+	"uniquenessgroup": "uq_florence",
+	"icon": "florence.b"
+    },
+    {
+	"id": "florence.d",
+	"label": "An Image, Which is Silent",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "winter": 10,
+	    "follower_lustremembrance": 1,
+	    "loyalty_sir": 1,
+	    "jealous": 1,
+	    "sentimental": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "florence.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "florence.r.c"
+	},
+	"description": "None will be able to look away. None will be able to applaud, nor scream.",
+	"uniquenessgroup": "uq_florence",
+	"icon": "florence.b"
+    },
+    {
+	"id": "ephraim.a",
+	"label": "Ephraim, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustremembrance": 1
+	},
+	"xtriggers": {
+	    "recruiting": "ephraim.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "ephraim.r"
+	},
+	"description": "A mousy, amiable old man who favours afternoons in the park, feeding the birds and chatting with the passing constabulary. The hands have lost the strength of youth, but Ephraim remembers what he was.",
+	"uniquenessgroup": "uq_ephraim",
+    },
+    {
+	"id": "ephraim.b",
+	"label": "Ephraim, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "winter": 2,
+	    "follower_lustremembrance": 1,
+	    "frail": 1,
+	    "thorough": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "ephraim.c",
+	    "capturefollower": "ephraim.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "ephraim.r"
+	},
+	"description": "Ephraim is unhurried, unassuming, and unremarkable. It suited him then, and it suits him now.",
+	"uniquenessgroup": "uq_ephraim",
+    },
+    {
+	"id": "ephraim.c",
+	"label": "Ephraim, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "winter": 5,
+	    "follower_lustremembrance": 1,
+	    "frail": 1,
+	    "thorough": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_winter": "ephraim.d",
+	    "capturefollower": "ephraim.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "ephraim.r"
+	},
+	"description": "Ephraim hobbles in public, coughing like a man of his age ought to. But there is a disingenuity to the way he walks, laughs, and even blinks.",
+	"uniquenessgroup": "uq_ephraim",
+	"icon": "ephraim.b"
+    },
+    {
+	"id": "ephraim.d",
+	"label": "An Old Man, Who Remembers",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "winter": 10,
+	    "follower_lustremembrance": 1,
+	    "loyalty_elegiast": 1,
+	    "frail": 1,
+	    "thorough": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "ephraim.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "ephraim.r.c"
+	},
+	"description": "In a locked room, a scrapbook rests on a table. On each page: a date, a faded photograph, and a missing persons report. The memorial forgets nothing, and neither does its architect.",
+	"uniquenessgroup": "uq_ephraim",
+	"icon": "ephraim.b"
+    },
+    {
+	"id": "beatrice.a",
+	"label": "Beatrice, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1
+	},
+	"xtriggers": {
+	    "recruiting": "beatrice.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "beatrice.r"
+	},
+	"description": "A wrinkled centenarian who has outlived most of her relations, grandson included. Mrs. Crozier is a lonely woman, and she grows lonelier by the day.",
+	"uniquenessgroup": "uq_beatrice",
+    },
+    {
+	"id": "beatrice.b",
+	"label": "Beatrice, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "winter": 2,
+	    "aromantic": 1,
+	    "frail": 1,
+	    "morbid": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "beatrice.c",
+	    "capturefollower": "beatrice.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "beatrice.r"
+	},
+	"description": "Mrs. Crozier is often sad, and she cannot always remember why.",
+	"uniquenessgroup": "uq_beatrice",
+    },
+    {
+	"id": "beatrice.c",
+	"label": "Beatrice, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "winter": 5,
+	    "aromantic": 1,
+	    "frail": 1,
+	    "morbid": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_winter": "beatrice.d",
+	    "capturefollower": "beatrice.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "beatrice.r"
+	},
+	"description": "Memory is a fading light in the long shadow of ten decades. Beatrice is clinging to that light, though her fingers are slipping.",
+	"uniquenessgroup": "uq_beatrice",
+	"icon": "beatrice.b"
+    },
+    {
+	"id": "beatrice.d",
+	"label": "An Old Woman, Who is Forgotten",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "winter": 10,
+	    "aromantic": 1,
+	    "frail": 1,
+	    "morbid": 1,
+	    "loyalty_snow": 1,
+	    "mimicwinter": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "beatrice.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "beatrice.r.c"
+	},
+	"description": "There was someone\n\nhere",
+	"uniquenessgroup": "uq_beatrice",
+	"icon": "beatrice.b"
+    },
+    {
+	"id": "atticus.a",
+	"label": "Atticus, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustchange": 1
+	},
+	"xtriggers": {
+	    "recruiting": "atticus.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "atticus.r"
+	},
+	"description": "A Garveyist orator and activist, loud of voice and fiery of heart. Atticus Bailey had been a man of the Far West, before his politics necessitated some time away from his more 'disruptive' critics.",
+	"uniquenessgroup": "uq_atticus",
+    },
+    {
+	"id": "atticus.b",
+	"label": "Atticus, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "heart": 2,
+	    "follower_lustchange": 1,
+	    "amicable": 1,
+	    "pacifist": 1,
+	    "impassioned": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "atticus.c",
+	    "capturefollower": "atticus.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "atticus.r"
+	},
+	"description": "Atticus has learned that it is one thing to change minds; it is another to change hearts.",
+	"uniquenessgroup": "uq_atticus",
+    },
+    {
+	"id": "atticus.c",
+	"label": "Atticus, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "heart": 5,
+	    "follower_lustchange": 1,
+	    "amicable": 1,
+	    "pacifist": 1,
+	    "impassioned": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_heart": "atticus.d",
+	    "capturefollower": "atticus.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "atticus.r"
+	},
+	"description": "It is difficult to disagree with Atticus, even when he is wrong. His ubiquitous cheer, his smile, his fervor - the argument of his enthusiasm is not easily set aside.",
+	"uniquenessgroup": "uq_atticus",
+	"icon": "atticus.b"
+    },
+    {
+	"id": "atticus.d",
+	"label": "Atticus, a Tarantellist",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "heart": 10,
+	    "follower_lustchange": 1,
+	    "loyalty_thunderskin": 1,
+	    "amicable": 1,
+	    "pacifist": 1,
+	    "impassioned": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "atticus.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "atticus.r.c"
+	},
+	"description": "If an ear might listen, then Atticus will be heard. If an eye might weep, then Atticus will draw forth tears. If a heart might be moved, then Atticus will move it to beat on his rhythm, and his rhythm alone.",
+	"uniquenessgroup": "uq_atticus",
+	"icon": "atticus.b"
+    },
+    {
+	"id": "millie.a",
+	"label": "Millie, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustchange": 1
+	},
+	"xtriggers": {
+	    "recruiting": "millie.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "millie.r"
+	},
+	"description": "Ms. Keating keeps the old library in west London, and Gideon comes along to scratch up copies of <i>The Republic</i> when unwatched. The librarian and her cat are a furtive pair, but they know an odd thing or two.",
+	"uniquenessgroup": "uq_millie",
+    },
+    {
+	"id": "millie.b",
+	"label": "Millie, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "heart": 2,
+	    "frail": 1,
+	    "sentimental": 1,
+	    "pacifist": 1,
+	    "follower_lustchange": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "millie.c",
+	    "capturefollower": "millie.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "millie.r"
+	},
+	"description": "Millie’s kindness is warm and heavy enough to be a blanket - or an obfuscating curtain.",
+	"uniquenessgroup": "uq_millie",
+    },
+    {
+	"id": "millie.c",
+	"label": "Millie, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "heart": 5,
+	    "frail": 1,
+	    "sentimental": 1,
+	    "pacifist": 1,
+	    "follower_lustchange": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_heart": "millie.d",
+	    "capturefollower": "millie.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "millie.r"
+	},
+	"description": "Millie and Gideon know the importance of safekeeping. It is one thing to protect people from what will bruise and bleed them; it is another to protect them from what they oughtn't to know.",
+	"uniquenessgroup": "uq_millie",
+	"icon": "millie.b"
+    },
+    {
+	"id": "millie.d",
+	"label": "Millie, a Tarantellist",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "heart": 10,
+	    "frail": 1,
+	    "sentimental": 1,
+	    "pacifist": 1,
+	    "follower_lustchange": 1,
+	    "loyalty_velvet": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "millie.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "millie.r.c"
+	},
+	"description": "When the evening waxes just dark enough - when the roots twist in the correct manner and the night whispers into practiced ears - the pale cat will come with secrets, and the librarian will guard them as one guards treasures.",
+	"uniquenessgroup": "uq_millie",
+	"icon": "millie.b"
+    },
+    {
+	"id": "lucetta.a",
+	"label": "Lucetta, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustchange": 1
+	},
+	"xtriggers": {
+	    "recruiting": "lucetta.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "lucetta.r"
+	},
+	"description": "'La Voce di Calabria' is performing at the Royal Opera House this season. It is said that the breadth of her repertoire is only surpassed by the perfection of her voice - and her obsession with maintaining it.",
+	"uniquenessgroup": "uq_lucetta",
+    },
+    {
+	"id": "lucetta.b",
+	"label": "Lucetta, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "heart": 2,
+	    "follower_lustchange": 1,
+	    "famous": 1,
+	    "bully": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "lucetta.c",
+	    "capturefollower": "lucetta.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "lucetta.r"
+	},
+	"description": "Sometimes it is <i>fortissimo e con brio</i>, sometimes it is <i>sotto voce</i> - always, it is Lucetta.",
+	"uniquenessgroup": "uq_lucetta",
+    },
+    {
+	"id": "lucetta.c",
+	"label": "Lucetta, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "heart": 5,
+	    "famous": 1,
+	    "bully": 1,
+	    "follower_lustchange": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_heart": "lucetta.d",
+	    "capturefollower": "lucetta.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "lucetta.r"
+	},
+	"description": "Lucetta does not demand applause, nor tears, nor adulation. All she demands is that they listen, and the rest will come as it so deservingly must.",
+	"uniquenessgroup": "uq_lucetta",
+	"icon": "lucetta.b"
+    },
+    {
+	"id": "lucetta.d",
+	"label": "Lucetta, a Tarantellist",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "heart": 10,
+	    "famous": 1,
+	    "bully": 1,
+	    "follower_lustchange": 1,
+	    "loyalty_saw": 1,
+	    "mimicheart": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "lucetta.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "lucetta.r.c"
+	},
+	"description": "The ocean has its rages, its crescendos - but it knows serenity, too. Critics have said that her voice has the quality of the sea, but Lucetta would say the sea has the quality of her voice.",
+	"uniquenessgroup": "uq_lucetta",
+	"icon": "lucetta.b"
+    },
+    {
+	"id": "constance.a",
+	"label": "Constance, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustsensation": 1
+	},
+	"xtriggers": {
+	    "recruiting": "constance.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "constance.r"
+	},
+	"description": "A seasoned nurse, peerless midwife, and purveyor of baked sweets, now working as a house-call caregiver. Saint Bartholomew’s had released this hospitable Samaritan from their employ - why?",
+	"uniquenessgroup": "uq_constance",
+    },
+    {
+	"id": "constance.b",
+	"label": "Constance, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "grail": 2,
+	    "follower_lustsensation": 1,
+	    "pacifist": 1,
+	    "amicable": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "constance.c",
+	    "capturefollower": "constance.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "constance.r"
+	},
+	"description": "Constance’s fee borders on charity, and she never fails to give sweets to her younger patients. Her appetite seems to be for the work - the suturing, the nursing, the nourishing - rather than the wage.",
+	"uniquenessgroup": "uq_constance",
+    },
+    {
+	"id": "constance.c",
+	"label": "Constance, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "grail": 5,
+	    "follower_lustsensation": 1,
+	    "pacifist": 1,
+	    "amicable": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_grail": "constance.d",
+	    "capturefollower": "constance.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "constance.r"
+	},
+	"description": "The blood, the entry, the scream of nascent life: a feast of stimuli, to which Constance is always drawn. Her humanity quarrels with her hungers, her flesh turns inwards when denied - but she manages to smile at her patients all the same.",
+	"uniquenessgroup": "uq_constance",
+	"icon": "constance.b"
+    },
+    {
+	"id": "constance.d",
+	"label": "Constance, a Cyprian",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "grail": 10,
+	    "follower_lustsensation": 1,
+	    "loyalty_grail": 1,
+	    "pacifist": 1,
+	    "amicable": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "constance.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "constance.r.c"
+	},
+	"description": "She is abundant, flushed, roiling, like a rose of flesh. She does not eat very often now, but the few meals she takes in private are always salted with tears. To fail the birth is a depthless sorrow, but Constance knows that to waste it is worse still.",
+	"uniquenessgroup": "uq_constance",
+	"icon": "constance.b"
+    },
+    {
+	"id": "maximilian.a",
+	"label": "Maximilian, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1,
+	    "follower_lustsensation": 1,
+	},
+	"xtriggers": {
+	    "recruiting": "maximilian.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "maximilian.r"
+	},
+	"description": "A gaunt-eyed, daydreaming bohemian with a mile-wide artistic streak. He has taken to things stranger and sweeter than absinthe as means of inspiration, and they have taken to him.",
+	"uniquenessgroup": "uq_maximilian",
+    },
+    {
+	"id": "maximilian.b",
+	"label": "Maximilian, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "grail": 2,
+	    "impassioned": 1,
+	    "frail": 1,
+	    "follower_lustsensation": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "maximilian.c",
+	    "capturefollower": "maximilian.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "maximilian.r"
+	},
+	"description": "Maximilian does not paint without a bottle at his side and a long pipe under his lip.",
+	"uniquenessgroup": "uq_maximilian",
+    },
+    {
+	"id": "maximilian.c",
+	"label": "Maximilian, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "grail": 5,
+	    "impassioned": 1,
+	    "frail": 1,
+	    "follower_lustsensation": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_grail": "maximilian.d",
+	    "capturefollower": "maximilian.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "maximilian.r"
+	},
+	"description": "Maximilian’s hands tremble when he is separated from his muses for too long. Consumption has become synonymous with his artistry, and wherever he moves to create, he too is consumed in a manner of speaking.",
+	"uniquenessgroup": "uq_maximilian",
+	"icon": "maximilian.b"
+    },
+    {
+	"id": "maximilian.d",
+	"label": "Maximilian, a Cyprian",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "grail": 10,
+	    "impassioned": 1,
+	    "frail": 1,
+	    "follower_lustsensation": 1,
+	    "loyalty_flowermaker": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "maximilian.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "maximilian.r.c"
+	},
+	"description": "The artist is dreaming more than he is waking. His mouth is dry cotton, his breath a low rattle, but his fingers are always damp with genius. How exquisitely he wastes away.",
+	"uniquenessgroup": "uq_maximilian",
+	"icon": "maximilian.b"
+    },
+    {
+	"id": "daisy.a",
+	"label": "Daisy, an Acquaintance",
+	"aspects": {
+	    "mortal": 1,
+	    "acquaintance": 1
+	},
+	"xtriggers": {
+	    "recruiting": "daisy.b",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "daisy.r"
+	},
+	"description": "Daisy keeps a homely green corner in the Capital, and earns the odd shilling selling neighbors beets and bouquets. Even away from her family’s farm, she tends the old pastoral habits.",
+	"uniquenessgroup": "uq_daisy",
+    },
+    {
+	"id": "daisy.b",
+	"label": "Daisy, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "grail": 2,
+	    "pacifist": 1,
+	    "prepared": 1,
+	    "amicable": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "daisy.c",
+	    "capturefollower": "daisy.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "daisy.r"
+	},
+	"description": "There is especial joy, Daisy knows, in the budding of flower to fruit, and in presiding over that change.",
+	"uniquenessgroup": "uq_daisy",
+    },
+    {
+	"id": "daisy.c",
+	"label": "Daisy, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "grail": 5,
+	    "pacifist": 1,
+	    "prepared": 1,
+	    "amicable": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_grail": "daisy.d",
+	    "capturefollower": "daisy.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "daisy.r"
+	},
+	"description": "Daisy has always prided herself on the savours and scents that grow under her care, but only now have all those things begun to curdle towards a red sweetness.",
+	"uniquenessgroup": "uq_daisy",
+	"icon": "daisy.b"
+    },
+    {
+	"id": "daisy.d",
+	"label": "Daisy, a Cyprian",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "grail": 10,
+	    "pacifist": 1,
+	    "prepared": 1,
+	    "amicable": 1,
+	    "loyalty_malachite": 1,
+	    "mimicgrail": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "daisy.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "daisy.r.c"
+	},
+	"description": "Daisy can tease life out from even the most barren husk. Her hand is summer’s promise, and wherever her hand falls the bees, the bellflowers, and the botflies sweeten and swell.",
+	"uniquenessgroup": "uq_daisy",
+	"icon": "daisy.b"
+    },
+    {
+	"id": "conrad.p",
+	"label": "Conrad, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "knock": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "An ugly necessity - if we had let Conrad keep his fingers, he might already be free.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_conrad"
+    },
+    {
+	"id": "josephine.p",
+	"label": "Sister Josephine, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "knock": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Blood seeps out from under the cell door. She cannot thank us enough for this opportunity to atone.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_josephine"
+    },
+    {
+	"id": "elizabeth.p",
+	"label": "Elizabeth, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "knock": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Elizabeth doesn't like cells. She's been in one before.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_elizabeth"
+    },
+    {
+	"id": "charlotte.p",
+	"label": "Charlotte, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "moth": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "'Klaus? Klaus, it's very dark here - how much longer must I stay?'",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_charlotte"
+    },
+    {
+	"id": "howe.p",
+	"label": "Howe, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "moth": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "'Please! You can't leave me in here! <i>She's coming!</i>'",
+	"lifetime": 600,
+	"decayTo": "influencemothg",
+	"uniquenessgroup": "uq_howe"
+    },
+    {
+	"id": "lawrence.p",
+	"label": "Lawrence, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "moth": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "For a man so possessed of wanderlust, confinement is tantamount to torture.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_lawrence"
+    },
+    {
+	"id": "klaus.p",
+	"label": "Klaus, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "'Leave her alone! You hear me? <i>Don't you dare lay a finger on her!</i>'",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_klaus"
+    },
+    {
+	"id": "jerome.p",
+	"label": "Jerome, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "The armchair lieutenant had never expected <i>his</i> life to be thrown away for a higher cause.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_jerome"
+    },
+    {
+	"id": "marjorie.p",
+	"label": "Marjorie, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "For each day she remains, Marjorie etches a tally into the wall.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_marjorie"
+    },
+    {
+	"id": "edgar.p",
+	"label": "Edgar, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "forge": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Edgar roars, curses, strikes against the cell door with his fists. When his rage is spent, we reinforce his holdings against the damage he's done.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_edgar"
+    },
+    {
+	"id": "roya.p",
+	"label": "Roya, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "forge": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "To keep Roya weak, we provide her only certain foods. Sometimes, she cannot help but take a bite.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_roya"
+    },
+    {
+	"id": "ludwig.p",
+	"label": "Ludwig, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "forge": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Let us see him make something useful from wrought-iron bars.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_ludwig"
+    },
+    {
+	"id": "victorien.p",
+	"label": "Victorien, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "edge": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "He laughed, and cracked a jibe about lacking foresight. And then he laughed no more.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_victorien"
+    },
+    {
+	"id": "nadine.p",
+	"label": "Nadine, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "edge": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "The revolution is ended. Here is one of its orphans.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_nadine"
+    },
+    {
+	"id": "yelena.p",
+	"label": "Yelena, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "edge": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Yelena is ready to finally be finished with it all.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_yelena"
+    },
+    {
+	"id": "florence.p",
+	"label": "Florence, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "winter": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "If only audiences could see her now.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_florence"
+    },
+    {
+	"id": "ephraim.p",
+	"label": "Ephraim, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "winter": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Ephraim's only request is to be 'put beside the others.'",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_ephraim"
+    },
+    {
+	"id": "beatrice.p",
+	"label": "Beatrice, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "winter": 5,
+	    "heart": 3,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "'Chester? Chester, dear, would you shut the window? There's quite a draft outside.'",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_beatrice"
+    },
+    {
+	"id": "atticus.p",
+	"label": "Atticus, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 3,
+	    "heart": 5,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Atticus is shackled, but not silenced. Not yet, at least.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_atticus"
+    },
+    {
+	"id": "millie.p",
+	"label": "Millie, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 3,
+	    "heart": 5,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Millie sniffles quietly in the corner. She wonders where Gideon’s gone.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_millie"
+    },
+    {
+	"id": "lucetta.p",
+	"label": "Lucetta, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 3,
+	    "heart": 5,
+	    "grail": 3
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "We expected screaming, but Lucetta has fallen silent. Her voice won't be wasted on futility.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_lucetta"
+    },
+    {
+	"id": "constance.p",
+	"label": "Constance, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 3,
+	    "heart": 3,
+	    "grail": 5
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "Constance's fingertips are anxious tatters of chewed meat and tooth-scraped bone.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_constance"
+    },
+    {
+	"id": "maximilian.p",
+	"label": "Maximilian, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 3,
+	    "heart": 3,
+	    "grail": 5
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "An addict will always weep the loudest when he is deprived of his poisons.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_maximilian"
+    },
+    {
+	"id": "daisy.p",
+	"label": "Daisy, a Prisoner",
+	"aspects": {
+	    "mortal": 1,
+	    "prisoner": 1,
+	    "lantern": 3,
+	    "heart": 3,
+	    "grail": 5
+	},
+	"xtriggers": {
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic"
+	},
+	"description": "She’ll be at home under churchyard earth, I’m sure. Perhaps she will bloom.",
+	"lifetime": 600,
+	"decayTo": "corpse",
+	"uniquenessgroup": "uq_daisy"
+    },
+    {
+	"id": "victorien.b.alt",
+	"label": "Victorien, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "edge": 2,
+	    "lantern": 1,
+	    "morbid": 1,
+	    "amicable": 1,
+	    "follower_lustsensation": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "victorien.c.alt",
+	    "capturefollower": "victorien.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "victorien.r"
+	},
+	"description": "Victorien still clamps his right eye shut before pulling the trigger - a habit he’ll kill eventually, he says.",
+	"uniquenessgroup": "uq_victorien",
+	"icon": "victorien.b"
+    },
+    {
+	"id": "victorien.c.alt",
+	"label": "Victorien, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "edge": 5,
+	    "lantern": 3,
+	    "morbid": 1,
+	    "amicable": 1,
+	    "follower_lustsensation": 1,
+	    "loyalty_colonel": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_edge": "victorien.d.alt",
+	    "capturefollower": "victorien.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "victorien.r"
+	},
+	"description": "Victorien’s remaining eye is slowly learning to catch up with his gun-hand. Victorien’s missing eye already has.",
+	"uniquenessgroup": "uq_victorien",
+	"icon": "victorien.b"
+    },
+    {
+	"id": "victorien.d.alt",
+	"label": "Victorien, a Deadeye",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "edge": 10,
+	    "lantern": 5,
+	    "morbid": 1,
+	    "amicable": 1,
+	    "follower_lustsensation": 1,
+	    "loyalty_colonel": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "victorien.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "victorien.r.c"
+	},
+	"description": "Death comes in measures, in controlled breaths, in fingers lifted to taste the wind. To make it sporting for his targets, Victorien sometimes deigns to close his eye - but that, too, is something of a cruel joke.",
+	"uniquenessgroup": "uq_victorien",
+	"icon": "victorien.b"
+    },
+    {
+	"id": "nadine.b.alt",
+	"label": "Nadine, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "edge": 2,
+	    "heart": 1,
+	    "defiant": 1,
+	    "impassioned": 1,
+	    "follower_lustpower": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "nadine.c.alt",
+	    "capturefollower": "nadine.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "nadine.r"
+	},
+	"description": "A disagreement is an invitation for a clash, and Nadine likes to disagree.",
+	"uniquenessgroup": "uq_nadine",
+	"icon": "nadine.b"
+    },
+    {
+	"id": "nadine.c.alt",
+	"label": "Nadine, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "edge": 5,
+	    "heart": 3,
+	    "defiant": 1,
+	    "impassioned": 1,
+	    "follower_lustpower": 1,
+	    "loyalty_lionsmith": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_edge": "nadine.d.alt",
+	    "capturefollower": "nadine.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "nadine.r"
+	},
+	"description": "Nadine has stoked and tempered her disdain for authority. She will go fearlessly against even the most titantic adversity.",
+	"uniquenessgroup": "uq_nadine",
+	"icon": "nadine.b"
+    },
+    {
+	"id": "nadine.d.alt",
+	"label": "Nadine, a Firebrand",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "edge": 10,
+	    "heart": 5,
+	    "defiant": 1,
+	    "impassioned": 1,
+	    "follower_lustpower": 1,
+	    "loyalty_lionsmith": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "nadine.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "nadine.r.c"
+	},
+	"description": "Her tongue, her heart, her raised fist - a trumpet, a drum, a striking hammer. Here strides tomorrow's intrepid vanguard against yesterday, and she does not yield in the face of any power.",
+	"uniquenessgroup": "uq_nadine",
+	"icon": "nadine.b"
+    },
+    {
+	"id": "yelena.b.alt",
+	"label": "Yelena, a Believer",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "follower": 1,
+	    "edge": 2,
+	    "winter": 1,
+	    "defiant": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "follower_lustremembrance": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotiontodisciple": "yelena.c.alt",
+	    "capturefollower": "yelena.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "yelena.r"
+	},
+	"description": "Yelena gives people what she thinks they deserve.",
+	"uniquenessgroup": "uq_yelena",
+	"icon": "yelena.b"
+    },
+    {
+	"id": "yelena.c.alt",
+	"label": "Yelena, a Disciple",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "potential": 1,
+	    "follower": 1,
+	    "edge": 5,
+	    "winter": 3,
+	    "defiant": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "follower_lustremembrance": 1,
+	    "loyalty_wolf": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "promotionto_d_edge": "yelena.d.alt",
+	    "capturefollower": "yelena.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "yelena.r"
+	},
+	"description": "Yelena's grief refined to hatred long ago, but now it bubbles to the surface. It seethes behind her eyes, beneath her nails, between her teeth.",
+	"uniquenessgroup": "uq_yelena",
+	"icon": "yelena.b"
+    },
+    {
+	"id": "yelena.d.alt",
+	"label": "Yelena, a Brutality",
+	"aspects": {
+	    "mortal": 1,
+	    "believer": 1,
+	    "disciple": 1,
+	    "exalted": 1,
+	    "follower": 1,
+	    "edge": 10,
+	    "winter": 5,
+	    "defiant": 1,
+	    "morbid": 1,
+	    "resilient": 1,
+	    "follower_lustremembrance": 1,
+	    "loyalty_wolf": 1,
+	    "mimicedge": 1
+	},
+	"xtriggers": {
+	    "capturefollower": "yelena.p",
+	    "killmortal": "corpse",
+	    "derangemortal": "lunatic",
+	    "rebellion": "yelena.r.c"
+	},
+	"description": "Cruelty is the maxim. There will be no quarter, no glory, and no distinction. Here and there, the world cultivates its savage things, and Yelena is one of them, now.",
+	"uniquenessgroup": "uq_yelena",
+	"icon": "yelena.b"
+    },
+	{
+	    "id": "henri_c",
+	    "label": "Henri, a Disciple",
+	    "description": "Henri has found that it is not a terrible thing for one to be mastered by desire.",
+	    "aspects": {
+		"grail": 5,
+		"edge": 4,
+		"disciple": 1,
+		"exalted": 1,
+		"follower": 1,
+		"mortal": 1,
+		"enterprising": 1,
+		"morbid": 1
+	    },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "capturefollower": "henri_p",
+                "rebellion": "henri_r_c"
+            },
+	    "uniquenessgroup": "uq_henri",
+            "icon": "henri_follower"
+	},
+        {
+            "id": "henri_d",
+            "label": "Henri, a Libertine",
+            "description": "Henri’s rules are as thus: If a thing is to be taken, take it. If a thing is to be tasted, taste it. There is no god but appetite, and nothing is sacred to appetite.",
+            "aspects": {
+                "mortal": 1,
+                "follower": 1,
+                "disciple": 1,
+                "exalted": 1,
+                "grail": 10,
+                "edge": 7,
+		"loyalty_grail": 1,
+		"enterprising": 1,
+		"morbid": 1
+            },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "capturefollower": "genericprisonerm",
+                "rebellion": "henri_r_d"
+            },
+            "uniquenessgroup": "uq_henri",
+            "icon": "henri_follower"
+        },
+	{
+	    "id": "kit_b",
+	    "label": "Kit, a Believer",
+	    "description": "Kit's journalistic focus makes her a spirited, persistent young tool.",
+	    "aspects": {
+		"heart": 2,
+		"lantern": 1,
+		"follower": 1,
+		"mortal": 1,
+		"amicable": 1,
+		"impassioned": 1
+	    },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "promotiontodisciple": "kit_c",
+                "derangemortal": "lunatic",
+                "capturefollower": "kit_p",
+                "rebellion": "kit_r"
+            },
+	    "uniquenessgroup": "uq_kit",
+            "icon": "kit_follower"
+	},
+	{
+	    "id": "kit_c",
+	    "label": "Kit, a Disciple",
+	    "description": "If one knows how to phrase it, one can convince anyone to say anything, <i>do</i> anything. Kit knows the measure of that truth, and knows it well.",
+	    "aspects": {
+		"heart": 5,
+		"lantern": 4,
+		"disciple": 1,
+		"exalted": 1,
+		"follower": 1,
+		"mortal": 1,
+		"amicable": 1,
+		"impassioned": 1
+	    },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "capturefollower": "kit_p",
+                "rebellion": "kit_r_c"
+            },
+	    "uniquenessgroup": "uq_kit",
+            "icon": "kit_follower"
+	},
+        {
+            "id": "kit_d",
+            "label": "Kit, a Correspondent",
+            "description": "Kit’s congeniality is the sort that nestles warmly under the skin and makes you want to tell her about your day. People can’t help but tell their stories when she asks - stories, then secrets, then sins. And she smiles, always, when she listens.",
+            "aspects": {
+                "mortal": 1,
+                "follower": 1,
+                "disciple": 1,
+                "exalted": 1,
+                "heart": 10,
+                "lantern": 7,
+		"loyalty_velvet": 1,
+		"amicable": 1,
+		"impassioned": 1
+            },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "capturefollower": "kit_p",
+                "rebellion": "kit_r_d"
+            },
+            "uniquenessgroup": "uq_kit",
+            "icon": "kit_follower"
+        },
+	{
+	    "id": "lionel_c",
+	    "label": "Lionel, a Disciple",
+	    "description": "Loyalty is the weapon that cannot be broken from without, and Lionel wields his with ready prowess.",
+	    "aspects": {
+		"edge": 5,
+		"lantern": 4,
+		"disciple": 1,
+		"exalted": 1,
+		"follower": 1,
+		"mortal": 1,
+		"loyal": 1,
+		"famous": 1
+	    },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "capturefollower": "lionel_p",
+                "rebellion": "lionel_r_c"
+            },
+	    "uniquenessgroup": "uq_lionel",
+            "icon": "lionel_follower"
+	},
+        {
+            "id": "lionel_d",
+            "label": "Lionel, a Commander",
+            "description": "Lionel has become an old, fatal thing. He is a soldier worthy of higher causes, greater strivings - but he has given us his word, and for the time being that is a bond unbreakable.",
+            "aspects": {
+                "mortal": 1,
+                "follower": 1,
+                "disciple": 1,
+                "exalted": 1,
+                "edge": 10,
+                "lantern": 7,
+		"loyalty_colonel": 1,
+		"loyal": 1,
+		"famous": 1
+            },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "capturefollower": "lionel_p",
+                "rebellion": "lionel_r_d"
+            },
+            "uniquenessgroup": "uq_lionel",
+            "icon": "lionel_follower"
+        },
+	{
+	    "id": "shion_c",
+	    "label": "Shion, a Disciple",
+	    "description": "Shion perceives the world in unnegotiable binaries - ambitions and obstacles, entrances and exits, black and white.",
+	    "aspects": {
+		"knock": 5,
+		"winter": 4,
+		"disciple": 1,
+		"exalted": 1,
+		"follower": 1,
+		"mortal": 1,
+		"scholarly": 1,
+		"prepared": 1
+	    },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "capturefollower": "shion_p",
+                "rebellion": "shion_r_c"
+            },
+	    "uniquenessgroup": "uq_shion",
+            "icon": "shion_follower"
+	},
+        {
+            "id": "shion_d",
+            "label": "Shion, a Threshold",
+            "description": "She is the demarcation, the distinction, and the delineation. Where Shion goes, the air between this place and elsewhere grows rigid, impenetrable.",
+            "aspects": {
+                "mortal": 1,
+                "follower": 1,
+                "disciple": 1,
+                "exalted": 1,
+                "knock": 10,
+                "winter": 7,
+		"loyalty_horned": 1,
+		"scholarly": 1,
+		"prepared": 1
+            },
+            "xtriggers": {
+                "killmortal": "corpse",
+                "derangemortal": "lunatic",
+                "capturefollower": "shion_p",
+                "rebellion": "shion_r_d"
+            },
+            "uniquenessgroup": "uq_shion",
+            "icon": "shion_follower"
+        }
+]
+}

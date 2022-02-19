@@ -1,0 +1,748 @@
+{
+"recipes": [
+    {
+	"id": "tenacious.survives",
+	"actionid": "talk",
+	"label": "Tenacity!",
+	"description": "'Impossible! No-one could have gone unscathed from that!'\n\n[Tenacious Hunters will sometimes evade or withstand attacks and schemes that otherwise would have harmed them. But they are not invulnerable, and there are methods besides physical assault you can use to deal with Hunters.]",
+	"requirements": {
+	    "tenacious": 1
+	},
+	"effects": {
+	    "notoriety": 1,
+	    "poison": -99,
+	    "trapped": -99
+	}
+    },
+    {
+	"id": "tenacious.survives.woundfollower",
+	"actionid": "talk",
+	"label": "Tenacity!",
+	"description": "'Impossible! No-one could have gone unscathed from that!'\n\n[Tenacious Hunters will sometimes evade or withstand attacks and schemes that otherwise would have harmed them. But they are not invulnerable, and there are methods besides physical assault you can use to deal with Hunters.]",
+	"requirements": {
+	    "tenacious": 1
+	},
+	"effects": {
+	    "notoriety": 1,
+	    "poison": -99
+	},
+	"aspects": {
+	    "killsummoned": 1
+	},
+	"mutations": [
+	    {
+		"filter": "believer",
+		"mutate": "follower_wound",
+		"level": 1
+	    },
+	    {
+		"filter": "believer",
+		"mutate": "follower",
+		"level": -1
+	    }
+	]
+    },
+    {
+	"id": "become.tenacious",
+	"actionid": "talk",
+	"label": "A Scar is a Lesson",
+	"description": "Our attack is a failure. The Hunter has emerged from this ordeal stronger.\n\n[Hunters who survive physical attacks may become Tenacious.]",
+	"requirements": {
+	    "tenacious": -1
+	},
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "tenacious",
+		"level": 1
+	    }
+	],
+	"effects": {
+	    "notoriety": 1,
+	    "poison": -99
+	}
+    },
+    {
+	"id": "become.tenacious.woundfollower",
+	"actionid": "talk",
+	"label": "A Scar is a Lesson",
+	"description": "Our attack is a failure. The Hunter has emerged from this ordeal stronger.\n\n[Hunters who survive physical attacks may become Tenacious.]",
+	"requirements": {
+	    "tenacious": -1
+	},
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "tenacious",
+		"level": 1
+	    },
+	    {
+		"filter": "believer",
+		"mutate": "follower_wound",
+		"level": 1
+	    },
+	    {
+		"filter": "believer",
+		"mutate": "follower",
+		"level": -1
+	    }
+	],
+	"effects": {
+	    "notoriety": 1,
+	    "poison": -99
+	},
+	"aspects": {
+	    "killsummoned": 1
+	}
+    },
+    {
+	"id": "mystic.survives",
+	"actionid": "talk",
+	"label": "Wards and Seals",
+	"description": "This Hunter is armed with the most dangerous weapon of all: knowledge.\n\n[Mystic Hunters know best how to defend against creatures of the Mansus, and spirits sent against them will usually fail. But they will make a mistake sooner or later.]",
+	"requirements": {
+	    "mystic": 1,
+	    "summoned": 1
+	},
+	"effects": {
+	    "notoriety": 1
+	},
+	"aspects": {
+	    "killsummoned": 1
+	}
+    },
+    {
+	"id": "become.mystic",
+	"actionid": "talk",
+	"label": "Against the Dark",
+	"description": "What does not kill them sometimes makes them stranger.\n\n[Hunters who survive attacks from summoned creatures may become Mystic.]",
+	"requirements": {
+	    "mystic": -1,
+	    "summoned": 1
+	},
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "mystic",
+		"level": 1
+	    }
+	],
+	"effects": {
+	    "notoriety": 1
+	},
+	"aspects": {
+	    "killsummoned": 1
+	}
+    },
+    {
+	"id": "attackhunter.winter.high",
+	"actionid": "talk",
+	"label": "Send a silent minion to wound a Hunter",
+	"startdescription": "My minion will exercise the killing patience. [This is less likely to succeed than an Edge attack, and success or failure will both draw attention, but the minion will go unscathed no matter the outcome.]",
+	"requirements": {
+	    "follower": 1,
+	    "hunter": 1,
+	    "hiding": -1,
+	    "winter": 10
+	},
+	"linked": [
+	    {
+		"id": "attackhunter.winter.success",
+		"chance": 70
+	    },
+	    {
+		"id": "attackhunter.winter.failure"
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.winter.med",
+	"actionid": "talk",
+	"label": "Send a quiet minion to wound a Hunter",
+	"startdescription": "My minion will wait as a spider waits. If all is put into motion correctly, this plan might succeed. [This is less likely to succeed than an Edge attack, and success or failure will both draw attention, but the minion will go unscathed no matter the outcome.]",
+	"requirements": {
+	    "follower": 1,
+	    "hunter": 1,
+	    "hiding": -1,
+	    "winter": 5
+	},
+	"linked": [
+	    {
+		"id": "attackhunter.winter.success",
+		"chance": 50
+	    },
+	    {
+		"id": "attackhunter.winter.failure"
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.winter.low",
+	"actionid": "talk",
+	"label": "Send a cautious minion to wound a Hunter",
+	"startdescription": "My minion will wait for the right moment, though most likely that moment will never come. [This is less likely to succeed than an Edge attack, and success or failure will both draw attention, but the minion will go unscathed no matter the outcome.]",
+	"requirements": {
+	    "follower": 1,
+	    "hunter": 1,
+	    "hiding": -1,
+	    "winter": 2
+	},
+	"linked": [
+	    {
+		"id": "attackhunter.winter.success",
+		"chance": 30
+	    },
+	    {
+		"id": "attackhunter.winter.failure"
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.winter.success",
+	"actionid": "talk",
+	"label": "Patience...",
+	"startdescription": "I await word...",
+	"description": "Our patience has borne fruit - my minion has returned, and the Hunter now has a grim memento by which they might remember us. Our target will go into hiding.",
+	"warmup": 30,
+	"effects": {
+	    "notoriety": 1
+	},
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "hunter_wound",
+		"level": 1,
+		"additive": true
+	    },
+	    {
+		"filter": "hunter",
+		"mutate": "hiding",
+		"level": 1
+	    }
+	],
+	"alt": [
+	    {
+		"id": "tenacious.survives",
+		"chance": 40
+	    },
+	    {
+		"id": "mystic.survives",
+		"chance": 70
+	    }
+	],
+	"linked": [
+	    {
+		"id": "hunter.kill"
+	    },
+	    {
+		"id": "hunter.yearhardened.kill"
+	    }
+	]
+    },
+    {
+	"id": "hunter.kill",
+	"actionid": "talk",
+	"label": "A Hunter's End",
+	"startdescription": "This one will trouble us no longer.",
+	"requirements": {
+	    "hunter_wound": 3,
+	    "year_hardened": -1
+	},
+	"aspects": {
+	    "killhunter": 1
+	}
+    },
+    {
+	"id": "hunter.yearhardened.kill",
+	"actionid": "talk",
+	"label": "A Hunter's End",
+	"startdescription": "Stolen or no, lifespan is ultimately finite. This one will trouble us no longer.",
+	"requirements": {
+	    "hunter_wound": 4,
+	    "year_hardened": 1
+	},
+	"aspects": {
+	    "killhunter": 1
+	}
+    },
+    {
+	"id": "attackhunter.winter.failure",
+	"actionid": "talk",
+	"label": "Patience...",
+	"startdescription": "I await word...",
+	"description": "My minion could find no opportune moment for their attack. The Hunter may now know they are in danger.",
+	"warmup": 30,
+	"effects": {
+	    "notoriety": 1
+	},
+	"alt": [
+	    {
+		"id": "become.tenacious",
+		"chance": 20
+	    },
+
+	    {
+		"id": "become.mystic",
+		"chance": 30
+	    },
+	    {
+		"id": "attackhunter.winter.failure.hide",
+		"chance": 50
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.winter.failure.hide",
+	"actionid": "talk",
+	"label": "Patience...",
+	"startdescription": "I await word...",
+	"description": "My minion could find no opportune moment for their attack. What's more - this Hunter has caught onto our efforts against them, and has gone into hiding.",
+	"warmup": 30,
+	"effects": {
+	    "notoriety": 1
+	},
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "hiding",
+		"level": 1
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.edge.high",
+	"actionid": "talk",
+	"label": "Send an Unstoppable Force to wound a Hunter",
+	"startdescription": "My minion will take this Hunter as a lion takes sheep. [Failure to wound a Hunter with Edge will wound your minion instead, or destroy them if they are a summoned spirit.]",
+	"requirements": {
+	    "follower": 1,
+	    "hunter": 1,
+	    "hiding": -1,
+	    "edge": 10
+	},
+	"linked": [
+	    {
+		"id": "attackhunter.edge.success",
+		"chance": 90
+	    },
+	    {
+		"id": "attackhunter.edge.failure"
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.edge.med",
+	"actionid": "talk",
+	"label": "Send a Potent Minion to wound a Hunter",
+	"startdescription": "My minion is deadly. This scheme is likely to succeed. [Failure to wound a Hunter with Edge will wound your minion instead, or destroy them if they are a summoned spirit.]",
+	"requirements": {
+	    "follower": 1,
+	    "hunter": 1,
+	    "hiding": -1,
+	    "edge": 5
+	},
+	"linked": [
+	    {
+		"id": "attackhunter.edge.success",
+		"chance": 70
+	    },
+	    {
+		"id": "attackhunter.edge.failure"
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.edge.low",
+	"actionid": "talk",
+	"label": "Send a Minion to wound a Hunter",
+	"startdescription": "My minion's skills are limited. This is unlikely to succeed, and my minion will suffer in the event of failure. [Failure to wound a Hunter with Edge will wound your minion instead, or destroy them if they are a summoned spirit.]",
+	"requirements": {
+	    "follower": 1,
+	    "hunter": 1,
+	    "hiding": -1,
+	    "edge": 2
+	},
+	"linked": [
+	    {
+		"id": "attackhunter.edge.success",
+		"chance": 30
+	    },
+	    {
+		"id": "attackhunter.edge.failure"
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.unsuitable",
+	"actionid": "talk",
+	"label": "Send an unsuitable minion to deal with a Hunter?",
+	"startdescription": "This minion is woefully unsuited to make an attempt on someone's life. Only a miracle will see them succeed. [Failure to wound a Hunter this way will wound your minion instead, or destroy them if they are a summoned spirit.]",
+	"requirements": {
+	    "follower": 1,
+	    "hunter": 1,
+	    "hiding": -1
+	},
+	"linked": [
+	    {
+		"id": "attackhunter.edge.success",
+		"chance": 10
+	    },
+	    {
+		"id": "attackhunter.edge.failure"
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.edge.success",
+	"actionid": "talk",
+	"label": "Hunting a Hunter...",
+	"startdescription": "I await word...",
+	"description": "Force has prevailed. My minion reports a successful attack against the Hunter, who will no doubt go into hiding as a result of their experience.",
+	"warmup": 30,
+	"effects": {
+	    "notoriety": 1
+	},
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "hunter_wound",
+		"level": 1,
+		"additive": true
+	    },
+	    {
+		"filter": "hunter",
+		"mutate": "hiding",
+		"level": 1
+	    }
+	],
+	"alt": [
+	    {
+		"id": "tenacious.survives.woundfollower",
+		"chance": 40
+	    },
+	    {
+		"id": "mystic.survives",
+		"chance": 70
+	    }
+	],
+	"linked": [
+	    {
+		"id": "hunter.kill"
+	    },
+	    {
+		"id": "hunter.yearhardened.kill"
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.edge.failure",
+	"actionid": "talk",
+	"label": "Hunting a Hunter...",
+	"startdescription": "I await word...",
+	"description": "My minion's attack was repelled, and they skulk back to me with the wounds of a nearly-failed escape. The Hunter may be aware of a greater effort against them, now.",
+	"warmup": 30,
+	"effects": {
+	    "notoriety": 1
+	},
+	"aspects": {
+	    "killsummoned": 1
+	},
+	"mutations": [
+	    {
+		"filter": "believer",
+		"mutate": "follower_wound",
+		"level": 1
+	    },
+	    {
+		"filter": "believer",
+		"mutate": "follower",
+		"level": -1
+	    }
+	],
+	"alt": [
+	    {
+		"id": "become.tenacious",
+		"chance": 20
+	    },
+	    {
+		"id": "become.mystic",
+		"chance": 30
+	    },
+	    {
+		"id": "attackhunter.edge.failure.hide",
+		"chance": 50
+	    }
+	]
+    },
+    {
+	"id": "attackhunter.edge.failure.hide",
+	"actionid": "talk",
+	"label": "Hunting a Hunter...",
+	"startdescription": "I await word...",
+	"description": "My minion's attack was repelled, and they skulk back to me with the wounds of a nearly-failed escape. Worse still, this attempt on their life has caused the Hunter to go into hiding.",
+	"warmup": 30,
+	"effects": {
+	    "notoriety": 1
+	},
+	"aspects": {
+	    "killsummoned": 1
+	},
+	"mutations": [
+	    {
+		"filter": "believer",
+		"mutate": "follower_wound",
+		"level": 1
+	    },
+	    {
+		"filter": "believer",
+		"mutate": "follower",
+		"level": -1
+	    },
+	    {
+		"filter": "hunter",
+		"mutate": "hiding",
+		"level": 1
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.lantern.high",
+	"actionid": "talk",
+	"label": "Locate a Hiding Hunter with an All-Seeing Minion",
+	"startdescription": "They cannot hide, not from us. [Successfully tailing a Hunter will bring them out of Hiding and render them vulnerable to attack. However, this may draw further attention, and if they realize they are being followed, the Hunter may retaliate against your minion.]",
+	"requirements": {
+	    "follower": 1,
+	    "hiding": 1,
+	    "lantern": 10
+	},
+	"linked": [
+	    {
+		"id": "track.hiding.success",
+		"chance": 90
+	    },
+	    {
+		"id": "track.hiding.failure"
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.lantern.med",
+	"actionid": "talk",
+	"label": "Locate a Hiding Hunter with a Perceptive Minion",
+	"startdescription": "The Capital is large, but not insurmountably so. My minion likely has the sense and the skill to track down our hiding adversary. [Successfully tailing a Hunter will bring them out of Hiding and render them vulnerable to attack. However, this may draw further attention, and if they realize they are being followed, the Hunter may retaliate against your minion.]",
+	"requirements": {
+	    "follower": 1,
+	    "hiding": 1,
+	    "lantern": 5
+	},
+	"linked": [
+	    {
+		"id": "track.hiding.success",
+		"chance": 70
+	    },
+	    {
+		"id": "track.hiding.failure"
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.lantern.low",
+	"actionid": "talk",
+	"label": "Locate a Hiding Hunter with a Heedful Minion",
+	"startdescription": "My minion has eyes, but not much more than that. [Successfully tailing a Hunter will bring them out of Hiding and render them vulnerable to attack. However, this may draw further attention, and if they realize they are being followed, the Hunter may retaliate against your minion.]",
+	"requirements": {
+	    "follower": 1,
+	    "hiding": 1,
+	    "lantern": 2
+	},
+	"linked": [
+	    {
+		"id": "track.hiding.success",
+		"chance": 30
+	    },
+	    {
+		"id": "track.hiding.failure"
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.knock.high",
+	"actionid": "talk",
+	"label": "Locate a Hiding Hunter with an All-Seeing Minion",
+	"startdescription": "They cannot hide, not from us. [Successfully tailing a Hunter will bring them out of Hiding and render them vulnerable to attack. However, this may draw further attention, and if they realize they are being followed, the Hunter may retaliate against your minion.]",
+	"requirements": {
+	    "follower": 1,
+	    "hiding": 1,
+	    "knock": 10
+	},
+	"linked": [
+	    {
+		"id": "track.hiding.success",
+		"chance": 90
+	    },
+	    {
+		"id": "track.hiding.failure"
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.knock.med",
+	"actionid": "talk",
+	"label": "Locate a Hiding Hunter with a Perceptive Minion",
+	"startdescription": "The Capital is large, but not insurmountably so. My minion likely has the sense and the skill to track down our hiding adversary. [Successfully tailing a Hunter will bring them out of Hiding and render them vulnerable to attack. However, this may draw further attention, and if they realize they are being followed, the Hunter may retaliate against your minion.]",
+	"requirements": {
+	    "follower": 1,
+	    "hiding": 1,
+	    "knock": 5
+	},
+	"linked": [
+	    {
+		"id": "track.hiding.success",
+		"chance": 70
+	    },
+	    {
+		"id": "track.hiding.failure"
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.knock.low",
+	"actionid": "talk",
+	"label": "Locate a Hiding Hunter with a Heedful Minion",
+	"startdescription": "My minion has eyes, but not much more than that. [Successfully tailing a Hunter will bring them out of Hiding and render them vulnerable to attack. However, this may draw further attention, and if they realize they are being followed, the Hunter may retaliate against your minion.]",
+	"requirements": {
+	    "follower": 1,
+	    "hiding": 1,
+	    "knock": 2
+	},
+	"linked": [
+	    {
+		"id": "track.hiding.success",
+		"chance": 30
+	    },
+	    {
+		"id": "track.hiding.failure"
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.success",
+	"actionid": "talk",
+	"label": "Reconnaissance...",
+	"startdescription": "I await word as to our search...",
+	"description": "My minion has peeled back the false names and decoy addresses. This Hunter is once more vulnerable to our machinations.",
+	"warmup": 30,
+	"mutations": [
+	    {
+		"filter": "hunter",
+		"mutate": "hiding",
+		"level": -1
+	    }
+	],
+	"alt": [
+	    {
+		"id": "track.hiding.failure.retaliate.belligerent",
+		"chance": 50
+	    },
+	    {
+		"id": "track.hiding.failure.retaliate.mystic",
+		"chance": 70
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.failure",
+	"actionid": "talk",
+	"label": "Reconnaissance...",
+	"startdescription": "I await word as to our search...",
+	"description": "My minion's search has yielded nothing, and our inquiries after this Hunter may be traced back to us.",
+	"warmup": 30,
+	"effects": {
+	    "notoriety": 1
+	},
+	"alt": [
+
+	    {
+		"id": "track.hiding.failure.retaliate.belligerent",
+		"chance": 50
+	    },
+	    {
+		"id": "track.hiding.failure.retaliate.mystic",
+		"chance": 70
+	    },
+	    {
+		"id": "track.hiding.failure.retaliate",
+		"chance": 30
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.failure.retaliate",
+	"actionid": "talk",
+	"label": "Reconnaissance...",
+	"description": "The Hunter became aware they were being followed, led my minion to a place where they could turn the tables on them, and used their incapacitation as opportunity to vanish. We have learned nothing, save the fact that we must be more careful.",
+	"warmup": 30,
+	"effects": {
+	    "notoriety": 1
+	},
+	"aspects": {
+	    "killsummoned": 1
+	},
+	"mutations": [
+	    {
+		"filter": "believer",
+		"mutate": "follower_wound",
+		"level": 1
+	    },
+	    {
+		"filter": "believer",
+		"mutate": "follower",
+		"level": -1
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.failure.retaliate.belligerent",
+	"actionid": "talk",
+	"label": "Reconnaissance...",
+	"description": "This Hunter is educated in violence and its applications, demonstrating their prowess on my spy.\n\n[Belligerent Hunters are more likely to retaliate against mortal minions you use to track them.]",
+	"warmup": 30,
+	"requirements": {
+	    "belligerent": 1,
+	    "summoned": -1
+	},
+	"effects": {
+	    "notoriety": 1
+	},
+	"mutations": [
+	    {
+		"filter": "believer",
+		"mutate": "follower_wound",
+		"level": 1
+	    },
+	    {
+		"filter": "believer",
+		"mutate": "follower",
+		"level": -1
+	    }
+	]
+    },
+    {
+	"id": "track.hiding.failure.retaliate.mystic",
+	"actionid": "talk",
+	"label": "Reconnaissance...",
+	"description": "My otherworldy spy has not returned - this Hunter's expertise has presumably protected them again.\n\n[Mystic Hunters are more likely to retaliate against summonings you use to track them.]",
+	"warmup": 30,
+	"requirements": {
+	    "mystic": 1,
+	    "summoned": 1
+	},
+	"effects": {
+	    "notoriety": 1
+	},
+	"aspects": {
+	    "killsummoned": 1
+	}
+    }
+]
+}
