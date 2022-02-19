@@ -293,7 +293,7 @@
 	    ],
 	    "alt": [
 		{
-		    "id": "corrupt.bribepay"
+		    "id": "corrupt.bribe.attempt"
 		}
 	    ],
 	   "linked": [
@@ -511,6 +511,9 @@
 	    "linked": [
 		{
 		    "id": "persuasive.attempt"
+		},
+		{
+		    "id": "persuasive.nonefound"
 		}
 	    ]
 	},
@@ -518,7 +521,227 @@
 	    "id": "persuasive.attempt",
 	    "actionid": "suspicion",
 	    "label": "A Silver Tongue",
-	    "startdescription": "",
-	    "
+	    "startdescription": "If I do not act, these words will take root in my follower's heart like a poison. [This will inflict Resentment upon your follower if allowed to proceed. You can provide Passion to defend against this, but you may need to do so multiple times.]",
+	    "warmup": 30,
+	    "requirements": {
+		"follower": 1
+	    },
+	    "slots": [
+		{
+		    "id": "needspassion",
+		    "label": "Passion?",
+		    "required": {
+			"passion": 1
+		    }
+		},
+	    ],
+	    "alt": [
+		{
+		    "id": "persuasive.attempt.passion",
+		}
+	    ],
+	    "linked": [
+		{
+		    "id": "persuasive.inflictresentment"
+		}
+	    ]
+	},
+	{
+	    "id": "persuasive.attempt.passion",
+	    "actionid": "suspicion",
+	    "label": "Rhetoric and Manipulation?",
+	    "startdescription": "I will remind them of their loyalties, of their sacrifices and their pacts. Perhaps that will be enough to hold them.",
+	    "requirements": {
+		"passion": 1
+	    },
+	    "aspects": {
+		"fatiguing": 1
+	    },
+	    "linked": [
+		{
+		    "id": "persuasive.end",
+		    "chance": 50
+		},
+		{
+		    "id": "persuasive.attempt"
+		}
+	    ]
+	},
+	{
+	    "id": "persuasive.end",
+	    "actionid": "suspicion",
+	    "label": "Rhetoric and Manipulation",
+	    "startdescription": "I have secured my follower against this Hunter's persuasions. They will remain loyal for the time being, and our adversary will withdraw to reassess their strategies.",
+	    "effects": {
+		"reputation": -99
+	    }
+	},
+	{
+	    "id": "persuasive.inflictresentment",
+	    "actionid": "suspicion",
+	    "label": "The Serpent in the Garden",
+	    "startdescription": "This Hunter is a cunning and articulate creature. Their subtle counsels have struck a chord with my follower - perhaps I ought to trust them with less, now.",
+	    "mutations": [
+		{
+		    "filter": "follower",
+		    "mutate": "resentment",
+		    "level": 1,
+		    "additive": true
+		}
+	    ],
+	    "effects": {
+		"reputation": -99
+	    }
+	},
+        {
+            "id": "suspicion_searchlongerforevidence",
+            "actionid": "suspicion",
+            "requirements": {
+                "mystique": 1
+            },
+            "label": "The Perils of Renown",
+            "startdescription": "My Mystique has attracted this hunter's attention. They can prove nothing yet, but they'll keep looking for longer, now.",
+            "effects": {
+                "mystique": -1
+            },
+            "slots": [
+                {
+                    "id": "Clues",
+                    "label": "Clues",
+                    "required": {
+                        "reputation": 1
+                    },
+                    "greedy": true
+                }
+            ],
+            "warmup": 60,
+            "linked": [
+	 	{
+		    "id": "trapped.woundhunter.high"
+		},
+	 	{
+		    "id": "trapped.woundhunter.med"
+		},
+	 	{
+		    "id": "trapped.woundhunter.low"
+		},
+		{
+		    "id": "observant.converttonotoriety",
+		    "chance": 70
+		},
+		{
+		    "id": "corrupt.bribe",
+		    "chance": 70
+		},
+		{
+		    "id": "belligerent.router",
+		    "chance": 70
+		},
+		{
+		    "id": "persuasive.router",
+		    "chance": 70
+		},
+                {
+                    "id": "suspicion_searchlongerforevidence",
+                    "chance": 100
+                },
+                {
+                    "id": "suspiciongrabevidence",
+                    "chance": 100
+                }
+            ]
+        },
+        {
+            "id": "suspiciongrabevidence",
+            "actionid": "suspicion",
+            "label": "Considering the Evidence...",
+            "startdescription": "If a Hunter has found Notoriety, they will try to use it to create or upgrade Evidence. If they're Meticulous, they'll always succeed. If they're Erratic, they're more likely to fail... but they can occasionally create Evidence even without Notoriety.",
+            "description": "I am safe, for now. My adversary has not enough evidence to bring a case against me, and they've found no new clues.",
+            "slots": [
+                {
+                    "id": "Evidence",
+                    "label": "Evidence",
+                    "required": {
+                        "evidenceb": 1,
+                        "evidence": 1
+                    },
+                    "greedy": true
+                }
+            ],
+            "alt": [
+                {
+                    "id": "suspicionpretrial",
+                    "chance": 100
+                },
+                {
+                    "id": "suspicionerratic_alwaysfail",
+                    "chance": 20
+                },
+                {
+                    "id": "suspicionpromoteevidencemeticulous",
+                    "chance": 100
+                },
+                {
+                    "id": "suspicionpromoteevidence",
+                    "chance": 70
+                },
+                {
+                    "id": "suspicioncreateevidencemeticulous",
+                    "chance": 100
+                },
+                {
+                    "id": "suspicioncreateevidence",
+                    "chance": 70
+                },
+                {
+                    "id": "suspicionfaildefault",
+                    "chance": 30
+                }
+            ],
+            "warmup": 30,
+            "linked": [
+                {
+                    "id": "suspicionerratic_alwayssucceed",
+                    "chance": 20
+                }
+            ]
+        },
+        {
+            "id": "suspicioncreateevidence",
+            "actionid": "suspicion",
+            "requirements": {
+                "reputation": 1
+            },
+            "label": "Converting Clues to Evidence",
+            "startdescription": "Rumour squats on rooftops and flutters in gutters. This hunter is making progress in their investigation.",
+            "description": "I am certain that my adversary has lodged a copy of their notes elsewhere - with their solicitor, with their superior, or even with a contact in the press. This is troubling.",
+            "effects": {
+                "reputation": -1,
+                "evidence": 1
+            },
+            "warmup": 30,
+	    "linked": [
+		{
+		    "id": "publicist.imbuepublished",
+		}
+	    ]
+        },
+	{
+	    "id": "publicist.imbuepublished",
+	    "actionid": "suspicion",
+	    "label": "Menace of the Press",
+	    "startdescription": "A Publicist is sensationalising evidence of my crimes...",
+	    "warmup": 15,
+	    "requirements": {
+		"publicist": 1
+	    },
+	    "mutations": [
+		{
+		   "filter": "evidencelevel",
+		   "mutate": "published",
+		   "level": 1
+		}
+	    ]
+	}
 ]
 }
