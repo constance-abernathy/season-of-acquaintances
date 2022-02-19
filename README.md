@@ -45,7 +45,6 @@
 - **Opium Dreaming Overhaul**
   - Dreaming with Funds has a chance to create a new ability card, **A Dry Craving**. This card will start with one point of the **Resistance** aspect. 
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
 
@@ -53,19 +52,20 @@
 
 These will be affixed to followers when they become (Disciples? Exalts? When their side quest is complete?) for some extra flavour. We might have some other mechanical use for them in the future, but as it stands it’s just cool text.
 
+|Hour|Quote|
+| :-: | :-: |
 |<p>**The Moth**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_moth.png?raw=true)</p>|<p>In vain, in vain - the all-composing hour</p><p>Resistless falls: the Muse obeys the power.</p><p>She comes! she comes! the sable throne behold</p><p>Of *Night* primeval, and of *Chaos* old!</p><p>- Alexander Pope</p>|
-| :-: | :- |
 |<p>**The Vagabond**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_vagabond.png?raw=true)</p>|<p>Much have I traveled in the realms of gold</p><p>And many goodly states and kingdoms seen;</p><p>Round many western islands have I been</p><p>Which bards in fealty to Apollo hold.</p><p>- John Keats</p>|
 |<p>**The Malachite**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_malachite.png?raw=true)</p>|<p>'What gentle ghost, besprent with April dew,</p><p>Hails me so solemnly to yonder yew,</p><p>And beckoning woos me, from the fatal tree</p><p>To pluck a garland for herself or me?'</p><p></p><p>- Ben Jonson|
-|<p>**The Watchman**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_watchman.png?raw=true)</p>|<p>The man who listens to Reason is lost; Reason enslaves all whose minds are not strong enough to master her.</p><p>- George Bernard Shaw</p>|
+|<p>**The Watchman**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_watchman.png?raw=true)</p>|<p>The man who listens to Reason is lost;</p><p>Reason enslaves all whose minds are not strong enough to master her.</p><p>- George Bernard Shaw</p>|
 |<p>**The Madrugad**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_madrugad.png?raw=true)</p>|<p>In the dawn, armed with a burning patience, we shall enter the splendid Cities.</p><p></p><p>- Arthur Rimbaud</p>|
-|<p>**The Forge of Days**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_forge.png?raw=true)</p>|<p>And the smith his iron measures hammered to the anvil’s chime; Thanking God, whose boundless wisdom makes the flowers of poesy bloom; In the forge’s dust and cinders, in the tissues of the loom.</p><p>- Henry Wadsworth Longfellow</p>|
-|<p>**The Colonel**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_colonel.png?raw=true)</p>|<p>One man scorned and covered with scars still strove with his last ounce of courage to reach the unreachable stars; and the world will be better for this.</p><p>- Miguel de Cervantes</p>|
-|<p>**The Lionsmith**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_lionsmith.png?raw=true)</p>|<p>I am going to be a storm - a flame - I need to fight whole armies alone; I have ten hearts; I have a hundred arms; I feel too strong to war with mortals - BRING ME GIANTS!</p><p>- Edmond Rostand</p>|
-|<p>**The Wolf-Divided**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_wolf.png?raw=true)</p>|<p>Have I not the reason to hate and to despise myself? Indeed I do; and chiefly for not having hated and despised the world enough.</p><p>- William Hazlitt</p>|
+|<p>**The Forge of Days**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_forge.png?raw=true)</p>|<p>And the smith his iron measures hammered to the anvil’s chime;</p><p>Thanking God, whose boundless wisdom makes the flowers of poesy bloom;</p><p>In the forge’s dust and cinders, in the tissues of the loom.</p><p>- Henry Wadsworth Longfellow</p>|
+|<p>**The Colonel**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_colonel.png?raw=true)</p>|<p>One man scorned and covered with scars still strove with his last ounce of courage to reach the unreachable stars;</p><p>and the world will be better for this.</p><p>- Miguel de Cervantes</p>|
+|<p>**The Lionsmith**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_lionsmith.png?raw=true)</p>|<p>I am going to be a storm - a flame - I need to fight whole armies alone;</p><p>I have ten hearts;</p><p>I have a hundred arms;</p><p>I feel too strong to war with mortals - BRING ME GIANTS!</p><p>- Edmond Rostand</p>|
+|<p>**The Wolf-Divided**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_wolf.png?raw=true)</p>|<p>Have I not the reason to hate and to despise myself? Indeed I do;</p><p>and chiefly for not having hated and despised the world enough.</p><p>- William Hazlitt</p>|
 |<p>**The Sun-in-Rags**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_sir.png?raw=true)</p>|<p>The splendid silence clings</p><p>Around me: and around</p><p>The saddest of all kings</p><p>Crowned, and again discrowned.</p><p>- Lionel Johnson</p>|
 |<p>**The Elegiast**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_elegiast.png?raw=true)</p>|<p>Some hang above the tombs,</p><p>Some weep in empty rooms,</p><p>I, when the iris blooms,</p><p>Remember.</p><p>- Mary Coleridge</p>|
-|<p>**Snow**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_snow.png?raw=true)</p>|<p>Look in my face; my name is Might-have-been;</p><p>I am also call'd No-more, Too-late, Farewell.</p><p>- Dante Gabriel Rossetti</p>|
+|<p>**Snow**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_snow.png?raw=true)</p>|<p>Look in my face;</p><p>my name is Might-have-been;</p><p>I am also call'd No-more, Too-late, Farewell.</p><p>- Dante Gabriel Rossetti</p>|
 |<p>**The Thunderskin**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_thunderskin.png?raw=true)</p>|<p>On with the dance! Let joy be unconfined;</p><p>No sleep till morn, when Youth and Pleasure meet</p><p>To chase the glowing Hours with flying feet.</p><p>- Lord Byron</p>|
 |<p>**The Velvet**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_velvet.png?raw=true)</p>|<p>For secrets are edged tools,</p><p>And must be kept from children and from fools.</p><p>- John Dryden</p>|
 |<p>**The Twins**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_saw.png?raw=true)</p>|<p>The weird sisters, hand in hand,</p><p>Posters of the sea and land,</p><p>Thus do go about, about.</p><p>- William Shakespeare</p>|
@@ -75,7 +75,7 @@ These will be affixed to followers when they become (Disciples? Exalts? When the
 |<p>**The Mother of Ants**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_moa.png?raw=true)</p>|<p>Yet some there be that by due steps aspire</p><p>To lay their just hands on that golden key</p><p>That opes the palace of Eternity.</p><p>- John Milton</p>|
 |<p>**The Meniscate**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_meniscate.png?raw=true)</p>|<p>Slowly, silently, now the moon</p><p>Walks the night in her silver shoon;</p><p>This way, and that, she peers, and sees</p><p>Silver fruit upon silver trees.</p><p>- Walter de la Mare</p>|
 |<p>**The Horned Axe**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_horned.png?raw=true)</p>|<p>On that day I will punish all who leap over the threshold, who fill the house of their master with violence and deceit.</p><p>- Zephaniah 1:9</p>|
-|<p>**The Mare-in-the-Tree**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_mare.png?raw=true)</p>|<p>I reside at Table Mountain, and my name is Truthful James; </p><p>I am not up to small deceit, or any sinful games.</p><p>- Francis Brett Hart</p>|
+|<p>**The Mare-in-the-Tree**</p><p>![](https://github.com/constance-abernathy/season-of-acquaintances/blob/main/assets_SOA/loyalty_mare.png?raw=true)</p>|<p>I reside at Table Mountain, and my name is Truthful James;</p><p></p><p>I am not up to small deceit, or any sinful games.</p><p>- Francis Brett Hart</p>|
 
 
 
@@ -94,8 +94,8 @@ There will be three followers for every aspect, save Secret Histories. Each foll
 **Jealous** - While romancing someone else, there is a chance for this follower to gain Resentment. They may try harming your lover if Resentment becomes high enough, or even become a Rival.
 
 
-|**Name**|**Hour**|**Notes**|
-| :-: | :-: | :-: |
+|**Name**|**Hour**||
+| :-: | :-: | :- |
 |Charlotte|The Moth|<p>**The capricious younger sister to Klaus, afflicted with borderline personality disorder.**</p><p></p><p>Exalting Charlotte will turn Klaus into a Rival.</p>|
 |Lawrence|The Vagabond|**A chronic wanderer, map-maker, memoirist, and “citizen of no nation.”**|
 |Howe|The Mare-in-the-Tree|**Seemingly innocuous boy who is a liaison for the Mare-in-the-Tree.**|
@@ -131,8 +131,8 @@ The new patrons will each have a unique set of mechanics and rewards attached to
 - H.W. Rocheford - Stories from around the globe (No lore, but need expeditions)
 
 
-|**Name**|**Notes**|
-| :-: | :-: |
+|**Name**||
+| :-: | :- |
 |**Professor William Jericho**|<p>**A tenured professor of history at the Imperial College, hiding his own interests in alternate narratives.**</p><p></p><p>William will give commissions that function much the same as base-game ones, asking for pieces on Lantern, Secret Histories, and Heart.</p><p></p><p>Rewards for completing William’s commissions will include spintriae and special Fact cards that can be used to pass research challenges in lieu of the usual headquarters or card requirement.</p>|
 |**Alexandra Beek**|<p>**An expatriate crime boss expanding to the Capital following the fracturing of the Duffoure mob in the 1920s.**</p><p></p><p>Beek will give commissions that don’t represent the character doing academic writing for her - rather, she will give ‘contract jobs’ that represent different criminal undertakings. These will include hitjobs (Edge), smuggling (Moth), and counterfeiting (Forge).</p><p></p><p>You will need to provide manpower (a follower) and a relevant technique (lore) for a job to proceed. Rewards will include spintriae and criminal favours, but will also often create reputation consequences for you.</p>|
 |**H.M. Rocheford**|<p>**The editor-in-chief for *Interviews with the Invisible*, a monthly news column popular amongst madrugadas and noctambules alike.**</p><p></p><p>Rocheford will ask for stories and interviews from around the world to put in his next issue. Receiving a commission from him will produce a card for **J. Armitage, the Correspondent,** and you will have to take him on an expedition in [specified region depending on what the comm asked for]. Completing the expedition with him in tow will give you the card necessary to complete Rocheford’s expedition.</p><p></p><p>Rewards will include spintriae and [new rewards]</p>|
@@ -141,8 +141,8 @@ The new patrons will each have a unique set of mechanics and rewards attached to
 
 New locations in the Capital will provide more depth to the city via new jobs, new mechanics, and being meeting spots for potential followers/patrons. Locations that have a pool of potential followers/patrons available will have the Potential Followers/Potential Patrons aspects attached to them, which will be removed if you draw a Case of Mistaken Identity. 
 
-|**Name**|**Notes**|
-| :-: | :-: |
+|**Name**||
+| :-: | :- |
 |Imperial College|<p>**A furious congregating point for the new academia of the Capital.**</p><p></p><p>Exploring this location with a Funds will let you attend a lecture there, which can produce useful Ability influences like Erudition and Glimmering. It can also produce Restlessness, in the event the lecture is boring. </p><p></p><p>If you slot William into the Explore verb with this location and a spintriae, he will give you private lessons on occult academics. This will yield a new Comprehension card that will have (10/20/30) of the Complexity aspect attached to it. Putting the Comprehension card into the Study slot with Erudition or Glimmering (different cards will necessitate different requirements) will trigger a recipe that subtracts a random number of Complexity from the Comprehension card. Once it reaches zero, the Comprehension card will become a lore fragment.</p><p></p><p>If you have a scholarship skill, you can apply for an adjunct lecturer job here (this will take you to an interview, which will require no small amount of reason). If you are the Physician, you will have an easier time getting this job. You can win a job retirement victory by following this job chain to its highest stage.</p>|
 |Church of Our Redeemer Seen|<p>**A reserved little chapel folded away into the city’s innards, run by a convent of reticent nuns.**</p><p></p><p>Exploring this location will let you attend a mass there, which will draw from a deck of possible rewards. It may also give you nothing. </p><p></p><p>Exploring this location with a Dread, Fascination, or Restlessness grants you a 70% chance to destroy the influence. There is a 30% chance that it will simply give you Restlessness without destroying your initial influence. </p><p><br>If you are the Priest, there will be unique text for visiting this location.</p>|
 |East End Bookies|<p>**The fights organized by this betting circuit are strictly off the books. Sometimes they gather in the basement of an Aldgate pub; sometimes the rear room of a suspect casino. Tonight, the crowd throngs here.**</p><p></p><p>Exploring this location with a Fund will let you spectate fights, which will draw from a deck of possible rewards. There is a 20% chance that the authorities will break up the fight, giving Notoriety. </p><p></p><p>If you have the strength skill, you can get the Prize Fighting job here. Winning fights will mutate your job card with the Repute aspect, and passing a certain threshold (15/30) of Repute will make it possible for you to rank up your job (Not instant - keep fighting once you reach the threshold. There is a 50% chance you will be promoted for every fight you do after acquiring the proper amount of Repute). You can achieve a job retirement victory by following this job chain to its highest stage. </p>|
