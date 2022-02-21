@@ -883,6 +883,30 @@
 		"investigatingsuccess.greater": 1
 	    }
 	},
+	{
+            "id": "suspicionerratic_alwayssucceed",
+            "actionid": "suspicion",
+            "label": "Bewildering Successes",
+            "requirements": {
+                "erratic": 1,
+                "reputation": -1
+            },
+            "effects": {
+                "notoriety": 1
+            },
+            "startdescription": "A rumour claims my adversary has taken to casting oracles with the I Ching. Another claims they seek answers in dreams. Yet another, that they select which questions to ask by rolling dice. They've found evidence where there should be no evidence to find. [This happens only occasionally.]",
+            "linked": [
+                {
+                    "id": "suspicion.promoteevidence",
+                    "chance": 100
+                },
+                {
+                    "id": "suspicion.createevidence",
+                    "chance": 100
+                }
+            ],
+            "warmup": 30
+        },
         {
             "id": "suspicion.pretrial",
             "label": "The Bureau Considers My Case",
