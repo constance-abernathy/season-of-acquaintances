@@ -22,6 +22,10 @@
             "warmup": 10,
             "craftable": false,
             "linked": [
+		{
+		    "id": "grab.damningevidence",
+		    "chance": 100
+		},
                 {
                     "id": "grab.reputation",
                     "chance": 100
@@ -32,6 +36,31 @@
                 }
             ]
         },
+	{
+	    "id": "grab.damningevidence",
+	    "actionid": "suspicion",
+	    "label": "Damning Evidence is being brought to court!",
+	    "startdescription": "With Damning Evidence in hand, a Hunter can appeal for my case to go to trial. Reviews of the evidence are being held, tribunals are being called to order -",
+	    "warmup": 30,
+	    "tablereqs": {
+		"evidence.c": 1
+	    },
+	    "slots": [
+		{
+		    "id": "needsevidence",
+		    "label": "Damning Evidence",
+		    "required": {
+			"evidence.c": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "linked": [
+		{
+		    "id": "suspicion.pretrial"
+		}
+	    ]
+	},
         {
             "id": "grab.reputation",
             "label": "Searching for Clues...",
@@ -81,7 +110,7 @@
                     "id": "suspicion_searchlongerforevidence"
                 },
                 {
-                    "id": "suspiciongrabevidence"
+                    "id": "suspicion.grabevidence"
                 }
             ]
         },
@@ -217,7 +246,7 @@
 		"chance": 70
 	    },
 	    {
-		"id": "suspiciongrabevidence"
+		"id": "suspicion.grabevidence"
 	    },
 	]
     },
@@ -247,7 +276,7 @@
 	],
 	"linked": [
 	    {
-		"id": "suspiciongrabevidence"
+		"id": "suspicion.grabevidence"
 	    }
 	]
     },
@@ -258,7 +287,6 @@
 	    "startdescription": "This might be enough to buy my innocence. Or it might not.",
 	    "requirements": {
 		"corrupt": 1,
-		"notoriety": 1,
 		"compensationvalue": 1
 	    },
 	    "effects": {
@@ -298,7 +326,7 @@
 	    ],
 	   "linked": [
 		{
-		    "id": "suspiciongrabevidence"
+		    "id": "suspicion.grabevidence"
 		}
 	    ],
 	    "warmup": 30,
@@ -646,13 +674,13 @@
                     "chance": 100
                 },
                 {
-                    "id": "suspiciongrabevidence",
+                    "id": "suspicion.grabevidence",
                     "chance": 100
                 }
             ]
         },
         {
-            "id": "suspiciongrabevidence",
+            "id": "suspicion.grabevidence",
             "actionid": "suspicion",
             "label": "Considering the Evidence...",
             "startdescription": "If a Hunter has found Notoriety, they will try to use it to create or upgrade Evidence. If they're Meticulous, they'll always succeed. If they're Erratic, they're more likely to fail... but they can occasionally create Evidence even without Notoriety.",
@@ -662,35 +690,32 @@
                     "id": "Evidence",
                     "label": "Evidence",
                     "required": {
-                        "evidenceb": 1,
-                        "evidence": 1
+                        "evidence.a": 1,
+                        "evidence.b": 1,
+			"evidence.c": 1
                     },
                     "greedy": true
                 }
             ],
             "alt": [
                 {
-                    "id": "suspicionpretrial",
-                    "chance": 100
-                },
-                {
                     "id": "suspicionerratic_alwaysfail",
                     "chance": 20
                 },
                 {
-                    "id": "suspicionpromoteevidencemeticulous",
+                    "id": "suspicion.promoteevidencemeticulous",
                     "chance": 100
                 },
                 {
-                    "id": "suspicionpromoteevidence",
+                    "id": "suspicion.promoteevidence",
                     "chance": 70
                 },
                 {
-                    "id": "suspicioncreateevidencemeticulous",
+                    "id": "suspicion.createevidencemeticulous",
                     "chance": 100
                 },
                 {
-                    "id": "suspicioncreateevidence",
+                    "id": "suspicion.createevidence",
                     "chance": 70
                 },
                 {
@@ -707,30 +732,96 @@
             ]
         },
         {
-            "id": "suspicioncreateevidence",
+            "id": "suspicion.promoteevidencemeticulous",
+            "actionid": "suspicion",
+            "label": "Creating Damning Evidence",
+            "requirements": {
+                "evidencelevel": 1,
+                "reputation": 1,
+                "meticulous": 1
+            },
+            "linked": [
+                {
+                    "id": "suspicion.promoteevidence",
+                    "chance": 100
+                }
+            ]
+        },
+        {
+            "id": "suspicion.createevidencemeticulous",
+            "actionid": "suspicion",
+            "label": "Converting Clues to Evidence",
+            "requirements": {
+                "reputation": 1,
+                "meticulous": 1
+            },
+            "linked": [
+                {
+                    "id": "suspicion.createevidence",
+                    "chance": 100
+                }
+            ]
+        },
+        {
+            "id": "suspicion.createevidence",
             "actionid": "suspicion",
             "requirements": {
-                "reputation": 1
+                "reputation": 2
             },
-            "label": "Converting Clues to Evidence",
-            "startdescription": "Rumour squats on rooftops and flutters in gutters. This hunter is making progress in their investigation.",
-            "description": "I am certain that my adversary has lodged a copy of their notes elsewhere - with their solicitor, with their superior, or even with a contact in the press. This is troubling.",
-            "effects": {
-                "reputation": -1,
-                "evidence": 1
-            },
+            "label": "Clues to Evidence...",
+            "startdescription": "Rumour squats on rooftops and flutters in gutters. This Hunter is making progress in their investigation.",
             "warmup": 30,
 	    "linked": [
 		{
-		    "id": "publicist.imbuepublished",
+		    "id": "create.evidence.a"
+		},
+		{
+		    "id": "create.evidence.b"
 		}
 	    ]
         },
+	{
+	    "id": "create.evidence.a",
+	    "actionid": "suspicion",
+	    "label": "Clues to Evidence...",
+	    "startdescription": "The first necessary elements of a case against me are in play. I am not yet in danger of a trial, but I must be careful not to give this Hunter more clues to follow.",
+	    "requirements": {
+		"notoriety": 1
+	    },
+	    "effects": {
+		"evidence.a": 1,
+		"reputation": -99
+	    },
+	    "linked": [
+		{
+		    "id": "publicist.imbuepublished"
+		}
+	    ]
+	},
+	{
+	    "id": "create.evidence.b",
+	    "actionid": "suspicion",
+	    "label": "Clues to Evidence...",
+	    "startdescription": "The first necessary elements of a case against me are in play. I am not yet in danger of a trial, but I must be careful not to give this Hunter more clues to follow.",
+	    "requirements": {
+		"reputation": 1
+	    },
+	    "effects": {
+		"evidence.b": 1,
+		"reputation": -99
+	    },
+	    "linked": [
+		{
+		    "id": "publicist.imbuepublished"
+		}
+	    ]
+	},
 	{
 	    "id": "publicist.imbuepublished",
 	    "actionid": "suspicion",
 	    "label": "Menace of the Press",
 	    "startdescription": "A Publicist is sensationalising evidence of my crimes...",
+	    "description": "I am a sort of famous, now. This does not bode well for my work.",
 	    "warmup": 15,
 	    "requirements": {
 		"publicist": 1
@@ -742,6 +833,78 @@
 		   "level": 1
 		}
 	    ]
-	}
+	},
+        {
+            "id": "suspicion.promoteevidence",
+            "actionid": "suspicion",
+            "requirements": {
+                "evidencelevel": 1,
+                "reputation": 1
+            },
+            "label": "Furthering the Investigation...",
+            "startdescription": "This Hunter is elaborating upon what evidence they already have with new intelligence.",
+            "warmup": 30,
+	    "linked": [
+		{
+		    "id": "promoteevidence",
+		},
+		{
+		    "id": "promoteevidence.greater"
+		}
+	    ]
+        },
+	{
+	    "id": "promoteevidence",
+	    "actionid": "suspicion",
+	    "label": "Furthering the Investigation",
+	    "startdescription": "The shadow of the law looms - more evidence has been brought to bear on my case. I am ever closer to the danger of a trial, and the Bureau's trials are not known for their equity.",
+	    "requirements": {
+		"notoriety": 1
+	    },
+	    "effects": {
+		"reputation": -99
+	    },
+	    "aspects": {
+		"investigatingsuccess": 1
+	    }
+	},
+	{
+	    "id": "promoteevidence.greater",
+	    "actionid": "suspicion",
+	    "label": "Furthering the Investigation",
+	    "startdescription": "The shadow of the law looms - more evidence has been brought to bear on my case. I am ever closer to the danger of a trial, and the Bureau's trials are not known for their equity. [This Hunter has created Damning Evidence, which they can use to bring you to trial.]",
+	    "requirements": {
+		"reputation": 3
+	    },
+	    "effects": {
+		"reputation": -99
+	    },
+	    "aspects": {
+		"investigatingsuccess.greater": 1
+	    }
+	},
+        {
+            "id": "suspicion.pretrial",
+            "label": "The Bureau Considers My Case",
+            "actionid": "suspicion",
+            "requirements": {
+                "evidence.c": 1
+            },
+            "startdescription": "My adversary has convinced the Suppression Bureau to consider my case. The Bureau is charged with punishment of the less usual type of criminal - the criminal whose crimes may exist only in dreams.",
+            "description": ".",
+            "warmup": 30,
+            "craftable": false,
+            "linked": [
+                {
+                    "id": "suspicion_attemptmitigation_me",
+                    "chance": 30
+                },
+                {
+                    "id": "suspicion_questionfollower",
+                    "chance": 100
+                }
+            ],
+            "burnimage": "beforetrial"
+        }
 ]
 }
