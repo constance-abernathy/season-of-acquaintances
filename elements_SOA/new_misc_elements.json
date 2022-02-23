@@ -74,28 +74,45 @@
 	"lifetime": 60,
 	"decayTo": "influencemoth",
     },
+        {
+            "id": "corpse",
+            "label": "A Human Corpse",
+            "description": "The spirit is departed. At some point, the smell will be so bad you'll have to dispose of it, but here it is for now. It may attract attention; it may be used to impress the impressionable. [Even after the Corpse is gone, Notoriety will remain.]",
+            "aspects": {
+                "winter": 3,
+                "grail": 3,
+                "ingredient": 1,
+                "reputation": 3,
+                "remnant": 1
+            },
+            "xtriggers": {
+                "raiseburgeoning": "spirit_wintera_moth",
+                "raiseshattered": "spirit_wintera_edge"
+            },
+            "lifetime": 60,
+            "decayTo": "notoriety"
+        },
     {
 	"id": "witness",
 	"label": "A Witness",
-	"description": "They have seen - that alone makes them a liability. [Hunters can create Substantial Evidence if they speak to living Witnesses about your crimes.]",
+	"description": "They have seen, and that is danger enough. [Hunters can create Substantial Evidence if they speak to living Witnesses about your crimes.]",
 	"aspects": {
 	    "annoyance": 1,
 	    "mortal": 1,
-	    "reputation": 2
+	    "reputation": 3
 	},
 	"xtriggers": {
 	    "killmortal": "corpse",
 	    "derangemortal": "lunatic"
 	},
-	"lifetime": 800,
-	"decayTo": "rumour",
-	"icon": "rumour"
+	"lifetime": 600,
+	"decayTo": "rumour"
     },
     {
 	"id": "infamy",
 	"label": "Infamy",
-	"description": "Scrutiny is omnipresent. [Infamy will make Hunters more aggressive during their investigations. You cannot destroy Infamy.]",
-	"lifetime": 800
+	"description": "The eyes of the world are upon me. [While Infamy is on the table, Hunters will look longer for clues and may take more aggressive actions against your cult. Infamy will only expire with time.]",
+	"lifetime": 1000
     },
     {
 	"id": "evidence.a",
@@ -105,35 +122,65 @@
 	    "evidencelevel": 1
 	},
 	"xtriggers": {
-	    "investigationsuccess": "evidence",
-	    "investigationsetback": "notoriety"
+	    "investigatingsuccess": "evidence.b",
+	    "investigatingsuccess.greater": "evidence.c",
+	    "investigatingsetback": "notoriety"
 	},
 	"lifetime": 600
     },
     {
-	"id": "evidence",
+	"id": "evidence.b",
 	"label": "Substantial Evidence",
 	"description": "A hunter has made a worryingly comprehensive accounting of my sins. [Hunters with Substantial Evidence of occult activities become more dangerous. Evidence may survive the death of the Hunter who created it.]",
 	"aspects": {
 	    "evidencelevel": 2
 	},
 	"xtriggers": {
-	    "investigationsuccess": "evidenceb",
-	    "investigationsetback": "evidence.a"
+	    "investigatingsuccess": "evidence.c",
+	    "investigatingsuccess.greater": "evidence.c",
+	    "investigatingsetback": "evidence.a"
 	},
 	"lifetime": 600
     },
     {
-	"id": "evidenceb",
+	"id": "evidence.c",
 	"label": "Damning Evidence",
-	"description": "'Earth, gape!  O, no, it will not harbour me!' [With Damning Evidence of occult activities in the city, the Suppression Bureau will be able to convict you. Evidence may survive the death of the Hunter who created it.]",
+	"description": "'Earth, gape! O, no, it will not harbour me!' [With Damning Evidence of occult activities in the city, the Suppression Bureau will be able to convict you. Evidence may survive the death of the Hunter who created it.]",
 	"aspects": {
 	    "evidencelevel": 3
 	},
 	"xtriggers": {
-	    "investigationsetback": "evidence"
+	    "investigatingsetback": "evidence.b"
 	},
 	"lifetime": 600
+    },
+    {
+	"id": "infamy.interrogate",
+	"label": "Strategy: An Interrogation",
+	"description": "This Hunter is interrogating a follower.",
+	"lifetime": 1,
+	"icon": "xl"
+    },
+    {
+	"id": "infamy.lockpatron",
+	"label": "Strategy: Approaching a Patron",
+	"description": "This Hunter is questioning a patron.",
+	"lifetime": 1,
+	"icon": "xl"
+    },
+    {
+	"id": "infamy.destroysecrecy",
+	"label": "Strategy: A Clean Sweep",
+	"description": "This Hunter is destroying Secrecy.",
+	"lifetime": 1,
+	"icon": "xl"
+    },
+    {
+	"id": "infamy.watchlocation",
+	"label": "Strategy: Surveilling a Location",
+	"description": "This Hunter is setting a watch somewhere.",
+	"lifetime": 1,
+	"icon": "xl"
     }
 ]
 }
