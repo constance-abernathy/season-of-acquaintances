@@ -27,6 +27,10 @@
 		    "chance": 100
 		},
                 {
+                    "id": "grab.reputation.infamy",
+                    "chance": 100
+                },
+                {
                     "id": "grab.reputation",
                     "chance": 100
                 },
@@ -40,7 +44,7 @@
 	    "id": "grab.damningevidence",
 	    "actionid": "suspicion",
 	    "label": "Damning Evidence is being brought to court!",
-	    "startdescription": "With Damning Evidence in hand, a Hunter can appeal for my case to go to trial. Reviews of the evidence are being held, tribunals are being called to order -",
+	    "startdescription": "With Damning Evidence in hand, a Hunter can appeal for my case to go to trial. Review hearings are being held, tribunals are being called to order -",
 	    "warmup": 30,
 	    "tablereqs": {
 		"evidence.c": 1
@@ -61,6 +65,69 @@
 		}
 	    ]
 	},
+        {
+            "id": "grab.reputation.infamy",
+            "label": "Searching Doggedly for Clues...",
+            "actionid": "suspicion",
+            "requirements": {
+                "hunter": 1
+            },
+	    "extantreqs": {
+		"infamy": 1
+	    },
+            "startdescription": "An adversary is asking questions about my activities...\n\n[With Infamy on the table, Hunters will spend more time searching for clues.]",
+            "slots": [
+                {
+                    "id": "Clues",
+                    "label": "Clues",
+                    "required": {
+                        "reputation": 1
+                    },
+                    "greedy": true
+                }
+            ],
+            "warmup": 90,
+	    "alt": [
+		{
+		    "id": "infamy.action.router",
+		    "chance": 100,
+		    "additional": true
+		}
+	    ],
+            "linked": [
+	 	{
+		    "id": "trapped.woundhunter.high"
+		},
+	 	{
+		    "id": "trapped.woundhunter.med"
+		},
+	 	{
+		    "id": "trapped.woundhunter.low"
+		},
+		{
+		    "id": "observant.converttonotoriety",
+		    "chance": 70
+		},
+		{
+		    "id": "corrupt.bribe",
+		    "chance": 70
+		},
+		{
+		    "id": "belligerent.router",
+		    "chance": 70
+		},
+		{
+		    "id": "persuasive.router",
+		    "chance": 70
+		},
+                {
+                    "id": "suspicion_searchlongerforevidence"
+                },
+                {
+                    "id": "suspicion.grabevidence"
+                }
+            ]
+        },
         {
             "id": "grab.reputation",
             "label": "Searching for Clues...",
@@ -211,8 +278,8 @@
     {
 	"id": "trapped.woundhunter.failure",
 	"actionid": "suspicion",
-	"label": "An Incendiary Trap!",
-	"description": "Our trap has failed its purpose. The Hunter, uncovering our device, has gone into hiding for fear of further danger.",
+	"label": "An Incendiary Trap, Foiled",
+	"description": "Our trap has failed its purpose. And the Hunter, uncovering our device, has gone into hiding for fear of further danger.",
 	"effects": {
 	    "infamy": 1,
 	    "notoriety": 1,
@@ -717,10 +784,6 @@
                 {
                     "id": "suspicion.createevidence",
                     "chance": 70
-                },
-                {
-                    "id": "suspicionfaildefault",
-                    "chance": 30
                 }
             ],
             "warmup": 30,
@@ -857,7 +920,7 @@
 	    "id": "promoteevidence",
 	    "actionid": "suspicion",
 	    "label": "Furthering the Investigation",
-	    "startdescription": "The shadow of the law looms - more evidence has been brought to bear on my case. I am ever closer to the danger of a trial, and the Bureau's trials are not known for their equity.",
+	    "startdescription": "More evidence has been brought to bear on my case. I am ever closer to the danger of a trial, and the Bureau's trials are not known for their equity.",
 	    "requirements": {
 		"notoriety": 1
 	    },
@@ -883,7 +946,7 @@
 		"investigatingsuccess.greater": 1
 	    }
 	},
-	{
+        {
             "id": "suspicionerratic_alwayssucceed",
             "actionid": "suspicion",
             "label": "Bewildering Successes",
@@ -929,6 +992,282 @@
                 }
             ],
             "burnimage": "beforetrial"
-        }
+        },
+	{
+	    "id": "infamy.action.router",
+	    "actionid": "lurk",
+	    "label": "Acting on Infamy",
+	    "startdescription": "Just now, I am one of the Suppression Bureau's most infamous suspects - perhaps the most infamous, in fact. Naturally, this Hunter holds a similar opinion of me. They will be more proactive in their investigation of my activites and associates. [With Infamy on the table, a Hunter can perform new investigative actions.]",
+	    "warmup": 30,
+            "internaldeck": {
+                "spec": [
+                    "infamy.interrogate",
+                    "infamy.interrogate",
+		    "infamy.lockpatron",
+		    "infamy.destroysecrecy",
+		    "infamy.watchlocation"
+                ],
+                "draws": 1,
+                "resetonexhaustion": true
+            },
+	    "linked": [
+		{
+		    "id": "infamy.action.interrogate"
+		},
+		{
+		    "id": "infamy.action.lockpatron"
+		},
+		{
+		    "id": "infamy.action.destroysecrecy"
+		},
+		{
+		    "id": "infamy.action.watchlocation"
+		}
+	    ]
+	},
+	{
+	    "id": "infamy.action.interrogate",
+	    "actionid": "lurk",
+	    "label": "A Follower, Interrogated",
+	    "startdescription": "Under pretense of some minor crime or other offense, this Hunter will temporarily detain one of my associates for questioning. They will try to give up nothing, but their time in custody may be long, and the Hunter may be clever - or cruel - in how they ask questions.",
+	    "description": "Just now, there was no-one for the Bureau to question.",
+	    "warmup": 90,
+	    "requirements": {
+		"infamy.interrogate": 1
+	    },
+	    "slots": [
+		{
+		    "id": "needsfollower",
+		    "label": "follower",
+		    "required": {
+			"follower": 1
+		    },
+		    "forbidden": {
+			"summoned": 1,
+			"hireling": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "linked": [
+		{
+		    "id": "infamy.action.interrogate.continue",
+		    "chance": 50
+		},
+		{
+		    "id": "infamy.action.interrogate.end"
+		}
+	    ]
+	},
+	{
+	    "id": "infamy.action.interrogate.continue",
+	    "actionid": "lurk",
+	    "label": "A Follower, Interrogated",
+	    "startdescription": "Under pretense of some minor crime or other offense, this Hunter has temporarily detained one of my associates for questioning. They will try to give up nothing, but their time in custody may be long, and the Hunter may be clever - or cruel - in how they ask questions.",
+	    "warmup": 60,
+	    "requirements": {
+		"follower": 1
+	    },
+	    "linked": [
+		{
+		    "id": "infamy.action.interrogate.continue",
+		    "chance": 70
+		},
+		{
+		    "id": "infamy.action.interrogate.end"
+		}
+	    ]
+	},
+	{
+	    "id": "infamy.action.interrogate.end",
+	    "actionid": "lurk",
+	    "label": "Released from Custody",
+	    "requirements": {
+		"follower": 1
+	    },
+	    "startdescription": "My follower returns at last from the bowels of the Central Office. They are weary and paler in the face, but of more consequence: they have revealed nothing of our work to the authorities.",
+	    "alt": [
+		{
+		    "id": "infamy.action.interrogate.end.evidence",
+		    "chance": 40
+		}
+	    ]
+	},
+	{
+	    "id": "infamy.action.interrogate.end.evidence",
+	    "actionid": "lurk",
+	    "label": "Released from Custody",
+	    "startdescription": "My follower returns from the bowels of the Central Office. They confess that, owing to some cunning or cruelty employed by the Bureau, the Hunter was able to learn more of our work. Such a direct testimony will have allowed them create Evidence against me.",
+	    "effects": {
+		"evidence.a": 1
+	    }
+	},
+	{
+	    "id": "infamy.action.lockpatron",
+	    "actionid": "lurk",
+	    "label": "A Patron, Questioned",
+	    "startdescription": "The Suppression Bureau will approach an influential someone regarding their involvement with me. A Patron's status will keep them from being pressed too hard for information, but they may balk at interacting with me for a time afterwards.",
+	    "description": "The Bureau could find no-one to approach for their inquiries.",
+	    "warmup": 60,
+	    "requirements": {
+		"infamy.lockpatron": 1
+	    },
+	    "slots": [
+		{
+		    "id": "needspatron",
+		    "label": "A Patron",
+		    "required": {
+			"patron": 1
+		    },
+		    "forbidden": {
+			"naenia": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "linked": [
+		{
+		    "id": "infamy.action.lockpatron.continue"
+		}
+	    ]
+	},
+	{
+	    "id": "infamy.action.lockpatron.continue",
+	    "actionid": "lurk",
+	    "label": "A Patron, Questioned",
+	    "startdescription": "A visit from the Suppression Bureau has made this Patron reluctant to associate with me, at least for the time being. I'll have to do without their services.",
+	    "description": "Something in this Patron's circumstances has changed - perhaps the malignance of my reputation is subsiding. They reopen relations with me by way of a cordial letter.",
+	    "warmup": 60,
+	    "requirements": {
+		"patron": 1
+	    },
+	    "linked": [
+		{
+		    "id": "infamy.action.lockpatron.continue",
+		    "chance": 70
+		}
+	    ]
+	},
+	{
+	    "id": "infamy.action.destroysecrecy",
+	    "actionid": "lurk",
+	    "label": "A Clean Sweep",
+	    "startdescription": "The Bureau is ordering a canvassing of the Capital in its totality - troupes of officers will go street by street, making their observations and speaking to those of consequence. It will be very hard to disguise our actions going forward. [This will destroy all Secrecy currently on the table.]",
+	    "description": "In the wake of scrutiny, uncanniness.",
+	    "warmup": 30,
+	    "requirements": {
+		"infamy.destroysecrecy": 1
+	    },
+	    "effects": {
+		"mystique": 1
+	    },
+	    "purge": {
+		"secrecy": 99
+	    }
+	},
+	{
+	    "id": "infamy.action.watchlocation",
+	    "actionid": "lurk",
+	    "label": "A Watched Place",
+	    "startdescription": "The Suppression Bureau will send agents to surveil a place - or perhaps places - that I have taken an interest in. If my associates go there, our adversaries will no doubt be watching them, keen for even the slightest sign of incrimination.",
+	    "warmup": 15,
+	    "requirements": {
+		"infamy.watchlocation": 1
+	    },
+	    "slots": [
+		{
+		    "id": "needslocation",
+		    "label": "A Location",
+		    "required": {
+			"location": 1
+		    },
+		    "forbidden": {
+			"locationstreetsstrange": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "mutations": [
+		{
+		    "filter": "location",
+		    "mutate": "surveilled",
+		    "level": 1
+		}
+	    ],
+	    "alt": [
+		{
+		    "id": "spit.infamy.watchlocation",
+		    "additional": true,
+		    "expulsion": {
+			"limit": 1,
+			"filter": {
+			    "location": 1,
+			    "locationcabaretclosed": 1
+			}
+		    }
+		}
+	    ],
+	    "linked": [
+		{
+		     "id": "infamy.action.watchlocation",
+		     "chance": 50
+		},
+		{
+		     "id": "infamy.action.watchlocation.dormant"
+		}
+	    ]
+	},
+	{
+	    "id": "spit.infamy.watchlocation",
+	    "actionid": "spit.edge",
+	    "label": "Eyes in Waiting",
+	    "startdescription": "A watch has been set in this place. It would not be wise to come here while that watch lasts.",
+	    "warmup": 10
+	},
+	{
+	    "id": "infamy.action.watchlocation.dormant",
+	    "actionid": "lurk",
+	    "label": "A Surveillance Period Progresses...",
+	    "startdescription": "By day, uniformed officers and their silver badges linger on the streetcorners here. By night, the rooftops and windows might sometimes reflect a spying eye, or the dual-glint of a pair of binoculars. [When this recipe ends, Surveilled locations will be restored to their original state.]",
+	    "warmup": 600,
+	    "linked": [
+		{
+		    "id": "infamy.action.watchlocation.revert"
+		}
+	    ]
+	},
+	{
+	    "id": "infamy.action.watchlocation.revert",
+	    "actionid": "lurk",
+	    "label": "A Surveillance Period is Ending",
+	    "startdescription": "The Bureau's agents are leaving their hiding places...",
+	    "description": "It is at last safe to visit the old places. No fevered eyes are trained upon my comings and goings.",
+	    "warmup": 15,
+	    "extantreqs": {
+		"surveilled": 1
+	    },
+	    "slots": [
+		{
+		    "id": "needssurveilled",
+		    "label": "A Location",
+		    "required": {
+			"surveilled": 1
+		    },
+		    "greedy": true
+		}
+	    ],
+	    "mutations": [
+		{
+		    "filter": "location",
+		    "mutate": "surveilled",
+		    "level": -1
+		}
+	    ],
+	    "linked": [
+		{
+		    "id": "infamy.action.watchlocation.revert"
+		}
+	    ]
+	}
 ]
 }
