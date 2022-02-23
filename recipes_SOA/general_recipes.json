@@ -87,6 +87,37 @@
             "description": "I have founded my cult. This is a step to greater power. [Use your cult to recruit and promote followers. Talk with followers about your cult to send them out on cult business.]"
         },
 	{
+	    "id": "hint_secrecydestroynoto",
+	    "label": "Subtlety's Shield?",
+	    "actionid": "study",
+	    "requirements": {
+		"secrecy": 1,
+		"skillsecrecy_uq": -1
+	    },
+	    "startdescription": "If we have made a recent mess of our reputation, we might fall back to the shadows - provided we have the Secrecy to do so. [You can use Secrecy to downgrade Notoriety into Mystique.]",
+	    "hintonly": true,
+	    "craftable": false
+	},
+	{
+	    "id": "secrecydestroynoto",
+	    "label": "Subtlety's Shield",
+	    "actionid": "study",
+	    "requirements": {
+		"secrecy": 1,
+		"notoriety": 1,
+		"skillsecrecy_uq": -1
+	    },
+	    "startdescription": "A careful curation of omissions and half-truths will afford us some protection from the sting of an overdeveloped reputation.",
+	    "description": "Uncanniness will linger, but there is little that can be proven by uncanniness alone.",
+	    "effects": {
+		"secrecy": -1,
+		"notoriety": -1,
+		"mystique": 1
+	    },
+	    "warmup": 30,
+	    "craftable": true
+	},
+	{
 	    "id": "hint_upgradediscretion",
 	    "label": "Increase my cult's discretion?",
 	    "actionid": "study",
